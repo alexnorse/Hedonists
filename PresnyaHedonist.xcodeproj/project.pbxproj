@@ -24,6 +24,7 @@
 		E6023C7F269DE4C50035AA7F /* NewNoteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6023C7E269DE4C50035AA7F /* NewNoteVC.swift */; };
 		E6023C81269DE4EF0035AA7F /* FavoritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6023C80269DE4EF0035AA7F /* FavoritesVC.swift */; };
 		E6023C83269DE54C0035AA7F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6023C82269DE54C0035AA7F /* Constants.swift */; };
+		E63C06EA26A06FD50078CAF7 /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63C06E926A06FD50078CAF7 /* OnboardingVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		E6023C7E269DE4C50035AA7F /* NewNoteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNoteVC.swift; sourceTree = "<group>"; };
 		E6023C80269DE4EF0035AA7F /* FavoritesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesVC.swift; sourceTree = "<group>"; };
 		E6023C82269DE54C0035AA7F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E63C06E926A06FD50078CAF7 /* OnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 		E6023C6F269DE1C70035AA7F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E63C06E926A06FD50078CAF7 /* OnboardingVC.swift */,
 				E6023C80269DE4EF0035AA7F /* FavoritesVC.swift */,
 				E6023C74269DE41C0035AA7F /* FeedVC.swift */,
 				E6023C76269DE4400035AA7F /* DetailsVC.swift */,
@@ -331,6 +334,7 @@
 				E6023C73269DE3A90035AA7F /* FeedCell.swift in Sources */,
 				E6023C75269DE41C0035AA7F /* FeedVC.swift in Sources */,
 				E6023C79269DE45C0035AA7F /* InfoVC.swift in Sources */,
+				E63C06EA26A06FD50078CAF7 /* OnboardingVC.swift in Sources */,
 				E6023C7D269DE49F0035AA7F /* NoteListVC.swift in Sources */,
 				E6023C7B269DE47C0035AA7F /* MapVC.swift in Sources */,
 				E6023C7F269DE4C50035AA7F /* NewNoteVC.swift in Sources */,
