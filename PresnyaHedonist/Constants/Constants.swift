@@ -5,7 +5,7 @@
 //  Created by Alexandr L. on 7/13/21.
 //
 
-import Foundation
+import UIKit
 
 enum VControllersID {
     static let ONBOARDING_VC    = "OnboardingVC"

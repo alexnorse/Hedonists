@@ -9,6 +9,8 @@ import UIKit
 
 class NewNoteVC: UIViewController {
 
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
     @IBOutlet weak var noteView: UIView!
     @IBOutlet weak var textView: UITextView!
     

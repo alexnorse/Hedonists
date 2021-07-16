@@ -9,6 +9,8 @@ import UIKit
 
 class InfoVC: UIViewController {
 
+    var place: Place?
+    
     @IBOutlet weak var type: UILabel!
     @IBOutlet weak var descript: UILabel!
     @IBOutlet weak var address: UILabel!
