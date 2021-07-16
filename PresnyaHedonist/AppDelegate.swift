@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             let path = Bundle.main.path(forResource: "data", ofType: "json")
             guard path != nil else {
-                print("Невозможно получить доступ к базе данных. Попробуйте перезапустить приложение")
+                print(Errors.databaseError)
                 return
             }
             

@@ -36,7 +36,7 @@ class FeedCell: UITableViewCell {
     
     
     func setCell(_ place: Place) {
-        placeImage.image = UIImage(named: place.image!)
+        placeImage.image = UIImage(named: "placeholder")
         placeName.text = place.name
     }
     
