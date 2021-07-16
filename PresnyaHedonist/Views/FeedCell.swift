@@ -30,6 +30,8 @@ class FeedCell: UITableViewCell {
     func uiSettings() {
         containerView.layer.cornerRadius = UISettings.cornerRadius
         
+        placeImage.layer.cornerRadius = UISettings.cornerRadius
+        
         shadowView.layer.cornerRadius = UISettings.cornerRadius
         shadowView.layer.shadowColor = CGColor(red: 0, green: 0, blue: 0, alpha: 0.5)
     }
