@@ -40,8 +40,38 @@ enum UISettings {
 
 
 enum Errors {
-    static let databaseError    = "Невозможно получить доступ к базе данных"
-    static let fetchError       = "Ошибка загрузки ленты"
-    static let faillURL         = "Ошибка загрузки страницы"
+    static let databaseError    = "Невозможно получить доступ к базе данных☹️"
+    static let fetchError       = "Ошибка загрузки ленты☹️"
+    static let faillURL         = "Ошибка загрузки страницы☹️ Проверьте соединение с интернетом"
 }
+
+
+enum EmptyStates {
+    static let notesEmpty = "У Вас пока нет заметок об этом месте. Добавьте свои впечатления после посещения 🖋"
+    static let favsEmpty = "Пока ни одно место не добавлено в избранное🤷‍♀️🤷‍♂️ \nПосмотрите, что интересного для Вас есть в нашей подборке🧐"
+}
+
+
+enum Titles {
+    static let feedTitle = "Лента"
+    static let favsTitle = "Избранное"
+}
+
+
+enum Fonts {
+    static let vcHeads          = UIFont(name: "LabGrotesque-Black", size: 30)
+    static let tabBarItems      = UIFont(name: "LabGrotesque-Black", size: 18)
+        
+    static let headlines        = UIFont(name: "LabGrotesque-Bold", size: 24)
+    static let keyAccents       = UIFont(name: "LabGrotesque-Bold", size: 20)
+        
+    static let bodyText         = UIFont(name: "LabGrotesque-Regular", size: 16)
+    static let bodyAccents      = UIFont(name: "LabGrotesque-Medium", size: 16)
+        
+    static let buttons          = UIFont(name: "LabGrotesque-Bold", size: 18)
+        
+    static let tableTtles       = UIFont(name: "LabGrotesque-Medium", size: 18)
+    static let tableSubheads    = UIFont(name: "LabGrotesque-Light", size: 16)
+}
+
 

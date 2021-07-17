@@ -18,6 +18,8 @@ class InfoVC: UIViewController {
     @IBOutlet weak var workHours: UILabel!
     @IBOutlet weak var phone: UILabel!
     @IBOutlet weak var addToFavsButton: UIButton!
+    @IBOutlet weak var instagramLink: UIButton!
+    @IBOutlet weak var addToFavs: UIButton!
     
     
     override func viewDidLoad() {
@@ -28,15 +30,27 @@ class InfoVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         configureContent()
+        uiSettings()
     }
     
     
     func configureContent() {
-        type.text = place?.category
-        descript.text = place?.descript
-        address.text = place?.address
-        workHours.text = place?.workhours
-        phone.text = place?.phone
+        type.text       = place?.category
+        descript.text   = place?.descript
+        address.text    = place?.address
+        workHours.text  = place?.workhours
+        phone.text      = place?.phone
+    }
+    
+    
+    func uiSettings() {
+        type.font = Fonts.bodyAccents
+        descript.font = Fonts.bodyText
+        address.font = Fonts.bodyAccents
+        workHours.font = Fonts.bodyAccents
+        phone.font = Fonts.bodyAccents
+        instagramLink.titleLabel?.font = Fonts.buttons
+        addToFavs.titleLabel?.font = Fonts.buttons
     }
     
     

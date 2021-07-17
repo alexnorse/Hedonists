@@ -27,6 +27,7 @@ class FeedCell: UITableViewCell {
     
     func uiSettings() {
         placeImage.layer.cornerRadius = UISettings.cornerRadius
+        placeName.font = Fonts.headlines
     }
     
     
@@ -34,5 +35,4 @@ class FeedCell: UITableViewCell {
         placeImage.image = UIImage(named: "placeholder")
         placeName.text = place.name
     }
-    
 }

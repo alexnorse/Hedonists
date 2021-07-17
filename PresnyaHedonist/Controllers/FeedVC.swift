@@ -28,7 +28,7 @@ class FeedVC: UIViewController {
     
     func configureController() {
         navigationController?.navigationBar.prefersLargeTitles = true
-        title = "Feed"
+        title = Titles.feedTitle
     }
     
     
@@ -50,7 +50,6 @@ class FeedVC: UIViewController {
         let destination = segue.destination as! DetailsVC
         destination.place = selectedPlace
     }
-
 }
 
 
@@ -67,5 +66,4 @@ extension FeedVC: UITableViewDelegate, UITableViewDataSource {
         cell.setCell(place)
         return cell
     }
-    
 }

@@ -14,6 +14,11 @@ class FavoritesEmptystateVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        uiSettings()
+    }
+    
+    
+    func uiSettings() {
+        emptyStateLabel.font = Fonts.bodyAccents
     }
 }

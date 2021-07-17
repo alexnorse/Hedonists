@@ -32,6 +32,12 @@
 		E692554626A181F80004E348 /* Place+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E692554226A181F80004E348 /* Place+CoreDataProperties.swift */; };
 		E6A06B1226A2BB3A003999AB /* NotesEmptystateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A06B1126A2BB3A003999AB /* NotesEmptystateVC.swift */; };
 		E6A06B1526A2BD4F003999AB /* FavoritesEmptystateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A06B1426A2BD4F003999AB /* FavoritesEmptystateVC.swift */; };
+		E6A06B1D26A2EB09003999AB /* LabGrotesque-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6A06B1726A2EB08003999AB /* LabGrotesque-Thin.ttf */; };
+		E6A06B1E26A2EB09003999AB /* LabGrotesque-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6A06B1826A2EB08003999AB /* LabGrotesque-Light.ttf */; };
+		E6A06B1F26A2EB09003999AB /* LabGrotesque-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6A06B1926A2EB09003999AB /* LabGrotesque-Bold.ttf */; };
+		E6A06B2026A2EB09003999AB /* LabGrotesque-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6A06B1A26A2EB09003999AB /* LabGrotesque-Medium.ttf */; };
+		E6A06B2126A2EB09003999AB /* LabGrotesque-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6A06B1B26A2EB09003999AB /* LabGrotesque-Black.ttf */; };
+		E6A06B2226A2EB09003999AB /* LabGrotesque-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6A06B1C26A2EB09003999AB /* LabGrotesque-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +89,12 @@
 		E692554226A181F80004E348 /* Place+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Place+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E6A06B1126A2BB3A003999AB /* NotesEmptystateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesEmptystateVC.swift; sourceTree = "<group>"; };
 		E6A06B1426A2BD4F003999AB /* FavoritesEmptystateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesEmptystateVC.swift; sourceTree = "<group>"; };
+		E6A06B1726A2EB08003999AB /* LabGrotesque-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LabGrotesque-Thin.ttf"; sourceTree = "<group>"; };
+		E6A06B1826A2EB08003999AB /* LabGrotesque-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LabGrotesque-Light.ttf"; sourceTree = "<group>"; };
+		E6A06B1926A2EB09003999AB /* LabGrotesque-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LabGrotesque-Bold.ttf"; sourceTree = "<group>"; };
+		E6A06B1A26A2EB09003999AB /* LabGrotesque-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LabGrotesque-Medium.ttf"; sourceTree = "<group>"; };
+		E6A06B1B26A2EB09003999AB /* LabGrotesque-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LabGrotesque-Black.ttf"; sourceTree = "<group>"; };
+		E6A06B1C26A2EB09003999AB /* LabGrotesque-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LabGrotesque-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +149,7 @@
 				E6023C3C269DB39B0035AA7F /* SceneDelegate.swift */,
 				E6023C4B269DB39C0035AA7F /* Info.plist */,
 				E6023C46269DB39C0035AA7F /* Assets.xcassets */,
+				E6A06B1626A2EAE7003999AB /* Fonts */,
 				E6023C6D269DE1700035AA7F /* Storyboards */,
 				E6023C6F269DE1C70035AA7F /* Controllers */,
 				E6023C6E269DE1A70035AA7F /* Views */,
@@ -225,6 +238,19 @@
 				E692554226A181F80004E348 /* Place+CoreDataProperties.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		E6A06B1626A2EAE7003999AB /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E6A06B1B26A2EB09003999AB /* LabGrotesque-Black.ttf */,
+				E6A06B1926A2EB09003999AB /* LabGrotesque-Bold.ttf */,
+				E6A06B1826A2EB08003999AB /* LabGrotesque-Light.ttf */,
+				E6A06B1A26A2EB09003999AB /* LabGrotesque-Medium.ttf */,
+				E6A06B1C26A2EB09003999AB /* LabGrotesque-Regular.ttf */,
+				E6A06B1726A2EB08003999AB /* LabGrotesque-Thin.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,10 +356,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6A06B2126A2EB09003999AB /* LabGrotesque-Black.ttf in Resources */,
 				E6023C4A269DB39C0035AA7F /* LaunchScreen.storyboard in Resources */,
 				E6023C47269DB39C0035AA7F /* Assets.xcassets in Resources */,
+				E6A06B1D26A2EB09003999AB /* LabGrotesque-Thin.ttf in Resources */,
+				E6A06B1F26A2EB09003999AB /* LabGrotesque-Bold.ttf in Resources */,
 				E6023C42269DB39B0035AA7F /* Main.storyboard in Resources */,
 				E692553E26A172550004E348 /* data.json in Resources */,
+				E6A06B2226A2EB09003999AB /* LabGrotesque-Regular.ttf in Resources */,
+				E6A06B1E26A2EB09003999AB /* LabGrotesque-Light.ttf in Resources */,
+				E6A06B2026A2EB09003999AB /* LabGrotesque-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

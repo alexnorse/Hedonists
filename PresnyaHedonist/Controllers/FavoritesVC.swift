@@ -6,15 +6,21 @@
 //
 
 import UIKit
+import CoreData
 
 class FavoritesVC: UIViewController {
 
     @IBOutlet weak var tableViewFavorites: UITableView!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        configureController()
     }
-
+    
+    
+    func configureController() {
+        navigationController?.navigationBar.prefersLargeTitles = true
+        title = Titles.favsTitle
+    }
 }

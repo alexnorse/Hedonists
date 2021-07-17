@@ -16,6 +16,7 @@ class DetailsVC: UIViewController {
     @IBOutlet weak var infoSegments: UISegmentedControl!
     @IBOutlet weak var containerView: UIView!
 
+    
     lazy var infoViewController: InfoVC = {
         let infoVC = storyboard?.instantiateViewController(identifier: VControllersID.INFO_VC) as! InfoVC
         return infoVC
@@ -37,12 +38,20 @@ class DetailsVC: UIViewController {
         
     }
     
+    
     override func viewWillAppear(_ animated: Bool) {
         imageView.image = UIImage(named: "placeholder")
         placeName.text = place?.name
+        
         segmentChange(self.infoSegments)
+        uiSettings()
     }
 
+    
+    func uiSettings() {
+        placeName.font = Fonts.headlines
+    }
+    
     
     private func switchVC(_ childVC: UIViewController) {
         addChild(childVC)

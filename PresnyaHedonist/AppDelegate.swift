@@ -17,7 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    
     private func preloadData() {
         let defaults = UserDefaults.standard
         let context = persistentContainer.viewContext

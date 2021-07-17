@@ -13,19 +13,30 @@ class NewNoteVC: UIViewController {
     
     @IBOutlet weak var noteView: UIView!
     @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var save: UIButton!
+    @IBOutlet weak var close: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        uiSettings()
+    }
+    
+    
+    func uiSettings() {
+        textView.font = Fonts.bodyText
+        save.titleLabel?.font = Fonts.buttons
+        close.titleLabel?.font = Fonts.buttons
     }
 
+    
     @IBAction func saveButton(_ sender: Any) {
         
     }
     
+    
     @IBAction func closeButton(_ sender: Any) {
         
     }
-    
 }
