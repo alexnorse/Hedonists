@@ -9,9 +9,7 @@ import UIKit
 
 class FeedCell: UITableViewCell {
 
-    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var placeImage: UIImageView!
-    @IBOutlet weak var shadowView: UIView!
     @IBOutlet weak var placeName: UILabel!
     
     
@@ -28,12 +26,7 @@ class FeedCell: UITableViewCell {
     
     
     func uiSettings() {
-        containerView.layer.cornerRadius = UISettings.cornerRadius
-        
         placeImage.layer.cornerRadius = UISettings.cornerRadius
-        
-        shadowView.layer.cornerRadius = UISettings.cornerRadius
-        shadowView.layer.shadowColor = CGColor(red: 0, green: 0, blue: 0, alpha: 0.5)
     }
     
     

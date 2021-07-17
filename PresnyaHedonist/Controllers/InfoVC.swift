@@ -17,6 +17,7 @@ class InfoVC: UIViewController {
     @IBOutlet weak var address: UILabel!
     @IBOutlet weak var workHours: UILabel!
     @IBOutlet weak var phone: UILabel!
+    @IBOutlet weak var addToFavsButton: UIButton!
     
     
     override func viewDidLoad() {
@@ -53,5 +54,10 @@ class InfoVC: UIViewController {
             return
         }
         present(SFSafariViewController(url: url), animated: true)
+    }
+    
+    
+    @IBAction func addToFavsTapped(_ sender: Any) {
+        
     }
 }

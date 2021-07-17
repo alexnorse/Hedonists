@@ -8,14 +8,16 @@
 import UIKit
 
 enum VControllersID {
-    static let ONBOARDING_VC    = "OnboardingVC"
-    static let FEED_VC          = "FeedVC"
-    static let DETAILS_VC       = "DetailsVC"
-    static let MAP_VC           = "MapVC"
-    static let INFO_VC          = "InfoVC"
-    static let NOTELIST_VC      = "NoteListVC"
-    static let NEWNOTE_VC       = "NewNoteVC"
-    static let FAVORITES_VC     = "FavoritesVC"
+    static let ONBOARDING_VC        = "OnboardingVC"
+    static let FEED_VC              = "FeedVC"
+    static let DETAILS_VC           = "DetailsVC"
+    static let MAP_VC               = "MapVC"
+    static let INFO_VC              = "InfoVC"
+    static let NOTELIST_VC          = "NoteListVC"
+    static let NOTES_EMPTYSTATE     = "NotesEmptystateVC"
+    static let NEWNOTE_VC           = "NewNoteVC"
+    static let FAVORITES_VC         = "FavoritesVC"
+    static let FAVORITES_EMPTYSTATE = "FavoritesEmptystateVC"
 }
 
 
