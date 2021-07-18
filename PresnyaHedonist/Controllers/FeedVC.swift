@@ -66,4 +66,9 @@ extension FeedVC: UITableViewDelegate, UITableViewDataSource {
         cell.setCell(place)
         return cell
     }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableViewFeed.deselectRow(at: indexPath, animated: true)
+    }
 }

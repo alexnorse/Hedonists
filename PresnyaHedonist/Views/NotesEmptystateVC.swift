@@ -21,6 +21,8 @@ class NotesEmptystateVC: UIViewController {
     
     func designSettings() {
         emptyLabel.font = Fonts.bodyAccents
+        emptyLabel.text = EmptyStates.notesEmpty
+        
         addNoteButton.titleLabel?.font = Fonts.buttons
     }
     

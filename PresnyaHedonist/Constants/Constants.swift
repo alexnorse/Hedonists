@@ -8,7 +8,6 @@
 import UIKit
 
 enum VControllersID {
-    static let ONBOARDING_VC        = "OnboardingVC"
     static let FEED_VC              = "FeedVC"
     static let DETAILS_VC           = "DetailsVC"
     static let MAP_VC               = "MapVC"

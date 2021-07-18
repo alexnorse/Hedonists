@@ -20,5 +20,6 @@ class FavoritesEmptystateVC: UIViewController {
     
     func designSettings() {
         emptyStateLabel.font = Fonts.bodyAccents
+        emptyStateLabel.text = EmptyStates.favsEmpty
     }
 }

@@ -22,7 +22,7 @@ class NoteListVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -36,6 +36,7 @@ class NoteListVC: UIViewController {
     
     func designSettings() {
         addnewNote.titleLabel?.font = Fonts.buttons
+        tableView.removeExcessCells()
     }
     
     
@@ -116,5 +117,10 @@ extension NoteListVC: UITableViewDelegate, UITableViewDataSource {
             self.refresh()
         }
         return UISwipeActionsConfiguration(actions: [delete])
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

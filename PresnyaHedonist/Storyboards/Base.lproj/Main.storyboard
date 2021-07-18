@@ -381,7 +381,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TRf-Qf-GRt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3849" y="826"/>
+            <point key="canvasLocation" x="4720" y="826"/>
         </scene>
         <!--New NoteVC-->
         <scene sceneID="1hM-yh-aG5">
@@ -461,7 +461,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vDE-QO-PCv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4755" y="826"/>
+            <point key="canvasLocation" x="3814" y="826"/>
         </scene>
         <!--InfoVC-->
         <scene sceneID="tzo-O4-1sw">
@@ -550,69 +550,6 @@
             </objects>
             <point key="canvasLocation" x="2954" y="-678"/>
         </scene>
-        <!--OnboardingVC-->
-        <scene sceneID="oiF-4r-MNB">
-            <objects>
-                <viewController storyboardIdentifier="OnboardingVC" id="I0J-QZ-c97" customClass="OnboardingVC" customModule="PresnyaHedonist" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ysb-05-ezl">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="qak-Qj-0g9">
-                                <rect key="frame" x="107" y="209" width="200" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="2Tg-Hu-tZL"/>
-                                    <constraint firstAttribute="width" constant="200" id="NAv-Zz-7vP"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwF-9P-bq6">
-                                <rect key="frame" x="82" y="739" width="250" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="EaY-oe-AO7"/>
-                                    <constraint firstAttribute="height" constant="50" id="xEF-Po-mxA"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Погнали!">
-                                    <color key="titleColor" systemColor="linkColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="welcomeTapped:" destination="I0J-QZ-c97" eventType="touchUpInside" id="O7j-3h-64v"/>
-                                </connections>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Label" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o0F-za-F92">
-                                <rect key="frame" x="57" y="439" width="300" height="200"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="0xM-n2-jaW"/>
-                                    <constraint firstAttribute="height" constant="200" id="4iZ-VQ-n97"/>
-                                </constraints>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="DUq-Yq-x2p"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="dwF-9P-bq6" firstAttribute="top" secondItem="o0F-za-F92" secondAttribute="bottom" constant="100" id="ASV-GA-a50"/>
-                            <constraint firstItem="o0F-za-F92" firstAttribute="centerX" secondItem="Ysb-05-ezl" secondAttribute="centerX" id="G9U-w5-MyK"/>
-                            <constraint firstItem="dwF-9P-bq6" firstAttribute="centerX" secondItem="Ysb-05-ezl" secondAttribute="centerX" id="Kk8-Cr-q01"/>
-                            <constraint firstItem="o0F-za-F92" firstAttribute="top" secondItem="qak-Qj-0g9" secondAttribute="bottom" constant="30" id="c9C-fY-BFT"/>
-                            <constraint firstItem="qak-Qj-0g9" firstAttribute="top" secondItem="DUq-Yq-x2p" secondAttribute="top" constant="165" id="g6o-g3-iih"/>
-                            <constraint firstItem="qak-Qj-0g9" firstAttribute="centerX" secondItem="Ysb-05-ezl" secondAttribute="centerX" id="kqw-ff-pIc"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="greetings" destination="o0F-za-F92" id="68O-2f-SfI"/>
-                        <outlet property="image" destination="qak-Qj-0g9" id="xwx-IX-yGD"/>
-                        <outlet property="welcomeButton" destination="dwF-9P-bq6" id="wqR-sq-uHA"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xYy-gd-QNa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1477" y="59"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="qOb-rU-ajB">
             <objects>
@@ -672,7 +609,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Logo" width="371.5" height="329"/>
         <image name="bolt.fill" catalog="system" width="101" height="128"/>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="info" catalog="system" width="93" height="128"/>
