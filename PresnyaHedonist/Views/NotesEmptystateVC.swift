@@ -15,11 +15,11 @@ class NotesEmptystateVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        uiSettings()
+        designSettings()
     }
     
     
-    func uiSettings() {
+    func designSettings() {
         emptyLabel.font = Fonts.bodyAccents
         addNoteButton.titleLabel?.font = Fonts.buttons
     }

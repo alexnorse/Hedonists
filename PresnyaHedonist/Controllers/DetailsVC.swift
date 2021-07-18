@@ -44,11 +44,11 @@ class DetailsVC: UIViewController {
         placeName.text = place?.name
         
         segmentChange(self.infoSegments)
-        uiSettings()
+        designSettings()
     }
 
     
-    func uiSettings() {
+    func designSettings() {
         placeName.font = Fonts.headlines
     }
     

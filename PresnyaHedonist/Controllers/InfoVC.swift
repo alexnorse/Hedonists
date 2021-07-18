@@ -30,7 +30,7 @@ class InfoVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         configureContent()
-        uiSettings()
+        designSettings()
     }
     
     
@@ -43,7 +43,7 @@ class InfoVC: UIViewController {
     }
     
     
-    func uiSettings() {
+    func designSettings() {
         type.font = Fonts.bodyAccents
         descript.font = Fonts.bodyText
         address.font = Fonts.bodyAccents

@@ -15,7 +15,7 @@ class FeedCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        uiSettings()
+        designSettings()
     }
 
     
@@ -25,7 +25,7 @@ class FeedCell: UITableViewCell {
     }
     
     
-    func uiSettings() {
+    func designSettings() {
         placeImage.layer.cornerRadius = UISettings.cornerRadius
         placeName.font = Fonts.headlines
     }
