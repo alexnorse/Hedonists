@@ -13,7 +13,8 @@ protocol NewNoteDelegate {
 }
 
 class NewNoteVC: UIViewController {
-
+    
+    static let shared = NewNoteVC()
     var place: Place?
     
     var delegate: NewNoteDelegate?
@@ -34,6 +35,8 @@ class NewNoteVC: UIViewController {
     
     
     func designSettings() {
+        view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.75)
+        
         noteView.layer.cornerRadius = UISettings.cornerRadius
         noteView.layer.shadowColor = CGColor(red: 0, green: 0, blue: 0, alpha: 0.5)
         noteView.layer.shadowOpacity = 1

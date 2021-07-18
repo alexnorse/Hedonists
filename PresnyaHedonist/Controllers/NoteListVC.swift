@@ -11,6 +11,7 @@ import CoreData
 class NoteListVC: UIViewController {
     
     var place: Place?
+    var notes: [Note]?
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext

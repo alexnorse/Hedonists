@@ -10,7 +10,6 @@ import UIKit
 class NotesEmptystateVC: UIViewController {
     
     @IBOutlet weak var emptyLabel: UILabel!
-    @IBOutlet weak var addNoteButton: UIButton!
     
     
     override func viewDidLoad() {
@@ -22,12 +21,6 @@ class NotesEmptystateVC: UIViewController {
     func designSettings() {
         emptyLabel.font = Fonts.bodyAccents
         emptyLabel.text = EmptyStates.notesEmpty
-        
-        addNoteButton.titleLabel?.font = Fonts.buttons
     }
-    
-    
-    @IBAction func addNoteTapped(_ sender: Any) {
-        
-    }
+
 }

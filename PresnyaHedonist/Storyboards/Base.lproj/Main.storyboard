@@ -351,18 +351,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLy-F2-R1a">
-                                <rect key="frame" x="82" y="812" width="250" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="fHt-DL-aAH"/>
-                                    <constraint firstAttribute="width" constant="250" id="vTb-lb-QSZ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Добавить заметку"/>
-                                <connections>
-                                    <action selector="addNoteTapped:" destination="uIB-2R-3Rf" eventType="touchUpInside" id="Z5e-Tj-Bo3"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MAK-o7-SHk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -370,18 +358,15 @@
                             <constraint firstAttribute="trailingMargin" secondItem="n45-Dm-7wS" secondAttribute="trailing" constant="30" id="3j2-Hx-BNJ"/>
                             <constraint firstItem="n45-Dm-7wS" firstAttribute="leading" secondItem="7Kr-Zf-hk2" secondAttribute="leadingMargin" constant="30" id="NxZ-ej-qWo"/>
                             <constraint firstItem="n45-Dm-7wS" firstAttribute="top" secondItem="MAK-o7-SHk" secondAttribute="top" constant="100" id="g4m-o2-r7P"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="fLy-F2-R1a" secondAttribute="bottom" id="tNS-Yr-f2o"/>
-                            <constraint firstItem="fLy-F2-R1a" firstAttribute="centerX" secondItem="7Kr-Zf-hk2" secondAttribute="centerX" id="w34-6Z-Ily"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="addNoteButton" destination="fLy-F2-R1a" id="49m-yx-2lj"/>
                         <outlet property="emptyLabel" destination="n45-Dm-7wS" id="WyC-Sx-fJy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TRf-Qf-GRt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4720" y="826"/>
+            <point key="canvasLocation" x="4694" y="826"/>
         </scene>
         <!--New NoteVC-->
         <scene sceneID="1hM-yh-aG5">
@@ -397,7 +382,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MxC-0h-DoD">
                                         <rect key="frame" x="10" y="10" width="280" height="230"/>
                                         <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Z6D-F7-QUS">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Z6D-F7-QUS">
                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="180"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <color key="textColor" systemColor="labelColor"/>
@@ -452,6 +437,7 @@
                             <constraint firstItem="Y2c-iI-bbg" firstAttribute="top" secondItem="rnI-T7-62B" secondAttribute="top" constant="150" id="VE8-oZ-Q2c"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="rUj-gd-MzS"/>
                     <connections>
                         <outlet property="close" destination="ec1-sT-FYv" id="EXw-Vh-T4f"/>
                         <outlet property="noteView" destination="Y2c-iI-bbg" id="Rbh-vm-Vqe"/>
