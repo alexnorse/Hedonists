@@ -34,8 +34,6 @@
 		E6A06B2026A2EB09003999AB /* LabGrotesque-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6A06B1A26A2EB09003999AB /* LabGrotesque-Medium.ttf */; };
 		E6A06B2126A2EB09003999AB /* LabGrotesque-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6A06B1B26A2EB09003999AB /* LabGrotesque-Black.ttf */; };
 		E6A06B2226A2EB09003999AB /* LabGrotesque-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6A06B1C26A2EB09003999AB /* LabGrotesque-Regular.ttf */; };
-		E6BD234126A5BEF200103FC8 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BD234026A5BEF200103FC8 /* EmptyStateView.swift */; };
-		E6BD234326A5C18A00103FC8 /* VC + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BD234226A5C18A00103FC8 /* VC + Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,8 +87,6 @@
 		E6A06B1A26A2EB09003999AB /* LabGrotesque-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LabGrotesque-Medium.ttf"; sourceTree = "<group>"; };
 		E6A06B1B26A2EB09003999AB /* LabGrotesque-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LabGrotesque-Black.ttf"; sourceTree = "<group>"; };
 		E6A06B1C26A2EB09003999AB /* LabGrotesque-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LabGrotesque-Regular.ttf"; sourceTree = "<group>"; };
-		E6BD234026A5BEF200103FC8 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
-		E6BD234226A5C18A00103FC8 /* VC + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VC + Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,7 +183,6 @@
 			isa = PBXGroup;
 			children = (
 				E6023C72269DE3A90035AA7F /* FeedCell.swift */,
-				E6BD234026A5BEF200103FC8 /* EmptyStateView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -220,7 +215,6 @@
 			children = (
 				E6023C82269DE54C0035AA7F /* Constants.swift */,
 				E652E0E826A43A1200DEDF92 /* TableView + Ext.swift */,
-				E6BD234226A5C18A00103FC8 /* VC + Ext.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -382,13 +376,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6BD234126A5BEF200103FC8 /* EmptyStateView.swift in Sources */,
 				E6023C81269DE4EF0035AA7F /* FavoritesVC.swift in Sources */,
 				E692554326A181F80004E348 /* Note+CoreDataClass.swift in Sources */,
 				E6023C45269DB39B0035AA7F /* PresnyaHedonist.xcdatamodeld in Sources */,
 				E6023C77269DE4400035AA7F /* DetailsVC.swift in Sources */,
 				E6023C73269DE3A90035AA7F /* FeedCell.swift in Sources */,
-				E6BD234326A5C18A00103FC8 /* VC + Ext.swift in Sources */,
 				E6023C75269DE41C0035AA7F /* FeedVC.swift in Sources */,
 				E652E0E926A43A1200DEDF92 /* TableView + Ext.swift in Sources */,
 				E6023C79269DE45C0035AA7F /* InfoVC.swift in Sources */,

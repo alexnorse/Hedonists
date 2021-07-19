@@ -146,13 +146,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="0tI-32-bnI">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="280"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="280" id="fpI-SC-pgX"/>
+                                            <constraint firstAttribute="height" constant="300" id="fpI-SC-pgX"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6zY-GM-gBG">
-                                        <rect key="frame" x="20" y="290" width="374" height="50"/>
+                                        <rect key="frame" x="20" y="310" width="374" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="FpZ-yP-e3S"/>
                                         </constraints>
@@ -161,7 +161,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="p23-59-jCi">
-                                        <rect key="frame" x="20" y="350" width="374" height="32"/>
+                                        <rect key="frame" x="20" y="370" width="374" height="32"/>
                                         <segments>
                                             <segment title="" image="info" catalog="system"/>
                                             <segment title="" image="mappin.and.ellipse" catalog="system"/>
@@ -172,7 +172,7 @@
                                         </connections>
                                     </segmentedControl>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WnO-zk-yYC">
-                                        <rect key="frame" x="0.0" y="391" width="414" height="417"/>
+                                        <rect key="frame" x="0.0" y="411" width="414" height="397"/>
                                     </view>
                                 </subviews>
                                 <constraints>
