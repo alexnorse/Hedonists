@@ -15,6 +15,7 @@ enum VControllersID {
     static let NOTELIST_VC          = "NoteListVC"
     static let NEWNOTE_VC           = "NewNoteVC"
     static let FAVORITES_VC         = "FavoritesVC"
+    static let TABBAR_VC            = "TabBarVC"
 }
 
 
@@ -62,7 +63,7 @@ enum Titles {
 
 enum Fonts {
     static let vcHeads          = UIFont(name: "LabGrotesque-Black", size: 30)
-    static let tabBarItems      = UIFont(name: "LabGrotesque-Black", size: 18)
+    static let tabBarItems      = UIFont(name: "LabGrotesque-Black", size: 14)
         
     static let headlines        = UIFont(name: "LabGrotesque-Bold", size: 24)
     static let keyAccents       = UIFont(name: "LabGrotesque-Bold", size: 20)

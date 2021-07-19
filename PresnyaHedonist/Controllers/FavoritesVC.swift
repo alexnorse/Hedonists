@@ -34,6 +34,7 @@ class FavoritesVC: UIViewController, UITableViewDelegate {
     
     func configureController() {
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.titleTextAttributes = ([NSAttributedString.Key.font: Fonts.vcHeads!])
         title = Titles.favsTitle
     }
 }
