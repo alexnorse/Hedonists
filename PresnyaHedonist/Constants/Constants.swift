@@ -51,6 +51,11 @@ enum EmptyStates {
 }
 
 
+enum Alerts {
+    static let addToFavs = "Добавлено в Избранное"
+}
+
+
 enum Titles {
     static let feedTitle = "Лента"
     static let favsTitle = "Избранное"

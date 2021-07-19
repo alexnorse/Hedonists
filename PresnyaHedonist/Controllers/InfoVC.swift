@@ -7,6 +7,7 @@
 
 import UIKit
 import SafariServices
+import CoreData
 
 class InfoVC: UIViewController {
     
@@ -72,6 +73,13 @@ class InfoVC: UIViewController {
     
     
     @IBAction func addToFavsTapped(_ sender: Any) {
+        let alert = UIAlertController(title: "♥️",
+                                      message: Alerts.addToFavs,
+                                      preferredStyle: .alert)
         
+        alert.addAction(UIAlertAction(title: "Ok",
+                                      style: .default))
+        
+        present(alert, animated: true)
     }
 }
