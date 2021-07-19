@@ -57,15 +57,13 @@ class InfoVC: UIViewController {
     
     @IBAction func instagramLink(_ sender: Any) {
         guard let url = URL(string: place?.url ?? "https://www.instagram.com") else {
+            
             let alert = UIAlertController(title: "Упс☹️",
                                           message: Errors.faillURL,
                                           preferredStyle: .alert)
-            
             alert.addAction(UIAlertAction(title: "Ok",
                                           style: .default))
-            
             present(alert, animated: true)
-            
             return
         }
         present(SFSafariViewController(url: url), animated: true)
@@ -76,10 +74,8 @@ class InfoVC: UIViewController {
         let alert = UIAlertController(title: "♥️",
                                       message: Alerts.addToFavs,
                                       preferredStyle: .alert)
-        
         alert.addAction(UIAlertAction(title: "Ok",
                                       style: .default))
-        
         present(alert, animated: true)
     }
 }

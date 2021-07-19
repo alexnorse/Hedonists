@@ -40,7 +40,7 @@ class DetailsVC: UIViewController {
     
     
     override func viewWillAppear(_ animated: Bool) {
-        imageView.image = UIImage(named: "placeholder")
+        imageView.image = UIImage(named: place!.image!)
         placeName.text = place?.name
         
         segmentChange(self.infoSegments)
