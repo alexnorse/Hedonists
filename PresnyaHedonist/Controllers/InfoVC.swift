@@ -11,7 +11,9 @@ import CoreData
 
 class InfoVC: UIViewController {
     
-    var place: Place?
+    var place: Place?    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     @IBOutlet weak var type: UILabel!
     @IBOutlet weak var descript: UILabel!
@@ -45,13 +47,13 @@ class InfoVC: UIViewController {
     
     
     func designSettings() {
-        type.font = Fonts.bodyAccents
-        descript.font = Fonts.bodyText
-        address.font = Fonts.bodyAccents
-        workHours.font = Fonts.bodyAccents
-        phone.font = Fonts.bodyAccents
-        instagramLink.titleLabel?.font = Fonts.buttons
-        addToFavs.titleLabel?.font = Fonts.buttons
+        type.font                       = Fonts.bodyAccents
+        descript.font                   = Fonts.bodyText
+        address.font                    = Fonts.bodyAccents
+        workHours.font                  = Fonts.bodyAccents
+        phone.font                      = Fonts.bodyAccents
+        instagramLink.titleLabel?.font  = Fonts.buttons
+        addToFavs.titleLabel?.font      = Fonts.buttons
     }
     
     

@@ -9,8 +9,10 @@ import UIKit
 import CoreData
 
 class FavoritesVC: UIViewController, UITableViewDelegate {
-
-    var favPlaces: [Place]?
+    
+    var place: Place?
+    
+    var fetchedPlaces: NSFetchedResultsController<Place>?
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
@@ -21,6 +23,7 @@ class FavoritesVC: UIViewController, UITableViewDelegate {
         super.viewDidLoad()
         tableViewFavorites.delegate = self
         tableViewFavorites.dataSource = self
+        tableViewFavorites.removeExcessCells()
     }
     
     
@@ -37,17 +40,22 @@ class FavoritesVC: UIViewController, UITableViewDelegate {
     
     
     func fetchFavs() {
-        do {
-            let request = Place.fetchRequest() as NSFetchRequest<Place>
-            let sort = NSSortDescriptor(key: "name", ascending: true)
+        if let place = place {
+            let request: NSFetchRequest<Place> = Place.fetchRequest()
+            let sort = NSSortDescriptor(key: "name", ascending: false)
             request.sortDescriptors = [sort]
-            favPlaces = try context.fetch(request)
-            
-            DispatchQueue.main.async {
-                self.tableViewFavorites.reloadData()
-            }
- 
-        } catch {}
+            do {
+                fetchedPlaces = NSFetchedResultsController(fetchRequest: request,
+                                                           managedObjectContext: context,
+                                                           sectionNameKeyPath: nil,
+                                                           cacheName: nil)
+                try fetchedPlaces?.performFetch()
+                
+            } catch {}
+        }
+        DispatchQueue.main.async {
+            self.tableViewFavorites.reloadData()
+        }
     }
 }
 
@@ -55,13 +63,13 @@ class FavoritesVC: UIViewController, UITableViewDelegate {
 extension FavoritesVC: UITabBarDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        self.favPlaces?.count ?? 0
+        fetchedPlaces?.fetchedObjects?.count ?? 0
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableViewFavorites.dequeueReusableCell(withIdentifier: CellsID.FAVORITES_CELL, for: indexPath)
-        let place = self.favPlaces?[indexPath.row]
+        let place = fetchedPlaces?.object(at: indexPath)
         
         let placeName = cell.viewWithTag(1) as! UILabel
         let placeType = cell.viewWithTag(2) as! UILabel
@@ -70,5 +78,10 @@ extension FavoritesVC: UITabBarDelegate, UITableViewDataSource {
         placeType.text = place?.category
         
         return cell
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableViewFavorites.deselectRow(at: indexPath, animated: true)
     }
 }

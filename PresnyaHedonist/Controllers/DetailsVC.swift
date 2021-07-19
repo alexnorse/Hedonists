@@ -10,6 +10,7 @@ import UIKit
 class DetailsVC: UIViewController {
     
     var place: Place?
+    var favPlaces: [Place] = []
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var placeName: UILabel!
