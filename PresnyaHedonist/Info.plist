@@ -26,10 +26,8 @@
 	<array>
 		<string>LabGrotesque-Black.ttf</string>
 		<string>LabGrotesque-Bold.ttf</string>
-		<string>LabGrotesque-Light.ttf</string>
 		<string>LabGrotesque-Medium.ttf</string>
 		<string>LabGrotesque-Regular.ttf</string>
-		<string>LabGrotesque-Thin.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

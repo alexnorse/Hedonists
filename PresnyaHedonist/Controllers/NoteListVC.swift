@@ -92,7 +92,6 @@ extension NoteListVC: UITableViewDelegate, UITableViewDataSource {
         let date = cell.viewWithTag(2) as! UILabel
         
         let note = fetchedNotes?.object(at: indexPath)
-        
         if let note = note {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "dd.MM.yy"

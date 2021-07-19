@@ -29,24 +29,23 @@ class NewNoteVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         designSettings()
     }
     
     
     func designSettings() {
-        view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.75)
+        view.backgroundColor            = UIColor(red: 0, green: 0, blue: 0, alpha: 0.75)
         
-        noteView.layer.cornerRadius = UISettings.cornerRadius
-        noteView.layer.shadowColor = CGColor(red: 0, green: 0, blue: 0, alpha: 0.5)
-        noteView.layer.shadowOpacity = 1
-        noteView.layer.shadowOffset = .zero
-        noteView.layer.shadowRadius = 5
+        noteView.layer.cornerRadius     = UISettings.cornerRadius
+        noteView.layer.shadowColor      = CGColor(red: 0, green: 0, blue: 0, alpha: 0.5)
+        noteView.layer.shadowOpacity    = 1
+        noteView.layer.shadowOffset     = .zero
+        noteView.layer.shadowRadius     = 5
         
         textView.font = Fonts.bodyText
         
-        save.titleLabel?.font = Fonts.buttons
-        close.titleLabel?.font = Fonts.buttons
+        save.titleLabel?.font           = Fonts.buttons
+        close.titleLabel?.font          = Fonts.buttons
     }
     
     
@@ -58,10 +57,9 @@ class NewNoteVC: UIViewController {
     @IBAction func saveButton(_ sender: Any) {
         
         let note = Note(context: context)
-        
-        note.date = Date()
-        note.text = textView.text
-        note.place = place
+        note.date   = Date()
+        note.text   = textView.text
+        note.place  = place
         
         appDelegate.saveContext()
         delegate?.noteAdded()

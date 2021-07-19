@@ -11,8 +11,7 @@ import CoreData
 
 class InfoVC: UIViewController {
     
-    var place: Place?    
-
+    var place: Place?
     
     @IBOutlet weak var type: UILabel!
     @IBOutlet weak var descript: UILabel!

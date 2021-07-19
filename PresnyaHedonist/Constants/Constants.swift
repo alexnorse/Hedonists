@@ -13,22 +13,20 @@ enum VControllersID {
     static let MAP_VC               = "MapVC"
     static let INFO_VC              = "InfoVC"
     static let NOTELIST_VC          = "NoteListVC"
-    static let NOTES_EMPTYSTATE     = "NotesEmptystateVC"
     static let NEWNOTE_VC           = "NewNoteVC"
     static let FAVORITES_VC         = "FavoritesVC"
-    static let FAVORITES_EMPTYSTATE = "FavoritesEmptystateVC"
 }
 
 
 enum CellsID {
-    static let FAVORITES_CELL   = "favoritesCell"
-    static let FEED_CELL        = "feedCell"
-    static let NOTES_CELL       = "notesCell"
+    static let FAVORITES_CELL       = "favoritesCell"
+    static let FEED_CELL            = "feedCell"
+    static let NOTES_CELL           = "notesCell"
 }
 
 
 enum FirstLaunchCheck {
-    static let PRELOAD_DATA     = "Preload"
+    static let PRELOAD_DATA         = "Preload"
 }
 
 
@@ -41,18 +39,18 @@ enum UISettings {
 enum Errors {
     static let databaseError    = "Невозможно получить доступ к базе данных☹️"
     static let fetchError       = "Ошибка загрузки ленты☹️"
-    static let faillURL         = "Ошибка загрузки страницы☹️ Проверьте соединение с интернетом"
+    static let faillURL         = "Ошибка загрузки страницы☹️ \nПроверьте соединение с интернетом"
 }
 
 
 enum EmptyStates {
-    static let notesEmpty = "У Вас пока нет заметок об этом месте. Добавьте свои впечатления после посещения 🖋"
-    static let favsEmpty = "Пока ни одно место не добавлено в избранное🤷‍♀️🤷‍♂️ \nПосмотрите, что интересного для Вас есть в нашей подборке🧐"
+    static let notesEmpty       = "У Вас пока нет заметок об этом месте. Добавьте свои впечатления после посещения 🖋"
+    static let favsEmpty        = "Пока ни одно место не добавлено в избранное🤷‍♀️🤷‍♂️ \nПосмотрите, что интересного для Вас есть в нашей подборке🧐"
 }
 
 
 enum Alerts {
-    static let addToFavs = "Добавлено в Избранное"
+    static let addToFavs        = "Добавлено в Избранное"
 }
 
 
@@ -75,7 +73,7 @@ enum Fonts {
     static let buttons          = UIFont(name: "LabGrotesque-Bold", size: 18)
         
     static let tableTtles       = UIFont(name: "LabGrotesque-Medium", size: 18)
-    static let tableSubheads    = UIFont(name: "LabGrotesque-Light", size: 16)
+    static let tableSubheads    = UIFont(name: "LabGrotesque-Regular", size: 16)
 }
 
 

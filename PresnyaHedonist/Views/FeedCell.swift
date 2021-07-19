@@ -26,13 +26,13 @@ class FeedCell: UITableViewCell {
     
     
     func designSettings() {
-        placeImage.layer.cornerRadius = UISettings.cornerRadius
-        placeName.font = Fonts.headlines
+        placeImage.layer.cornerRadius   = UISettings.cornerRadius
+        placeName.font                  = Fonts.headlines
     }
     
     
     func setCell(_ place: Place) {
-        placeImage.image = UIImage(named: place.image!)
-        placeName.text = place.name
+        placeImage.image    = UIImage(named: place.image!)
+        placeName.text      = place.name
     }
 }

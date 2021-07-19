@@ -29,33 +29,12 @@ class FavoritesVC: UIViewController, UITableViewDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         configureController()
-        fetchFavs()
     }
     
     
     func configureController() {
         navigationController?.navigationBar.prefersLargeTitles = true
         title = Titles.favsTitle
-    }
-    
-    
-    func fetchFavs() {
-        if let place = place {
-            let request: NSFetchRequest<Place> = Place.fetchRequest()
-            let sort = NSSortDescriptor(key: "name", ascending: false)
-            request.sortDescriptors = [sort]
-            do {
-                fetchedPlaces = NSFetchedResultsController(fetchRequest: request,
-                                                           managedObjectContext: context,
-                                                           sectionNameKeyPath: nil,
-                                                           cacheName: nil)
-                try fetchedPlaces?.performFetch()
-                
-            } catch {}
-        }
-        DispatchQueue.main.async {
-            self.tableViewFavorites.reloadData()
-        }
     }
 }
 
