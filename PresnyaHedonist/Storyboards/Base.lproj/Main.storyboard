@@ -65,38 +65,6 @@
             </objects>
             <point key="canvasLocation" x="312" y="826"/>
         </scene>
-        <!--Favorites EmptystateVC-->
-        <scene sceneID="ID9-sG-C1o">
-            <objects>
-                <viewController storyboardIdentifier="FavoritesEmptystateVC" id="xF4-5v-mPf" customClass="FavoritesEmptystateVC" customModule="PresnyaHedonist" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Cf6-2w-VBP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fs-Tm-uTD">
-                                <rect key="frame" x="50" y="437.5" width="314" height="21.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="pT0-Pj-vAN"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="9fs-Tm-uTD" firstAttribute="centerX" secondItem="Cf6-2w-VBP" secondAttribute="centerX" id="N13-LD-ipp"/>
-                            <constraint firstItem="9fs-Tm-uTD" firstAttribute="centerY" secondItem="Cf6-2w-VBP" secondAttribute="centerY" id="PMm-H9-Eo1"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="9fs-Tm-uTD" secondAttribute="trailing" constant="30" id="Vs0-PG-Lgj"/>
-                            <constraint firstItem="9fs-Tm-uTD" firstAttribute="leading" secondItem="Cf6-2w-VBP" secondAttribute="leadingMargin" constant="30" id="ino-B0-D1C"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="emptyStateLabel" destination="9fs-Tm-uTD" id="aAx-r9-dme"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ELC-oo-Af8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1196" y="826"/>
-        </scene>
         <!--FeedVC-->
         <scene sceneID="31s-wa-i6A">
             <objects>
@@ -336,37 +304,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SYj-i2-9dL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2954" y="826"/>
-        </scene>
-        <!--Notes EmptystateVC-->
-        <scene sceneID="7I0-sq-elh">
-            <objects>
-                <viewController storyboardIdentifier="NotesEmptystateVC" id="uIB-2R-3Rf" customClass="NotesEmptystateVC" customModule="PresnyaHedonist" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7Kr-Zf-hk2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n45-Dm-7wS">
-                                <rect key="frame" x="50" y="144" width="314" height="21.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="MAK-o7-SHk"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="n45-Dm-7wS" secondAttribute="trailing" constant="30" id="3j2-Hx-BNJ"/>
-                            <constraint firstItem="n45-Dm-7wS" firstAttribute="leading" secondItem="7Kr-Zf-hk2" secondAttribute="leadingMargin" constant="30" id="NxZ-ej-qWo"/>
-                            <constraint firstItem="n45-Dm-7wS" firstAttribute="top" secondItem="MAK-o7-SHk" secondAttribute="top" constant="100" id="g4m-o2-r7P"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="emptyLabel" destination="n45-Dm-7wS" id="WyC-Sx-fJy"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TRf-Qf-GRt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4694" y="826"/>
         </scene>
         <!--New NoteVC-->
         <scene sceneID="1hM-yh-aG5">
