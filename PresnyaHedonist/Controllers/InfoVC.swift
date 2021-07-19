@@ -12,8 +12,7 @@ import CoreData
 class InfoVC: UIViewController {
     
     var place: Place?    
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
     
     @IBOutlet weak var type: UILabel!
     @IBOutlet weak var descript: UILabel!
@@ -73,6 +72,7 @@ class InfoVC: UIViewController {
     
     
     @IBAction func addToFavsTapped(_ sender: Any) {
+        
         let alert = UIAlertController(title: "♥️",
                                       message: Alerts.addToFavs,
                                       preferredStyle: .alert)
