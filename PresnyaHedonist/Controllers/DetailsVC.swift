@@ -43,8 +43,8 @@ class DetailsVC: UIViewController {
         imageView.image = UIImage(named: place!.image!)
         placeName.text = place?.name
         
-        segmentChange(self.infoSegments)
         designSettings()
+        segmentChange(self.infoSegments)
     }
 
     

@@ -28,7 +28,6 @@ class FeedCell: UITableViewCell {
     func designSettings() {
         placeImage.layer.cornerRadius       = UISettings.cornerRadius
         placeName.font                      = Fonts.headlines
-        
         configureGradient()
     }
     

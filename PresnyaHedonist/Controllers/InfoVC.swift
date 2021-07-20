@@ -63,7 +63,8 @@ class InfoVC: UIViewController {
                                           preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok",
                                           style: .default))
-            present(alert, animated: true)
+            
+            DispatchQueue.main.async { self.present(alert, animated: true) }
             return
         }
         present(SFSafariViewController(url: url), animated: true)
@@ -77,6 +78,7 @@ class InfoVC: UIViewController {
                                       preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok",
                                       style: .default))
-        present(alert, animated: true)
+        
+        DispatchQueue.main.async { self.present(alert, animated: true) }
     }
 }

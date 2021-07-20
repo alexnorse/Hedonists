@@ -57,7 +57,8 @@ class NoteListVC: UIViewController {
                 try fetchedNotes?.performFetch()
             } catch {}
         }
-        tableView.reloadData()
+        
+        DispatchQueue.main.async { self.tableView.reloadData() }
     }
     
     
