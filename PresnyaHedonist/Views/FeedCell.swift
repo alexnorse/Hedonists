@@ -26,8 +26,26 @@ class FeedCell: UITableViewCell {
     
     
     func designSettings() {
-        placeImage.layer.cornerRadius   = UISettings.cornerRadius
-        placeName.font                  = Fonts.headlines
+        placeImage.layer.cornerRadius       = UISettings.cornerRadius
+        placeName.font                      = Fonts.headlines
+        
+        configureGradient()
+    }
+    
+    
+    func configureGradient() {
+        let gradientLayer   = CAGradientLayer()
+        
+        gradientLayer.frame = placeImage.frame
+        let blackColor      = UIColor.black.cgColor
+        let clearColor      = UIColor.clear.cgColor
+        
+        gradientLayer.colors = [
+            clearColor,
+            blackColor
+        ]
+        
+        placeImage.layer.addSublayer(gradientLayer)
     }
     
     

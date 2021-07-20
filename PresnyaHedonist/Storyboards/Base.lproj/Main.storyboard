@@ -78,33 +78,33 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="feedCell" id="zJe-b1-Ipn" customClass="FeedCell" customModule="PresnyaHedonist" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="262.5"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="250.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zJe-b1-Ipn" id="L0j-UN-zz8">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="262.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="250.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XOW-YZ-cff">
-                                                    <rect key="frame" x="35" y="16" width="344" height="230.5"/>
+                                                    <rect key="frame" x="25" y="10" width="364" height="230.5"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="230" id="gxJ-ZQ-m8l"/>
+                                                        <constraint firstAttribute="height" constant="230" id="eip-Uh-weB"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="doY-vk-xej">
-                                                    <rect key="frame" x="50" y="181" width="314" height="29"/>
+                                                    <rect key="frame" x="50" y="200.5" width="314" height="29"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="XOW-YZ-cff" firstAttribute="top" secondItem="L0j-UN-zz8" secondAttribute="topMargin" constant="5" id="2Ta-wB-VMR"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="XOW-YZ-cff" secondAttribute="trailing" constant="15" id="9cM-tg-ZbF"/>
-                                                <constraint firstItem="doY-vk-xej" firstAttribute="leading" secondItem="L0j-UN-zz8" secondAttribute="leadingMargin" constant="30" id="LJV-Ms-i6g"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="doY-vk-xej" secondAttribute="trailing" constant="30" id="UVs-eu-GqH"/>
-                                                <constraint firstItem="XOW-YZ-cff" firstAttribute="leading" secondItem="L0j-UN-zz8" secondAttribute="leadingMargin" constant="15" id="Z3v-8u-lZV"/>
-                                                <constraint firstItem="doY-vk-xej" firstAttribute="top" secondItem="L0j-UN-zz8" secondAttribute="topMargin" constant="170" id="e6o-1R-maT"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="XOW-YZ-cff" secondAttribute="bottom" constant="5" id="t12-r3-FDg"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="doY-vk-xej" secondAttribute="trailing" constant="30" id="8a6-gP-Ch6"/>
+                                                <constraint firstItem="XOW-YZ-cff" firstAttribute="centerY" secondItem="L0j-UN-zz8" secondAttribute="centerY" id="Bag-lB-dcb"/>
+                                                <constraint firstItem="XOW-YZ-cff" firstAttribute="centerX" secondItem="L0j-UN-zz8" secondAttribute="centerX" id="DKx-qE-6S3"/>
+                                                <constraint firstAttribute="height" secondItem="XOW-YZ-cff" secondAttribute="height" constant="20" id="TiT-2O-MP6"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="doY-vk-xej" secondAttribute="bottom" constant="10" id="X8c-5G-dh6"/>
+                                                <constraint firstItem="XOW-YZ-cff" firstAttribute="width" secondItem="L0j-UN-zz8" secondAttribute="width" constant="-50" id="c6Y-In-Lha"/>
+                                                <constraint firstItem="doY-vk-xej" firstAttribute="leading" secondItem="L0j-UN-zz8" secondAttribute="leadingMargin" constant="30" id="zAa-py-kc4"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
