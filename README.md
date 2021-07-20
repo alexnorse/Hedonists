@@ -17,3 +17,5 @@ Presnya is one of the oldest, historical and at the same time, fashionable distr
 - MapKit, MapView and Annotations
 - JSON data parsing
 - Safari Services
+- TabBarView
+- Search bar and Filters
