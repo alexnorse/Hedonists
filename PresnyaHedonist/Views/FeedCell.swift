@@ -36,7 +36,6 @@ class FeedCell: UITableViewCell {
     func configureGradient() {
         let gradientLayer   = CAGradientLayer()
         
-        gradientLayer.frame = placeImage.frame
         let blackColor      = UIColor.black.cgColor
         let clearColor      = UIColor.clear.cgColor
         
@@ -46,6 +45,8 @@ class FeedCell: UITableViewCell {
         ]
         
         placeImage.layer.addSublayer(gradientLayer)
+        gradientLayer.frame = bounds
+        gradientLayer.cornerRadius = UISettings.cornerRadius
     }
     
     
