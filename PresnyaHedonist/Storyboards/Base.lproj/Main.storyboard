@@ -171,12 +171,27 @@
                                             <action selector="segmentChange:" destination="keh-8C-f5D" eventType="valueChanged" id="PXU-bx-2GP"/>
                                         </connections>
                                     </segmentedControl>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WnO-zk-yYC">
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iUf-Uh-8KW">
                                         <rect key="frame" x="0.0" y="411" width="414" height="397"/>
-                                    </view>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WnO-zk-yYC">
+                                                <rect key="frame" x="20" y="20" width="374" height="397"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="397" id="fZ9-bB-Zcd"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="WnO-zk-yYC" firstAttribute="width" secondItem="iUf-Uh-8KW" secondAttribute="width" constant="-40" id="3fP-rw-qmc"/>
+                                            <constraint firstAttribute="bottom" secondItem="WnO-zk-yYC" secondAttribute="bottom" constant="-20" id="Avy-Xf-gCk"/>
+                                            <constraint firstItem="WnO-zk-yYC" firstAttribute="top" secondItem="iUf-Uh-8KW" secondAttribute="top" constant="20" id="L7W-IB-Igf"/>
+                                            <constraint firstAttribute="trailing" secondItem="WnO-zk-yYC" secondAttribute="trailing" constant="-20" id="bsD-Mz-FVZ"/>
+                                            <constraint firstItem="WnO-zk-yYC" firstAttribute="leading" secondItem="iUf-Uh-8KW" secondAttribute="leading" constant="20" id="gQW-Q3-a79"/>
+                                        </constraints>
+                                    </scrollView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="WnO-zk-yYC" firstAttribute="width" secondItem="Rbq-Ce-YGh" secondAttribute="width" id="71X-q6-Azb"/>
+                                    <constraint firstItem="iUf-Uh-8KW" firstAttribute="leading" secondItem="0tI-32-bnI" secondAttribute="leading" id="7Wm-Mg-5dd"/>
                                     <constraint firstItem="p23-59-jCi" firstAttribute="width" secondItem="Rbq-Ce-YGh" secondAttribute="width" constant="-40" id="eTf-d4-9Rp"/>
                                     <constraint firstItem="0tI-32-bnI" firstAttribute="width" secondItem="Rbq-Ce-YGh" secondAttribute="width" id="sIG-ob-5jt"/>
                                     <constraint firstItem="6zY-GM-gBG" firstAttribute="width" secondItem="Rbq-Ce-YGh" secondAttribute="width" constant="-40" id="zj8-sg-kJM"/>
