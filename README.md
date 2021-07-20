@@ -10,7 +10,7 @@ Presnya is one of the oldest, historical and at the same time, fashionable distr
 - Save your favorite places for the future
 - Learn more - info, addresses, working hours, social media links, etc.
 - Make notes, plan your routes and book the best restaurants via phone call
-- Enjoy life and be a true Hedonist and support the local business
+- Enjoy life, be a true Hedonist and support the local business
 
 ## Tech Stack:
 - CoreData
