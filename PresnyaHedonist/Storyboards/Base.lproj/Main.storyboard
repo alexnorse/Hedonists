@@ -183,7 +183,7 @@
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="WnO-zk-yYC" firstAttribute="width" secondItem="iUf-Uh-8KW" secondAttribute="width" id="3fP-rw-qmc"/>
-                                            <constraint firstAttribute="bottom" secondItem="WnO-zk-yYC" secondAttribute="bottom" id="Avy-Xf-gCk"/>
+                                            <constraint firstAttribute="bottom" secondItem="WnO-zk-yYC" secondAttribute="bottom" constant="50" id="Avy-Xf-gCk"/>
                                             <constraint firstItem="WnO-zk-yYC" firstAttribute="top" secondItem="iUf-Uh-8KW" secondAttribute="top" constant="10" id="L7W-IB-Igf"/>
                                             <constraint firstAttribute="trailing" secondItem="WnO-zk-yYC" secondAttribute="trailing" id="bsD-Mz-FVZ"/>
                                             <constraint firstItem="WnO-zk-yYC" firstAttribute="leading" secondItem="iUf-Uh-8KW" secondAttribute="leading" id="gQW-Q3-a79"/>
