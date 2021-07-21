@@ -37,6 +37,7 @@ class NoteListVC: UIViewController {
     
     func designSettings() {
         addnewNote.titleLabel?.font = Fonts.buttons
+        addnewNote.layer.cornerRadius = UISettings.cornerRadius
         tableView.removeExcessCells()
     }
     
