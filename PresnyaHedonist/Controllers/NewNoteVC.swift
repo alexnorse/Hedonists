@@ -43,9 +43,6 @@ class NewNoteVC: UIViewController {
         noteView.layer.shadowRadius     = 5
         
         textView.font = Fonts.bodyText
-        
-        save.titleLabel?.font           = Fonts.buttons
-        close.titleLabel?.font          = Fonts.buttons
     }
     
     

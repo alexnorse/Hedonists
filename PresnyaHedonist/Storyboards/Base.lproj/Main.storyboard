@@ -256,7 +256,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="US4-Hv-Uuq">
-                                <rect key="frame" x="0.0" y="44" width="414" height="758"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="753"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="notesCell" textLabel="tGy-VR-IbE" detailTextLabel="rvK-cf-1Q1" style="IBUITableViewCellStyleSubtitle" id="QQH-lR-WzP">
@@ -308,7 +308,7 @@
                             <constraint firstItem="US4-Hv-Uuq" firstAttribute="leading" secondItem="dry-8T-rSr" secondAttribute="leading" id="N0S-8j-m8U"/>
                             <constraint firstItem="iGh-Tz-xRN" firstAttribute="bottom" secondItem="dry-8T-rSr" secondAttribute="bottom" id="RGa-4P-A0U"/>
                             <constraint firstItem="iGh-Tz-xRN" firstAttribute="centerX" secondItem="0qf-SW-8Tu" secondAttribute="centerX" id="o98-Hi-iUI"/>
-                            <constraint firstItem="iGh-Tz-xRN" firstAttribute="top" secondItem="US4-Hv-Uuq" secondAttribute="bottom" constant="10" id="uhG-B9-jI1"/>
+                            <constraint firstItem="iGh-Tz-xRN" firstAttribute="top" secondItem="US4-Hv-Uuq" secondAttribute="bottom" constant="15" id="uhG-B9-jI1"/>
                         </constraints>
                     </view>
                     <connections>
@@ -475,11 +475,10 @@
                     </view>
                     <connections>
                         <outlet property="addToFavs" destination="a7U-pc-HJv" id="XKj-63-jND"/>
-                        <outlet property="addToFavsButton" destination="a7U-pc-HJv" id="hjG-lz-xqT"/>
                         <outlet property="address" destination="5hd-54-ZMe" id="oX7-2b-Zth"/>
                         <outlet property="descript" destination="umN-fv-YQU" id="zTZ-ym-K0v"/>
                         <outlet property="instagramLink" destination="lOh-Lb-A5L" id="BMi-TJ-h3y"/>
-                        <outlet property="phone" destination="CtH-7E-Ysv" id="3bF-3j-quX"/>
+                        <outlet property="phone" destination="CtH-7E-Ysv" id="a1z-ER-696"/>
                         <outlet property="type" destination="zGr-It-cAB" id="ViY-w8-YQr"/>
                         <outlet property="workHours" destination="mro-KO-Die" id="L0A-jP-Ck2"/>
                     </connections>
