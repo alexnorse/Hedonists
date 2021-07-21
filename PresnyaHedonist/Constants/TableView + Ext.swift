@@ -21,7 +21,7 @@ extension UITableView {
                                                  height: self.bounds.size.height))
         
         messageLabel.text                        = message
-        messageLabel.numberOfLines               = 0
+        messageLabel.numberOfLines               = 3
         messageLabel.textColor                   = .secondaryLabel
         messageLabel.lineBreakMode               = .byTruncatingTail
         messageLabel.textAlignment               = .center
@@ -31,5 +31,11 @@ extension UITableView {
         
         self.backgroundView = messageLabel
         self.separatorStyle = .none
+    }
+    
+    
+    func restore() {
+        self.backgroundView = nil
+        self.separatorStyle = .singleLine
     }
 }

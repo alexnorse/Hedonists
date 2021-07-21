@@ -55,7 +55,15 @@ class NoteListVC: UIViewController {
                                                           sectionNameKeyPath: nil,
                                                           cacheName: nil)
                 try fetchedNotes?.performFetch()
-            } catch {}
+            } catch {
+                let alert = UIAlertController(title: AlertTitle.error,
+                                              message: Errors.fetchError,
+                                              preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok",
+                                              style: .default))
+                
+                DispatchQueue.main.async { self.present(alert, animated: true) }
+            }
         }
         
         DispatchQueue.main.async { self.tableView.reloadData()}
@@ -85,7 +93,7 @@ extension NoteListVC: UITableViewDelegate, UITableViewDataSource {
         if fetchedNotes?.fetchedObjects?.count == 0 {
             self.tableView.setEmptyState(EmptyStates.notesEmpty)
         } else {
-            fetchedNotes?.fetchedObjects?.count ?? 0
+            self.tableView.restore()
         }
         
         return fetchedNotes?.fetchedObjects?.count ?? 0

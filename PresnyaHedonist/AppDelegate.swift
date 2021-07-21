@@ -28,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
             
             let url = URL(fileURLWithPath: path!)
+            
             do {
                 let data = try Data(contentsOf: url)
                 let jsonArray = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as! [[String : Any]]
@@ -45,7 +46,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     place.image       = data["image"] as? String
                     place.url         = data["url"] as? String
                 }
-            } catch {}
+            } catch {
+                print("AppDelegate Fetch Error")
+            }
             
             self.saveContext()
             defaults.setValue(true, forKey: FirstLaunchCheck.PRELOAD_DATA)
