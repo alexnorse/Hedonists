@@ -10,20 +10,9 @@ import UIKit
 class FeedVC: UIViewController {
     
     var places = [Place]()
-    var filteredPlaces = [Place]()
-    let searchController = UISearchController(searchResultsController: nil)
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     @IBOutlet weak var tableViewFeed: UITableView!
-    
-    var searchBarIsEmpty: Bool {
-        guard let text = searchController.searchBar.text else { return false }
-        return text.isEmpty
-    }
-    
-    var isFiltered: Bool {
-        return searchController.isActive && !searchBarIsEmpty
-    }
     
 
     override func viewDidLoad() {
@@ -33,7 +22,6 @@ class FeedVC: UIViewController {
         tableViewFeed.dataSource = self
         
         configureController()
-        configureSearchController()
         fetchData()
     }
     
@@ -60,28 +48,14 @@ class FeedVC: UIViewController {
     }
     
     
-    func configureSearchController() {
-        searchController.searchResultsUpdater                   = self
-        searchController.obscuresBackgroundDuringPresentation   = false
-        searchController.searchBar.placeholder                  = "Поиск..."
-        navigationItem.searchController                         = searchController
-        definesPresentationContext                              = true
-    }
-    
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let indexPath = tableViewFeed.indexPathForSelectedRow {
-            
-            let place: Place
-            if isFiltered {
-                place = filteredPlaces[indexPath.row]
-            } else {
-                place = places[indexPath.row]
-            }
-            
-            let destination = segue.destination as! DetailsVC
-            destination.place = place
+        if tableViewFeed.indexPathForSelectedRow == nil {
+            return
         }
+        
+        let selectedPlace = places[tableViewFeed.indexPathForSelectedRow!.row]
+        let destination = segue.destination as! DetailsVC
+        destination.place = selectedPlace
     }
 }
 
@@ -89,44 +63,21 @@ class FeedVC: UIViewController {
 extension FeedVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if isFiltered {
-            return filteredPlaces.count
-        }
-        return places.count
+        places.count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellsID.FEED_CELL) as! FeedCell
         
-        var place: Place
-        
-        if isFiltered {
-            place = filteredPlaces[indexPath.row]
-        } else {
-            place = places[indexPath.row]
-        }
-        
+        let place = places[indexPath.row]
         cell.setCell(place)
+        
         return cell
     }
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableViewFeed.deselectRow(at: indexPath, animated: true)
-    }
-}
-
-
-extension FeedVC: UISearchResultsUpdating {
-    
-    func updateSearchResults(for searchController: UISearchController) {
-        filterContentForSearch(searchController.searchBar.text!)
-    }
-    
-    
-    func filterContentForSearch(_ searchText: String) {
-        filteredPlaces = places.filter { ($0.name?.lowercased().contains(searchText.lowercased()))! }
-        DispatchQueue.main.async { self.tableViewFeed.reloadData() }
     }
 }
