@@ -34,7 +34,7 @@ class NewNoteVC: UIViewController {
     
     
     func designSettings() {
-        view.backgroundColor            = UIColor(red: 0, green: 0, blue: 0, alpha: 0.75)
+        view.backgroundColor            = UIColor(red: 0, green: 0, blue: 0, alpha: 0.7)
         
         noteView.layer.cornerRadius     = UISettings.cornerRadius
         noteView.layer.shadowColor      = CGColor(red: 0, green: 0, blue: 0, alpha: 0.5)
