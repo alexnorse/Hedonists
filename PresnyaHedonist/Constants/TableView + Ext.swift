@@ -21,7 +21,7 @@ extension UITableView {
                                                  height: self.bounds.size.height))
         
         messageLabel.text                        = message
-        messageLabel.numberOfLines               = 3
+        messageLabel.numberOfLines               = 0
         messageLabel.textColor                   = .secondaryLabel
         messageLabel.lineBreakMode               = .byTruncatingTail
         messageLabel.textAlignment               = .center

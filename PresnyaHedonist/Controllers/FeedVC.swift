@@ -132,11 +132,11 @@ extension FeedVC: UISearchResultsUpdating {
     
     
     func contentFilter(_ searchText: String, scope: String = "Все") {
-        filteredPlaces = places.filter({ place -> Bool in
+        filteredPlaces = places.filter({ (place) -> Bool in
             let categoryMatch = (scope == "Все") || (place.category == scope)
             if searchBarIsEmpty { return categoryMatch }
             
-            return categoryMatch && (place.name?.lowercased().contains(searchText.lowercased()) != nil)
+            return categoryMatch && place.name!.lowercased().contains(searchText.lowercased())
         })
     
         DispatchQueue.main.async { self.tableViewFeed.reloadData() }
