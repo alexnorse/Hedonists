@@ -8,6 +8,7 @@
 import UIKit
 import SafariServices
 import CoreData
+import CallKit
 
 class InfoVC: UIViewController {
     
@@ -38,7 +39,7 @@ class InfoVC: UIViewController {
         descript.text   = place?.descript
         address.text    = place?.address
         workHours.text  = place?.workhours
-        phone.text      = place?.phone?.phoneFormatter()
+        phone.text      = place?.phone
     }
     
     
@@ -48,6 +49,19 @@ class InfoVC: UIViewController {
         address.font                    = Fonts.bodyAccents
         workHours.font                  = Fonts.bodyAccents
         phone.font                      = Fonts.bodyAccents
+    }
+    
+    
+    @IBAction func phoneCall(_ sender: Any) {
+        let formattedNumber = place?.phone?.components(separatedBy: NSCharacterSet.decimalDigits.inverted).joined(separator: "")
+        
+        if let url = NSURL(string: ("tel:" + formattedNumber!)) {
+            if #available(iOS 10, *) {
+                UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
+            } else {
+                UIApplication.shared.openURL(url as URL)
+            }
+        }
     }
     
     

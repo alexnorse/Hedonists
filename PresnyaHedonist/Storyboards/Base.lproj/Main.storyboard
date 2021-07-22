@@ -382,7 +382,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="H1o-4i-etU">
-                                <rect key="frame" x="20" y="54" width="374" height="194.5"/>
+                                <rect key="frame" x="20" y="54" width="374" height="234.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Тип" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zGr-It-cAB">
                                         <rect key="frame" x="0.0" y="0.0" width="28" height="25"/>
@@ -426,8 +426,15 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Of3-2Y-KDG">
+                                        <rect key="frame" x="0.0" y="169.5" width="77" height="30"/>
+                                        <state key="normal" title="Позвонить"/>
+                                        <connections>
+                                            <action selector="phoneCall:" destination="q2e-RO-IXc" eventType="touchUpInside" id="Zrf-SS-w31"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lOh-Lb-A5L">
-                                        <rect key="frame" x="0.0" y="169.5" width="73" height="25"/>
+                                        <rect key="frame" x="0.0" y="209.5" width="73" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="5zj-1u-Qjq"/>
                                         </constraints>
