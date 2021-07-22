@@ -45,7 +45,7 @@ class FeedVC: UIViewController {
     func configureController() {
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: Fonts.vcHeads!]
-        title = Titles.feedTitle
+        title = VCTitles.feedTitle
     }
     
     

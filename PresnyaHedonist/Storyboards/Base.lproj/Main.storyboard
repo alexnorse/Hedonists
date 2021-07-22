@@ -9,58 +9,17 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--FavoritesVC-->
+        <!--FullmapVC-->
         <scene sceneID="fDr-av-YAL">
             <objects>
-                <viewController storyboardIdentifier="FavoritesVC" id="mkU-Al-IOF" customClass="FavoritesVC" customModule="PresnyaHedonist" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FullmapVC" id="mkU-Al-IOF" customClass="FullmapVC" customModule="PresnyaHedonist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tgl-MH-9Gp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1ot-7X-Pe5">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="favoritesCell" textLabel="Vpk-ne-aYv" detailTextLabel="kwn-bz-hYS" style="IBUITableViewCellStyleSubtitle" id="KYu-F8-XNt">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="56.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KYu-F8-XNt" id="zaY-uR-Tmb">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="56.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" tag="1" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vpk-ne-aYv">
-                                                    <rect key="frame" x="20" y="7" width="31.5" height="19.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" tag="2" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kwn-bz-hYS">
-                                                    <rect key="frame" x="20" y="29.5" width="50" height="17"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="MMW-Po-tws"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="1ot-7X-Pe5" firstAttribute="leading" secondItem="MMW-Po-tws" secondAttribute="leading" id="OkL-f8-0ah"/>
-                            <constraint firstItem="MMW-Po-tws" firstAttribute="trailing" secondItem="1ot-7X-Pe5" secondAttribute="trailing" id="ZlF-Wf-oMQ"/>
-                            <constraint firstItem="1ot-7X-Pe5" firstAttribute="top" secondItem="MMW-Po-tws" secondAttribute="top" id="feO-oy-G50"/>
-                            <constraint firstItem="MMW-Po-tws" firstAttribute="bottom" secondItem="1ot-7X-Pe5" secondAttribute="bottom" id="whI-fG-EfP"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="JFR-Gl-KAh"/>
-                    <connections>
-                        <outlet property="tableViewFavorites" destination="1ot-7X-Pe5" id="MhJ-xr-5sx"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ICd-2g-TRM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -423,7 +382,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="H1o-4i-etU">
-                                <rect key="frame" x="20" y="54" width="374" height="229.5"/>
+                                <rect key="frame" x="20" y="54" width="374" height="194.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Тип" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zGr-It-cAB">
                                         <rect key="frame" x="0.0" y="0.0" width="28" height="25"/>
@@ -480,19 +439,6 @@
                                             <action selector="instagramLink:" destination="q2e-RO-IXc" eventType="touchUpInside" id="aIH-O7-AVI"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7U-pc-HJv">
-                                        <rect key="frame" x="0.0" y="204.5" width="172" height="25"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="25" id="fLJ-NQ-vCg"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <state key="normal" title="Добавить в избранное">
-                                            <color key="titleColor" systemColor="linkColor"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="addToFavsTapped:" destination="q2e-RO-IXc" eventType="touchUpInside" id="NY0-TN-fef"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -505,7 +451,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="addToFavs" destination="a7U-pc-HJv" id="XKj-63-jND"/>
                         <outlet property="address" destination="5hd-54-ZMe" id="oX7-2b-Zth"/>
                         <outlet property="descript" destination="umN-fv-YQU" id="zTZ-ym-K0v"/>
                         <outlet property="instagramLink" destination="lOh-Lb-A5L" id="BMi-TJ-h3y"/>
@@ -556,11 +501,11 @@
             </objects>
             <point key="canvasLocation" x="312" y="59"/>
         </scene>
-        <!--Избранное-->
+        <!--Карта-->
         <scene sceneID="lWt-Nb-Ns5">
             <objects>
                 <navigationController storyboardIdentifier="FavoritesNC" automaticallyAdjustsScrollViewInsets="NO" id="GLF-kf-hDy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Избранное" image="heart.fill" catalog="system" id="I1x-ut-eWa"/>
+                    <tabBarItem key="tabBarItem" title="Карта" image="map.fill" catalog="system" id="I1x-ut-eWa"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="83t-I5-mNw">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -578,8 +523,8 @@
     </scenes>
     <resources>
         <image name="bolt.fill" catalog="system" width="101" height="128"/>
-        <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="info" catalog="system" width="93" height="128"/>
+        <image name="map.fill" catalog="system" width="128" height="110"/>
         <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
         <image name="note.text" catalog="system" width="128" height="106"/>
         <namedColor name="AccentColor">
