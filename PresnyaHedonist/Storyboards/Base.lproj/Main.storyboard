@@ -226,7 +226,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="US4-Hv-Uuq">
-                                <rect key="frame" x="0.0" y="64" width="414" height="683"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="718"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="notesCell" textLabel="tGy-VR-IbE" detailTextLabel="rvK-cf-1Q1" style="IBUITableViewCellStyleSubtitle" id="QQH-lR-WzP">
@@ -274,13 +274,12 @@
                         <viewLayoutGuide key="safeArea" id="dry-8T-rSr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="iGh-Tz-xRN" firstAttribute="centerX" secondItem="0qf-SW-8Tu" secondAttribute="centerX" id="Eia-aG-byh"/>
-                            <constraint firstItem="iGh-Tz-xRN" firstAttribute="top" secondItem="US4-Hv-Uuq" secondAttribute="bottom" constant="40" id="Fuu-VI-aLX"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="iGh-Tz-xRN" secondAttribute="bottom" constant="25" id="L4Y-xu-zbW"/>
-                            <constraint firstItem="US4-Hv-Uuq" firstAttribute="trailing" secondItem="dry-8T-rSr" secondAttribute="trailing" id="P2A-tb-EpT"/>
-                            <constraint firstItem="US4-Hv-Uuq" firstAttribute="top" secondItem="dry-8T-rSr" secondAttribute="top" constant="20" id="dEh-lg-kdg"/>
-                            <constraint firstItem="US4-Hv-Uuq" firstAttribute="leading" secondItem="dry-8T-rSr" secondAttribute="leading" id="eN0-p8-Z8j"/>
-                            <constraint firstItem="US4-Hv-Uuq" firstAttribute="centerX" secondItem="0qf-SW-8Tu" secondAttribute="centerX" id="yZX-5r-VUc"/>
+                            <constraint firstItem="US4-Hv-Uuq" firstAttribute="trailing" secondItem="dry-8T-rSr" secondAttribute="trailing" id="6pc-SZ-ixB"/>
+                            <constraint firstItem="iGh-Tz-xRN" firstAttribute="centerX" secondItem="0qf-SW-8Tu" secondAttribute="centerX" id="Ux8-PW-8ch"/>
+                            <constraint firstItem="US4-Hv-Uuq" firstAttribute="top" secondItem="dry-8T-rSr" secondAttribute="top" id="WEb-hY-4sW"/>
+                            <constraint firstItem="dry-8T-rSr" firstAttribute="bottom" secondItem="iGh-Tz-xRN" secondAttribute="bottom" constant="25" id="Xhc-r6-OXZ"/>
+                            <constraint firstItem="iGh-Tz-xRN" firstAttribute="top" secondItem="US4-Hv-Uuq" secondAttribute="bottom" constant="25" id="Y6R-vS-Zpy"/>
+                            <constraint firstItem="US4-Hv-Uuq" firstAttribute="leading" secondItem="dry-8T-rSr" secondAttribute="leading" id="eif-o4-Eoc"/>
                         </constraints>
                     </view>
                     <connections>
@@ -382,7 +381,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="H1o-4i-etU">
-                                <rect key="frame" x="20" y="54" width="374" height="234.5"/>
+                                <rect key="frame" x="20" y="54" width="374" height="199.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Тип" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zGr-It-cAB">
                                         <rect key="frame" x="0.0" y="0.0" width="28" height="25"/>
@@ -417,24 +416,15 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Телефон" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CtH-7E-Ysv">
-                                        <rect key="frame" x="0.0" y="134.5" width="66" height="25"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="25" id="lmY-CB-rVU"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Of3-2Y-KDG">
-                                        <rect key="frame" x="0.0" y="169.5" width="77" height="30"/>
+                                        <rect key="frame" x="0.0" y="134.5" width="77" height="30"/>
                                         <state key="normal" title="Позвонить"/>
                                         <connections>
                                             <action selector="phoneCall:" destination="q2e-RO-IXc" eventType="touchUpInside" id="Zrf-SS-w31"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lOh-Lb-A5L">
-                                        <rect key="frame" x="0.0" y="209.5" width="73" height="25"/>
+                                        <rect key="frame" x="0.0" y="174.5" width="73" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="5zj-1u-Qjq"/>
                                         </constraints>
@@ -461,7 +451,6 @@
                         <outlet property="address" destination="5hd-54-ZMe" id="oX7-2b-Zth"/>
                         <outlet property="descript" destination="umN-fv-YQU" id="zTZ-ym-K0v"/>
                         <outlet property="instagramLink" destination="lOh-Lb-A5L" id="BMi-TJ-h3y"/>
-                        <outlet property="phone" destination="CtH-7E-Ysv" id="a1z-ER-696"/>
                         <outlet property="type" destination="zGr-It-cAB" id="ViY-w8-YQr"/>
                         <outlet property="workHours" destination="mro-KO-Die" id="L0A-jP-Ck2"/>
                     </connections>

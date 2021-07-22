@@ -18,7 +18,6 @@ class InfoVC: UIViewController {
     @IBOutlet weak var descript: UILabel!
     @IBOutlet weak var address: UILabel!
     @IBOutlet weak var workHours: UILabel!
-    @IBOutlet weak var phone: UILabel!
     @IBOutlet weak var instagramLink: UIButton!
     
     
@@ -39,7 +38,6 @@ class InfoVC: UIViewController {
         descript.text   = place?.descript
         address.text    = place?.address
         workHours.text  = place?.workhours
-        phone.text      = place?.phone
     }
     
     
@@ -48,7 +46,6 @@ class InfoVC: UIViewController {
         descript.font                   = Fonts.bodyText
         address.font                    = Fonts.bodyAccents
         workHours.font                  = Fonts.bodyAccents
-        phone.font                      = Fonts.bodyAccents
     }
     
     
