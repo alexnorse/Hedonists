@@ -104,17 +104,13 @@ extension NoteListVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellsID.NOTES_CELL, for: indexPath)
         
-        let noteText = cell.viewWithTag(1) as! UILabel
-        let date = cell.viewWithTag(2) as! UILabel
-        
         let note = fetchedNotes?.object(at: indexPath)
-        if let note = note {
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "dd.MM.yy"
-            
-            noteText.text = note.text
-            date.text = dateFormatter.string(from: note.date!)
-        }
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd.MM.yy"
+        
+        cell.textLabel?.text = note?.text
+        cell.detailTextLabel?.text = dateFormatter.string(from: (note?.date)!)
+        
         return cell
     }
     
