@@ -24,7 +24,8 @@ class FeedVC: UIViewController {
     }
     
     var isFiltering: Bool {
-        return searchController.isActive && !searchBarIsEmpty
+        let searchScopeFiltering = searchController.searchBar.selectedScopeButtonIndex != 0
+        return searchController.isActive && (!searchBarIsEmpty || searchScopeFiltering)
     }
     
 
@@ -64,11 +65,14 @@ class FeedVC: UIViewController {
     
     
     func configureSearchController() {
-        searchController.searchResultsUpdater = self
-        searchController.searchBar.placeholder = "Поиск..."
-        searchController.obscuresBackgroundDuringPresentation = false
-        navigationItem.searchController = searchController
-        definesPresentationContext = true
+        searchController.searchResultsUpdater                   = self
+        searchController.searchBar.placeholder                  = "Поиск..."
+        searchController.obscuresBackgroundDuringPresentation   = false
+        navigationItem.searchController                         = searchController
+        definesPresentationContext                              = true
+        
+        searchController.searchBar.scopeButtonTitles            = ["Все", "Ресторан", "Места", "Завтраки", "Бар"]
+        searchController.searchBar.delegate                     = self
     }
     
     
@@ -121,12 +125,28 @@ extension FeedVC: UITableViewDelegate, UITableViewDataSource {
 extension FeedVC: UISearchResultsUpdating {
     
     func updateSearchResults(for searchController: UISearchController) {
-        contentFilter(searchController.searchBar.text!)
+        let searchBar = searchController.searchBar
+        let scope = searchBar.scopeButtonTitles![searchBar.selectedScopeButtonIndex]
+        contentFilter(searchController.searchBar.text!, scope: scope)
     }
     
     
-    func contentFilter(_ searchText: String) {
-        filteredPlaces = places.filter { ($0.name?.lowercased().contains(searchText.lowercased()))! }
+    func contentFilter(_ searchText: String, scope: String = "Все") {
+        filteredPlaces = places.filter({ place -> Bool in
+            let categoryMatch = (scope == "Все") || (place.category == scope)
+            if searchBarIsEmpty { return categoryMatch }
+            
+            return categoryMatch && (place.name?.lowercased().contains(searchText.lowercased()) != nil)
+        })
+    
         DispatchQueue.main.async { self.tableViewFeed.reloadData() }
+    }
+}
+
+
+extension FeedVC: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+        contentFilter(searchBar.text!, scope: searchBar.scopeButtonTitles![selectedScope])
     }
 }

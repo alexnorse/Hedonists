@@ -108,7 +108,7 @@
         "url": "https://www.instagram.com/papabvmoscow/"
     },
     {
-        "category": "Вино",
+        "category": "Бар",
         "name": "Big Wine Freaks",
         "address": "Большая Никитская ул., 62/3",
         "lat": 55.7589139,
@@ -120,7 +120,7 @@
         "url": "https://www.instagram.com/bwfmsk/"
     },
     {
-        "category": "Вино",
+        "category": "Бар",
         "name": "Wine Not?",
         "address": "ул. Сергея Макеева, д. 9, корп. 2",
         "lat": 55.76165,
@@ -132,7 +132,7 @@
         "url": "https://www.instagram.com/winenot_moscow/"
     },
     {
-        "category": "Вино",
+        "category": "Бар",
         "name": "Рассвет",
         "address": "Столярный пер., 3, к13",
         "lat": 55.7643964,
@@ -144,7 +144,7 @@
         "url": "https://www.instagram.com/rassvet.msk/"
     },
     {
-        "category": "Вино",
+        "category": "Бар",
         "name": "Практика",
         "address": "Б. Грузинская ул., 37c2",
         "lat": 55.7689174,
@@ -156,7 +156,7 @@
         "url": "https://www.instagram.com/praktikabydarvin/"
     },
     {
-        "category": "Вино",
+        "category": "Ресторан",
         "name": "Grand Cru",
         "address": "Малая Бронная ул., 22 с2",
         "lat": 55.7627635,
@@ -168,7 +168,7 @@
         "url": "https://www.instagram.com/grandcru_restaurant/"
     },
     {
-        "category": "Вино",
+        "category": "Бар",
         "name": "Grape",
         "address": "Малая Никитская ул., 16/5",
         "lat": 55.7593140,
@@ -180,7 +180,7 @@
         "url": "https://www.instagram.com/grapemoscow/"
     },
     {
-        "category": "Вино",
+        "category": "Бар",
         "name": "Виноv'n",
         "address": "Большой Козихинский пер., 15 ",
         "lat": 55.7637608,
@@ -192,7 +192,7 @@
         "url": "https://www.instagram.com/vinov.nbar/"
     },
     {
-        "category": "Концепт-стор",
+        "category": "Места",
         "name": "Byredo",
         "address": "Малая Бронная ул., 24 строение 1",
         "lat": 55.7632263,
@@ -204,7 +204,7 @@
         "url": "https://www.instagram.com/officialbyredo/"
     },
     {
-        "category": "Концепт-стор",
+        "category": "Места",
         "name": "Магазин Аптечных продуктов",
         "address": "Малая Бронная ул., 22/15",
         "lat": 55.7627635,
@@ -215,7 +215,7 @@
         "image": "apteka_bronnaya"
     },
     {
-        "category": "Концепт-стор",
+        "category": "Места",
         "name": "Molecule",
         "address": "Спиридоньевский пер., 12/9",
         "lat": 55.7630142,
@@ -227,7 +227,7 @@
         "url": "https://www.instagram.com/molecule_project/"
     },
     {
-        "category": "Концепт-стор",
+        "category": "Места",
         "name": "Le Labo",
         "address": "Малая Бронная ул., 24, строение 1",
         "lat": 55.7632263,
@@ -239,7 +239,7 @@
         "url": "https://www.instagram.com/lelabofragrances/"
     },
     {
-        "category": "Концепт-стор",
+        "category": "Места",
         "name": "Monochrome",
         "address": "Малая Никитская ул., 10",
         "lat": 55.7582313,
@@ -251,7 +251,7 @@
         "url": "https://www.instagram.com/monochrome_you/"
     },
     {
-        "category": "Концепт-стор",
+        "category": "Места",
         "name": "GJO",
         "address": "Никитский бул., 25",
         "lat": 55.7567072,
@@ -263,7 +263,7 @@
         "url": "https://www.instagram.com/gjoe_store/"
     },
     {
-        "category": "Концепт-стор",
+        "category": "Места",
         "name": "Cosmotheca",
         "address": "Новинский бул., 31",
         "lat": 55.7578719,
@@ -275,7 +275,7 @@
         "url": "https://www.instagram.com/cosmotheca/"
     },
     {
-        "category": "Концепт-стор",
+        "category": "Места",
         "name": "Leform",
         "address": "Поварская ул., 35/28",
         "lat": 55.7575463,
@@ -298,7 +298,7 @@
         "url": "https://www.instagram.com/abc.roasters/"
     },
     {
-        "category": "Кофе, выпечка и завтраки",
+        "category": "Завтраки",
         "name": "ABC Roasters (Никитская)",
         "address": "Большая Никитская ул., 19/16",
         "lat": 55.7570542,
@@ -310,7 +310,7 @@
         "url": "https://www.instagram.com/abc.roasters/"
     },
     {
-        "category": "Кофе, выпечка и завтраки",
+        "category": "Завтраки",
         "name": "Mates (Мантулинская)",
         "address": "ул. Мантулинская, 5 строение 11",
         "lat": 55.7561402,
@@ -322,7 +322,7 @@
         "url": "https://www.instagram.com/mates.msk/"
     },
     {
-        "category": "Кофе, выпечка и завтраки",
+        "category": "Завтраки",
         "name": "Mates (Патриаршие пруды)",
         "address": "Малая Бронная ул., 16",
         "lat": 55.7616715,
@@ -334,7 +334,7 @@
         "url": "https://www.instagram.com/mates.msk/"
     },
     {
-        "category": "Кофе, выпечка и завтраки",
+        "category": "Завтраки",
         "name": "Tiger Bunny",
         "address": "2-я Черногрязская ул., 6к2",
         "lat": 55.761469,
@@ -346,7 +346,7 @@
         "url": "https://www.instagram.com/tigerbunny_frozenyogurt/"
     },
     {
-        "category": "Кофе, выпечка и завтраки",
+        "category": "Завтраки",
         "name": "Сойка напела",
         "address": "ул. Красная Пресня, 36 строение 1",
         "lat": 55.762545,
@@ -358,7 +358,7 @@
         "url": "https://www.instagram.com/soyka.napela/"
     },
     {
-        "category": "Кофе, выпечка и завтраки",
+        "category": "Завтраки",
         "name": "Scramble",
         "address": "ул. Спиридоновка, 24, к.1",
         "lat": 55.7616787,
@@ -370,7 +370,7 @@
         "url": "https://www.instagram.com/scramblecafe/"
     },
     {
-        "category": "Кофе, выпечка и завтраки",
+        "category": "Завтраки",
         "name": "Ladurée",
         "address": "Малая Бронная ул., 27/14",
         "lat": 55.7634222,
@@ -382,7 +382,7 @@
         "url": "https://www.instagram.com/ladureerussia/"
     },
     {
-        "category": "Кофе, выпечка и завтраки",
+        "category": "Завтраки",
         "name": "Angel Cakes",
         "address": "Большой Козихинский пер., 15 строение 1",
         "lat": 55.763571,
@@ -394,7 +394,7 @@
         "url": "https://www.instagram.com/angelcakes.patriki/"
     },
     {
-        "category": "Кофе, выпечка и завтраки",
+        "category": "Завтраки",
         "name": "Циники",
         "address": "Богословский пер., 8/15 стр.1",
         "lat": 55.7624426,
@@ -406,7 +406,7 @@
         "url": "https://www.instagram.com/cynic_vegan/"
     },
     {
-        "category": "Кофе, выпечка и завтраки",
+        "category": "Завтраки",
         "name": "I Love Cake",
         "address": "Большой Патриарший пер., 4",
         "lat": 55.762434,
@@ -418,7 +418,7 @@
         "url": "https://www.instagram.com/ilovecake_cafe/"
     },
     {
-        "category": "Кофе, выпечка и завтраки",
+        "category": "Завтраки",
         "name": "Pims",
         "address": "Малая Бронная ул., 15Б",
         "lat": 55.760709,
@@ -430,7 +430,7 @@
         "url": "https://www.instagram.com/pimstea/"
     },
     {
-        "category": "Кофе, выпечка и завтраки",
+        "category": "Завтраки",
         "name": "Atelier de Tartelletes",
         "address": "Спиридоньевский пер., 10А с1",
         "lat": 55.7625519,
@@ -442,7 +442,7 @@
         "url": "https://www.instagram.com/atelier_de_tartelettes/"
     },
     {
-        "category": "Кофе, выпечка и завтраки",
+        "category": "Завтраки",
         "name": "Lavanda store",
         "address": "Малая Бронная ул., 21/13с1",
         "lat": 55.7626889,
@@ -454,7 +454,7 @@
         "url": "https://www.instagram.com/lawanda.store/"
     },
     {
-        "category": "Кофе, выпечка и завтраки",
+        "category": "Завтраки",
         "name": "Nude",
         "address": "ул. Спиридоновка, 24/1",
         "lat": 55.7616737,
@@ -466,7 +466,7 @@
         "url": "https://www.instagram.com/nude.coffeewine/"
     },
     {
-        "category": "Кофе, выпечка и завтраки",
+        "category": "Завтраки",
         "name": "Eggselent",
         "address": "Большая Садовая ул., 5 корпус 1",
         "lat": 55.7682301,
@@ -478,7 +478,7 @@
         "url": "https://www.instagram.com/eggsellent.ru/"
     },
     {
-        "category": "Прогулки",
+        "category": "Места",
         "name": "Парк Красная Пресня",
         "address": "ул. Мантулинская, 5",
         "lat": 55.7540374,
@@ -490,7 +490,7 @@
         "url": "https://www.instagram.com/red_presnya/"
     },
     {
-        "category": "Прогулки",
+        "category": "Места",
         "name": "Красногвардейские пруды",
         "address": "Шмидтовский пр-д (на пересечении с Красногвардейский бул.)",
         "lat": 55.7553592,
@@ -501,7 +501,7 @@
         "url": "https://www.instagram.com/red_presnya/"
     },
     {
-        "category": "Прогулки",
+        "category": "Места",
         "name": "Патриаршие пруды",
         "address": "Большой Патриарший пер., 7, строение 1",
         "lat": 55.763445,
@@ -512,7 +512,7 @@
         "url": "https://www.instagram.com/patriarshie/"
     },
     {
-        "category": "Прогулки",
+        "category": "Места",
         "name": "Краснопресненская набережная",
         "address": "Краснопресненская наб.",
         "lat": 55.7537715,
@@ -522,7 +522,7 @@
         "image": "krasnopresnenskaya_emb"
     },
     {
-        "category": "Прогулки",
+        "category": "Места",
         "name": "Сад Аквариум",
         "address": "Большая Садовая ул., 14с7",
         "lat": 55.767395,
@@ -531,7 +531,7 @@
         "image": "aquarium"
     },
     {
-        "category": "Прогулки",
+        "category": "Места",
         "name": "Тверской бульвар",
         "address": "Тверской бульвар",
         "lat": 55.7610592,
@@ -541,7 +541,7 @@
         "image": "tverskoy"
     },
     {
-        "category": "Прогулки",
+        "category": "Места",
         "name": "Римско-католический Кафедральный собор ",
         "address": "Малая Грузинская ул., 27/13",
         "lat": 55.76721,
@@ -552,7 +552,7 @@
         "image": "church"
     },
     {
-        "category": "Прогулки",
+        "category": "Места",
         "name": "Смотровая площадка Panorama360",
         "address": "Пресненская набережная, 12, башня \"Федерация\"",
         "lat": 55.7498627,
@@ -564,7 +564,7 @@
         "url": "https://www.instagram.com/pnr360.ru/"
     },
     {
-        "category": "Прогулки",
+        "category": "Места",
         "name": "Москва Сити",
         "address": "1-й Красногвардейский пр-д, 1",
         "lat": 55.751682,
@@ -575,7 +575,7 @@
         "url": "https://www.instagram.com/moscowcityofficial/"
     },
     {
-        "category": "Прогулки",
+        "category": "Места",
         "name": "Краснопресненские бани",
         "address": "Столярный пер., 7 строение 1",
         "lat": 55.763585,
