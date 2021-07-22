@@ -25,7 +25,7 @@ extension UITableView {
         messageLabel.textColor                   = .secondaryLabel
         messageLabel.lineBreakMode               = .byTruncatingTail
         messageLabel.textAlignment               = .center
-        messageLabel.font                        = Fonts.keyAccents
+        messageLabel.font                        = Fonts.bodyAccents
         messageLabel.sizeToFit()
         messageLabel.translatesAutoresizingMaskIntoConstraints = false
         
@@ -37,5 +37,10 @@ extension UITableView {
     func restore() {
         self.backgroundView = nil
         self.separatorStyle = .singleLine
+    }
+    
+    
+    func tableSeparator() {
+        self.separatorStyle = .none
     }
 }

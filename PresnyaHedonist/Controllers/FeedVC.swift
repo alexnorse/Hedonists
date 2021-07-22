@@ -33,6 +33,7 @@ class FeedVC: UIViewController {
 
         tableViewFeed.delegate = self
         tableViewFeed.dataSource = self
+        tableViewFeed.tableSeparator()
         
         configureController()
         configureSearchController()

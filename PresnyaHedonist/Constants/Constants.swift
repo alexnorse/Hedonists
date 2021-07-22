@@ -76,11 +76,6 @@ enum Fonts {
         
     static let bodyText         = UIFont(name: "LabGrotesque-Regular", size: 16)
     static let bodyAccents      = UIFont(name: "LabGrotesque-Medium", size: 16)
-        
-    static let buttons          = UIFont(name: "LabGrotesque-Bold", size: 18)
-        
-    static let tableTtles       = UIFont(name: "LabGrotesque-Medium", size: 18)
-    static let tableSubheads    = UIFont(name: "LabGrotesque-Regular", size: 16)
 }
 
 

@@ -11,7 +11,7 @@ class FeedCell: UITableViewCell {
 
     @IBOutlet weak var placeImage: UIImageView!
     @IBOutlet weak var placeName: UILabel!
-    
+    @IBOutlet weak var typeLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,6 +28,7 @@ class FeedCell: UITableViewCell {
     func designSettings() {
         placeImage.layer.cornerRadius       = UISettings.cornerRadius
         placeName.font                      = Fonts.headlines
+        typeLabel.font                      = Fonts.bodyAccents
         configureGradient()
     }
     
@@ -52,5 +53,6 @@ class FeedCell: UITableViewCell {
     func setCell(_ place: Place) {
         placeImage.image    = UIImage(named: place.image!)
         placeName.text      = place.name
+        typeLabel.text      = place.category
     }
 }
