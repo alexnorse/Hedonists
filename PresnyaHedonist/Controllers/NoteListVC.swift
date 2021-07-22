@@ -66,7 +66,14 @@ class NoteListVC: UIViewController {
             }
         }
         
-        DispatchQueue.main.async { self.tableView.reloadData()}
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+            if self.fetchedNotes?.fetchedObjects?.count == 0 {
+                self.tableView.setEmptyState(EmptyStates.notesEmpty)
+            } else {
+                self.tableView.restore()
+            }
+        }
     }
     
     
@@ -90,11 +97,6 @@ extension NoteListVC: NewNoteDelegate {
 extension NoteListVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        if fetchedNotes?.fetchedObjects?.count == 0 {
-            self.tableView.setEmptyState(EmptyStates.notesEmpty)
-        }
-        
         return fetchedNotes?.fetchedObjects?.count ?? 0
     }
     

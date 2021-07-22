@@ -15,20 +15,24 @@ extension UITableView {
     
     
     func setEmptyState(_ message: String) {
-        let messageLabel = UILabel(frame: CGRect(x: 0,
-                                                 y: 0,
-                                                 width: self.bounds.size.width,
-                                                 height: self.bounds.size.height))
         
-        messageLabel.text                        = message
-        messageLabel.numberOfLines               = 0
-        messageLabel.textColor                   = .secondaryLabel
-        messageLabel.lineBreakMode               = .byTruncatingTail
-        messageLabel.textAlignment               = .center
-        messageLabel.font                        = Fonts.bodyAccents
+        let rectangle = CGRect(origin: CGPoint(x: 0, y: self.center.y),
+                               size: CGSize(width: self.bounds.width, height: 100))
+        
+        let messageLabel = UILabel(frame: rectangle)
+        
+        messageLabel.center         = self.center
+        messageLabel.text           = message
+        messageLabel.numberOfLines  = 0
+        messageLabel.textColor      = .secondaryLabel
+        messageLabel.lineBreakMode  = .byTruncatingTail
+        messageLabel.textAlignment  = .center
+        messageLabel.font           = Fonts.bodyAccents
         messageLabel.sizeToFit()
         messageLabel.translatesAutoresizingMaskIntoConstraints = false
         
+        self.addSubview(messageLabel)
+        self.bringSubviewToFront(messageLabel)
         self.backgroundView = messageLabel
         self.separatorStyle = .none
     }
