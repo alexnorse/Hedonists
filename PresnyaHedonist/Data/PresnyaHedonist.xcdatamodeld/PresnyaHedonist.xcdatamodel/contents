@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20F71" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Note" representedClassName="Note" syncable="YES">
+    <entity name="Note" representedClassName="Note" syncable="YES" codeGenerationType="class">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="text" optional="YES" attributeType="String"/>
         <relationship name="place" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Place" inverseName="notes" inverseEntity="Place"/>
     </entity>
-    <entity name="Place" representedClassName="Place" syncable="YES">
+    <entity name="Place" representedClassName="Place" syncable="YES" codeGenerationType="class">
         <attribute name="address" attributeType="String"/>
         <attribute name="category" attributeType="String"/>
         <attribute name="descript" attributeType="String"/>

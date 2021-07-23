@@ -26,10 +26,6 @@
 		E6023C83269DE54C0035AA7F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6023C82269DE54C0035AA7F /* Constants.swift */; };
 		E652E0E926A43A1200DEDF92 /* TableView + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E652E0E826A43A1200DEDF92 /* TableView + Ext.swift */; };
 		E692553E26A172550004E348 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = E692553D26A172550004E348 /* data.json */; };
-		E692554326A181F80004E348 /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E692553F26A181F80004E348 /* Note+CoreDataClass.swift */; };
-		E692554426A181F80004E348 /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E692554026A181F80004E348 /* Note+CoreDataProperties.swift */; };
-		E692554526A181F80004E348 /* Place+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E692554126A181F80004E348 /* Place+CoreDataClass.swift */; };
-		E692554626A181F80004E348 /* Place+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E692554226A181F80004E348 /* Place+CoreDataProperties.swift */; };
 		E6A06B1F26A2EB09003999AB /* LabGrotesque-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6A06B1926A2EB09003999AB /* LabGrotesque-Bold.ttf */; };
 		E6A06B2026A2EB09003999AB /* LabGrotesque-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6A06B1A26A2EB09003999AB /* LabGrotesque-Medium.ttf */; };
 		E6A06B2126A2EB09003999AB /* LabGrotesque-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6A06B1B26A2EB09003999AB /* LabGrotesque-Black.ttf */; };
@@ -79,10 +75,6 @@
 		E6023C82269DE54C0035AA7F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E652E0E826A43A1200DEDF92 /* TableView + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView + Ext.swift"; sourceTree = "<group>"; };
 		E692553D26A172550004E348 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
-		E692553F26A181F80004E348 /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataClass.swift"; sourceTree = "<group>"; };
-		E692554026A181F80004E348 /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		E692554126A181F80004E348 /* Place+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Place+CoreDataClass.swift"; sourceTree = "<group>"; };
-		E692554226A181F80004E348 /* Place+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Place+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E6A06B1926A2EB09003999AB /* LabGrotesque-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LabGrotesque-Bold.ttf"; sourceTree = "<group>"; };
 		E6A06B1A26A2EB09003999AB /* LabGrotesque-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LabGrotesque-Medium.ttf"; sourceTree = "<group>"; };
 		E6A06B1B26A2EB09003999AB /* LabGrotesque-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LabGrotesque-Black.ttf"; sourceTree = "<group>"; };
@@ -146,7 +138,6 @@
 				E6023C6F269DE1C70035AA7F /* Controllers */,
 				E6023C6E269DE1A70035AA7F /* Views */,
 				E6023C71269DE1D70035AA7F /* Constants */,
-				E692554726A1823F0004E348 /* Models */,
 				E6023C70269DE1D00035AA7F /* Data */,
 			);
 			path = PresnyaHedonist;
@@ -217,17 +208,6 @@
 				E652E0E826A43A1200DEDF92 /* TableView + Ext.swift */,
 			);
 			path = Constants;
-			sourceTree = "<group>";
-		};
-		E692554726A1823F0004E348 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				E692553F26A181F80004E348 /* Note+CoreDataClass.swift */,
-				E692554026A181F80004E348 /* Note+CoreDataProperties.swift */,
-				E692554126A181F80004E348 /* Place+CoreDataClass.swift */,
-				E692554226A181F80004E348 /* Place+CoreDataProperties.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		E6A06B1626A2EAE7003999AB /* Fonts */ = {
@@ -377,22 +357,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6023C81269DE4EF0035AA7F /* FavoritesVC.swift in Sources */,
-				E692554326A181F80004E348 /* Note+CoreDataClass.swift in Sources */,
 				E6023C45269DB39B0035AA7F /* PresnyaHedonist.xcdatamodeld in Sources */,
 				E6023C77269DE4400035AA7F /* DetailsVC.swift in Sources */,
 				E6023C73269DE3A90035AA7F /* FeedCell.swift in Sources */,
 				E6023C75269DE41C0035AA7F /* FeedVC.swift in Sources */,
 				E652E0E926A43A1200DEDF92 /* TableView + Ext.swift in Sources */,
 				E6023C79269DE45C0035AA7F /* InfoVC.swift in Sources */,
-				E692554626A181F80004E348 /* Place+CoreDataProperties.swift in Sources */,
 				E6023C7D269DE49F0035AA7F /* NoteListVC.swift in Sources */,
 				E6023C7B269DE47C0035AA7F /* MapVC.swift in Sources */,
 				E6023C7F269DE4C50035AA7F /* NewNoteVC.swift in Sources */,
 				E6023C3B269DB39B0035AA7F /* AppDelegate.swift in Sources */,
 				E6023C3D269DB39B0035AA7F /* SceneDelegate.swift in Sources */,
-				E692554526A181F80004E348 /* Place+CoreDataClass.swift in Sources */,
 				E6023C83269DE54C0035AA7F /* Constants.swift in Sources */,
-				E692554426A181F80004E348 /* Note+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
