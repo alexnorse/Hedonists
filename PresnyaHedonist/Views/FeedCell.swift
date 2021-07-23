@@ -13,6 +13,7 @@ class FeedCell: UITableViewCell {
     @IBOutlet weak var placeName: UILabel!
     @IBOutlet weak var typeLabel: UILabel!
     
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         designSettings()
@@ -29,22 +30,19 @@ class FeedCell: UITableViewCell {
         placeImage.layer.cornerRadius       = UISettings.cornerRadius
         placeName.font                      = Fonts.headlines
         typeLabel.font                      = Fonts.bodyAccents
+        
         configureGradient()
     }
     
     
     func configureGradient() {
         let gradientLayer   = CAGradientLayer()
-        
         let blackColor      = UIColor.black.cgColor
         let clearColor      = UIColor.clear.cgColor
         
-        gradientLayer.colors = [
-            clearColor,
-            blackColor
-        ]
-        
         placeImage.layer.addSublayer(gradientLayer)
+        
+        gradientLayer.colors = [clearColor, blackColor]
         gradientLayer.frame = bounds
         gradientLayer.cornerRadius = UISettings.cornerRadius
     }

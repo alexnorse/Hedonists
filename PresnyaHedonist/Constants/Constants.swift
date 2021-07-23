@@ -38,15 +38,16 @@ enum UISettings {
 
 
 enum Errors {
-    static let databaseError    = "В настоящий момент невозможно получить доступ к базе данных.\nПожалуста, попробуйте чуть позже."
-    static let fetchError       = "Ошибка загрузки.\nПожалуста, попробуйте еще раз."
+    static let databaseError    = "В настоящий момент невозможно получить доступ к базе данных.\nПожалуйста, попробуйте позже"
+    static let fetchError       = "Ошибка загрузки.\nПожалуста, попробуйте еще раз"
     static let faillURL         = "Неверный или устаревший адрес ссылки"
-    static let favsFail         = "Ошибка при добавлении в избранное"
+    static let favsFail         = "Произошла ошибка при добавлении в Избранное"
+    static let imageError       = "Ошибка загрузки изображения ☹️"
 }
 
 
 enum Alerts {
-    static let addedToFavorites = "Место добавлено в избранное"
+    static let addedToFavorites = "Место добавлено в избранное \n♥️♥️♥️"
 }
 
 
@@ -68,14 +69,11 @@ enum VCTitles {
 
 
 enum Fonts {
-    static let vcHeads          = UIFont(name: "LabGrotesque-Black", size: 30)
-    static let tabBarItems      = UIFont(name: "LabGrotesque-Black", size: 14)
-        
+    static let vcHeads          = UIFont(name: "LabGrotesque-Black", size: 28)
     static let headlines        = UIFont(name: "LabGrotesque-Bold", size: 24)
     static let keyAccents       = UIFont(name: "LabGrotesque-Bold", size: 20)
-        
-    static let bodyText         = UIFont(name: "LabGrotesque-Regular", size: 16)
     static let bodyAccents      = UIFont(name: "LabGrotesque-Medium", size: 16)
+    static let bodyText         = UIFont(name: "LabGrotesque-Regular", size: 16)
 }
 
 

@@ -14,7 +14,6 @@ protocol NewNoteDelegate {
 
 class NewNoteVC: UIViewController {
     
-    static let shared = NewNoteVC()
     var place: Place?
     
     var delegate: NewNoteDelegate?
@@ -23,6 +22,7 @@ class NewNoteVC: UIViewController {
     
     @IBOutlet weak var noteView: UIView!
     @IBOutlet weak var textView: UITextView!
+    
     @IBOutlet weak var save: UIButton!
     @IBOutlet weak var close: UIButton!
     
@@ -52,8 +52,9 @@ class NewNoteVC: UIViewController {
 
     
     @IBAction func saveButton(_ sender: Any) {
-        
+       
         let note = Note(context: context)
+        
         note.date   = Date()
         note.text   = textView.text
         note.place  = place

@@ -18,6 +18,7 @@ class InfoVC: UIViewController {
     @IBOutlet weak var descript: UILabel!
     @IBOutlet weak var address: UILabel!
     @IBOutlet weak var workHours: UILabel!
+    
     @IBOutlet weak var instagramLink: UIButton!
     @IBOutlet weak var addToFavorites: UIButton!
     
@@ -43,27 +44,26 @@ class InfoVC: UIViewController {
     
     
     func designSettings() {
-        type.font                       = Fonts.bodyAccents
-        descript.font                   = Fonts.bodyText
-        address.font                    = Fonts.bodyAccents
-        workHours.font                  = Fonts.bodyAccents
+        type.font       = Fonts.bodyAccents
+        descript.font   = Fonts.bodyText
+        address.font    = Fonts.bodyAccents
+        workHours.font  = Fonts.bodyAccents
     }
     
     
     @IBAction func phoneCall(_ sender: Any) {
+        
         let formattedNumber = place?.phone?.components(separatedBy: NSCharacterSet.decimalDigits.inverted).joined(separator: "")
         
         if let url = NSURL(string: ("tel:" + formattedNumber!)) {
-            if #available(iOS 10, *) {
-                UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
-            } else {
-                UIApplication.shared.openURL(url as URL)
-            }
+            if #available(iOS 10, *) { UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
+            } else { UIApplication.shared.openURL(url as URL) }
         }
     }
     
     
     @IBAction func instagramLink(_ sender: Any) {
+        
         guard let url = URL(string: place?.url ?? "https://www.instagram.com") else {
             
             let alert = UIAlertController(title: AlertTitle.error,
@@ -82,10 +82,10 @@ class InfoVC: UIViewController {
     @IBAction func addToFavoritesTapped(_ sender: Any) {
         
         let alertSuccess = UIAlertController(title: AlertTitle.success,
-                                      message: Alerts.addedToFavorites,
-                                      preferredStyle: .alert)
+                                             message: Alerts.addedToFavorites,
+                                             preferredStyle: .alert)
         alertSuccess.addAction(UIAlertAction(title: "Ok",
-                                      style: .default))
+                                             style: .default))
         
         DispatchQueue.main.async { self.present(alertSuccess, animated: true) }
         return

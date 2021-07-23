@@ -31,7 +31,6 @@ class FeedVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         tableViewFeed.delegate = self
         tableViewFeed.dataSource = self
         tableViewFeed.tableSeparator()
@@ -43,7 +42,7 @@ class FeedVC: UIViewController {
     
     
     func configureController() {
-        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.prefersLargeTitles  = true
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: Fonts.vcHeads!]
         title = VCTitles.feedTitle
     }
@@ -52,27 +51,28 @@ class FeedVC: UIViewController {
     func fetchData() {
         do {
             places = try context.fetch(Place.fetchRequest())
-        } catch {
-            let alert = UIAlertController(title: AlertTitle.error,
-                                          message: Errors.faillURL,
-                                          preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK",
-                                          style: .default))
             
-            DispatchQueue.main.async { self.present(alert, animated: true) }
+        } catch {
+            let fetchErrorAlert = UIAlertController(title: AlertTitle.error,
+                                                    message: Errors.faillURL,
+                                                    preferredStyle: .alert)
+            fetchErrorAlert.addAction(UIAlertAction(title: "OK",
+                                                    style: .default))
+            
+            DispatchQueue.main.async { self.present(fetchErrorAlert, animated: true) }
         }
     }
     
     
     func configureSearchController() {
         searchController.searchResultsUpdater                   = self
-        searchController.searchBar.placeholder                  = "Поиск..."
+        searchController.searchBar.delegate                     = self
         searchController.obscuresBackgroundDuringPresentation   = false
+        searchController.searchBar.placeholder                  = "Поиск..."
+        searchController.searchBar.scopeButtonTitles            = ["Все", "Ресторан", "Места", "Завтраки", "Бар"]
+        
         navigationItem.searchController                         = searchController
         definesPresentationContext                              = true
-        
-        searchController.searchBar.scopeButtonTitles            = ["Все", "Ресторан", "Места", "Завтраки", "Бар"]
-        searchController.searchBar.delegate                     = self
     }
     
     
@@ -132,12 +132,11 @@ extension FeedVC: UISearchResultsUpdating {
     
     
     func contentFilter(_ searchText: String, scope: String = "Все") {
+        
         filteredPlaces = places.filter({ (place) -> Bool in
             let categoryMatch = (scope == "Все") || (place.category == scope)
             if searchBarIsEmpty { return categoryMatch }
-            
-            return categoryMatch && place.name!.lowercased().contains(searchText.lowercased())
-        })
+            return categoryMatch && place.name!.lowercased().contains(searchText.lowercased()) })
     
         DispatchQueue.main.async { self.tableViewFeed.reloadData() }
     }

@@ -23,7 +23,6 @@ class NoteListVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -43,6 +42,7 @@ class NoteListVC: UIViewController {
     
     func refresh() {
         if let place = place {
+            
             let request: NSFetchRequest<Note> = Note.fetchRequest()
             request.predicate = NSPredicate(format: "place = %@", place)
             
@@ -55,6 +55,7 @@ class NoteListVC: UIViewController {
                                                           sectionNameKeyPath: nil,
                                                           cacheName: nil)
                 try fetchedNotes?.performFetch()
+                
             } catch {
                 let alert = UIAlertController(title: AlertTitle.error,
                                               message: Errors.fetchError,
@@ -79,9 +80,11 @@ class NoteListVC: UIViewController {
     
     @IBAction func addNoteButton(_ sender: Any) {
         let newNoteVC = storyboard?.instantiateViewController(identifier: VControllersID.NEWNOTE_VC) as! NewNoteVC
+        
         newNoteVC.delegate = self
         newNoteVC.place = place
         newNoteVC.modalPresentationStyle = .overCurrentContext
+        
         present(newNoteVC, animated: true, completion: nil)
     }
 }
@@ -103,9 +106,9 @@ extension NoteListVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellsID.NOTES_CELL, for: indexPath)
-        
         let note = fetchedNotes?.object(at: indexPath)
         let dateFormatter = DateFormatter()
+        
         dateFormatter.dateFormat = "dd.MM.yy"
         
         cell.textLabel?.text = note?.text

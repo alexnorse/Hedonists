@@ -40,7 +40,7 @@ class DetailsVC: UIViewController {
     
     
     override func viewWillAppear(_ animated: Bool) {
-        imageView.image = UIImage(named: place!.image!)
+        imageView.image = UIImage(named: place?.image ?? Errors.imageError)
         placeName.text = place?.name
         
         designSettings()
@@ -56,6 +56,7 @@ class DetailsVC: UIViewController {
     private func switchVC(_ childVC: UIViewController) {
         addChild(childVC)
         containerView.addSubview(childVC.view)
+        
         childVC.view.frame = containerView.bounds
         childVC.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         childVC.didMove(toParent: self)
@@ -64,15 +65,19 @@ class DetailsVC: UIViewController {
     
     @IBAction func segmentChange(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
+        
         case 0:
             infoViewController.place = self.place
             switchVC(infoViewController)
+            
         case 1:
             mapViewController.place = self.place
             switchVC(mapViewController)
+            
         case 2:
             noteListViewController.place = self.place
             switchVC(noteListViewController)
+            
         default:
             switchVC(infoViewController)
         }

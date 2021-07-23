@@ -14,6 +14,11 @@ extension UITableView {
     }
     
     
+    func tableSeparator() {
+        self.separatorStyle = .none
+    }
+    
+    
     func setEmptyState(_ message: String) {
         
         let rectangle = CGRect(origin: CGPoint(x: 0, y: self.center.y),
@@ -41,10 +46,5 @@ extension UITableView {
     func restore() {
         self.backgroundView = nil
         self.separatorStyle = .singleLine
-    }
-    
-    
-    func tableSeparator() {
-        self.separatorStyle = .none
     }
 }
