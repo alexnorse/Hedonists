@@ -109,7 +109,11 @@ extension NoteListVC: UITableViewDelegate, UITableViewDataSource {
         dateFormatter.dateFormat = "dd.MM.yy"
         
         cell.textLabel?.text = note?.text
+        cell.textLabel?.font = Fonts.bodyAccents
+        
         cell.detailTextLabel?.text = dateFormatter.string(from: (note?.date)!)
+        cell.detailTextLabel?.font = Fonts.bodyText
+        cell.detailTextLabel?.textColor = .secondaryLabel
         
         return cell
     }

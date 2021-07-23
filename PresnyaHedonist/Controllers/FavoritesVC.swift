@@ -6,9 +6,8 @@
 //
 
 import UIKit
-import MapKit
 
-class FullmapVC: UIViewController {
+class FavoritesVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +23,6 @@ class FullmapVC: UIViewController {
     func configureController() {
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.titleTextAttributes = ([NSAttributedString.Key.font: Fonts.vcHeads!])
-        title = VCTitles.mapTitle
+        title = VCTitles.favsTitle
     }
 }

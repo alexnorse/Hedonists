@@ -19,6 +19,7 @@ class InfoVC: UIViewController {
     @IBOutlet weak var address: UILabel!
     @IBOutlet weak var workHours: UILabel!
     @IBOutlet weak var instagramLink: UIButton!
+    @IBOutlet weak var addToFavorites: UIButton!
     
     
     override func viewDidLoad() {
@@ -75,5 +76,18 @@ class InfoVC: UIViewController {
             return
         }
         present(SFSafariViewController(url: url), animated: true)
+    }
+    
+    
+    @IBAction func addToFavoritesTapped(_ sender: Any) {
+        
+        let alertSuccess = UIAlertController(title: AlertTitle.success,
+                                      message: Alerts.addedToFavorites,
+                                      preferredStyle: .alert)
+        alertSuccess.addAction(UIAlertAction(title: "Ok",
+                                      style: .default))
+        
+        DispatchQueue.main.async { self.present(alertSuccess, animated: true) }
+        return
     }
 }

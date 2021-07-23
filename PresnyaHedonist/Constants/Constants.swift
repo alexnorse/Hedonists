@@ -14,13 +14,14 @@ enum VControllersID {
     static let INFO_VC              = "InfoVC"
     static let NOTELIST_VC          = "NoteListVC"
     static let NEWNOTE_VC           = "NewNoteVC"
-    static let FULLMAP_VC           = "FullmapVC"
+    static let FAVORITES_VC         = "FavoritesVC"
     static let TABBAR_VC            = "TabBarVC"
 }
 
 
 enum CellsID {
     static let FEED_CELL            = "feedCell"
+    static let FAVS_CELL            = "favsCell"
     static let NOTES_CELL           = "notesCell"
 }
 
@@ -40,6 +41,12 @@ enum Errors {
     static let databaseError    = "В настоящий момент невозможно получить доступ к базе данных.\nПожалуста, попробуйте чуть позже."
     static let fetchError       = "Ошибка загрузки.\nПожалуста, попробуйте еще раз."
     static let faillURL         = "Неверный или устаревший адрес ссылки"
+    static let favsFail         = "Ошибка при добавлении в избранное"
+}
+
+
+enum Alerts {
+    static let addedToFavorites = "Место добавлено в избранное"
 }
 
 
@@ -55,8 +62,8 @@ enum EmptyStates {
 
 
 enum VCTitles {
-    static let feedTitle    = "Лента"
-    static let mapTitle     = "Карта"
+    static let feedTitle     = "Все локации"
+    static let favsTitle     = "Избранное"
 }
 
 
