@@ -47,7 +47,7 @@ enum Errors {
 
 
 enum Alerts {
-    static let addedToFavorites = "Место добавлено в избранное \n♥️♥️♥️"
+    static let addedToFavorites = "Место добавлено в Избранное"
 }
 
 

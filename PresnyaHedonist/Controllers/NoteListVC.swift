@@ -116,7 +116,6 @@ extension NoteListVC: UITableViewDelegate, UITableViewDataSource {
         
         cell.detailTextLabel?.text = dateFormatter.string(from: (note?.date)!)
         cell.detailTextLabel?.font = Fonts.bodyText
-        cell.detailTextLabel?.textColor = .secondaryLabel
         
         return cell
     }
