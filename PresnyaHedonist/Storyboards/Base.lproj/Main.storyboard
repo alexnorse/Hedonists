@@ -16,28 +16,14 @@
                     <view key="view" contentMode="scaleToFill" id="Tgl-MH-9Gp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0XO-Tq-vPn">
-                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
-                            </mapView>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="MMW-Po-tws"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="0XO-Tq-vPn" firstAttribute="leading" secondItem="MMW-Po-tws" secondAttribute="leading" id="0wJ-5T-G8f"/>
-                            <constraint firstItem="0XO-Tq-vPn" firstAttribute="top" secondItem="Tgl-MH-9Gp" secondAttribute="topMargin" id="65n-nk-jE2"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="0XO-Tq-vPn" secondAttribute="bottom" id="lAD-R7-7mE"/>
-                            <constraint firstItem="0XO-Tq-vPn" firstAttribute="trailing" secondItem="MMW-Po-tws" secondAttribute="trailing" id="vgv-Xs-iKS"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="JFR-Gl-KAh"/>
-                    <connections>
-                        <outlet property="mapView" destination="0XO-Tq-vPn" id="mgG-jc-cUQ"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ICd-2g-TRM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="311.59420289855075" y="825.66964285714278"/>
+            <point key="canvasLocation" x="312" y="826"/>
         </scene>
         <!--FeedVC-->
         <scene sceneID="31s-wa-i6A">
