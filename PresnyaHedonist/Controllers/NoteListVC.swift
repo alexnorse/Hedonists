@@ -84,6 +84,7 @@ class NoteListVC: UIViewController {
         newNoteVC.delegate = self
         newNoteVC.place = place
         newNoteVC.modalPresentationStyle = .overCurrentContext
+        newNoteVC.modalTransitionStyle = .crossDissolve
         
         present(newNoteVC, animated: true, completion: nil)
     }

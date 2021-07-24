@@ -38,13 +38,13 @@ extension UITableView {
         
         self.addSubview(messageLabel)
         self.bringSubviewToFront(messageLabel)
-        self.backgroundView = messageLabel
-        self.separatorStyle = .none
+        self.backgroundView         = messageLabel
+        self.separatorStyle         = .none
     }
     
     
     func restore() {
-        self.backgroundView = nil
-        self.separatorStyle = .singleLine
+        self.backgroundView         = nil
+        self.separatorStyle         = .singleLine
     }
 }

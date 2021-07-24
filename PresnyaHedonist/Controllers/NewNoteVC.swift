@@ -37,7 +37,6 @@ class NewNoteVC: UIViewController {
         view.backgroundColor            = UIColor(red: 0, green: 0, blue: 0, alpha: 0.7)
         
         noteView.layer.cornerRadius     = UISettings.cornerRadius
-        noteView.layer.shadowColor      = CGColor(red: 0, green: 0, blue: 0, alpha: 0.5)
         noteView.layer.shadowOpacity    = 1
         noteView.layer.shadowOffset     = .zero
         noteView.layer.shadowRadius     = 5
