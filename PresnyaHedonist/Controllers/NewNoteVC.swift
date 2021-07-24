@@ -54,8 +54,12 @@ class NewNoteVC: UIViewController {
        
         let note = Note(context: context)
         
+        guard let noteText = textView.text, !noteText.isEmpty else {
+            return
+        }
+        
         note.date   = Date()
-        note.text   = textView.text
+        note.text   = noteText
         note.place  = place
         
         appDelegate.saveContext()
