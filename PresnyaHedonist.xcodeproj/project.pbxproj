@@ -25,6 +25,7 @@
 		E6023C81269DE4EF0035AA7F /* FavoritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6023C80269DE4EF0035AA7F /* FavoritesVC.swift */; };
 		E6023C83269DE54C0035AA7F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6023C82269DE54C0035AA7F /* Constants.swift */; };
 		E652E0E926A43A1200DEDF92 /* TableView + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E652E0E826A43A1200DEDF92 /* TableView + Ext.swift */; };
+		E65F31F826ABF91200946DC2 /* ViewController + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65F31F726ABF91200946DC2 /* ViewController + Ext.swift */; };
 		E692553E26A172550004E348 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = E692553D26A172550004E348 /* data.json */; };
 		E6A06B1F26A2EB09003999AB /* LabGrotesque-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6A06B1926A2EB09003999AB /* LabGrotesque-Bold.ttf */; };
 		E6A06B2026A2EB09003999AB /* LabGrotesque-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6A06B1A26A2EB09003999AB /* LabGrotesque-Medium.ttf */; };
@@ -74,6 +75,7 @@
 		E6023C80269DE4EF0035AA7F /* FavoritesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesVC.swift; sourceTree = "<group>"; };
 		E6023C82269DE54C0035AA7F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E652E0E826A43A1200DEDF92 /* TableView + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView + Ext.swift"; sourceTree = "<group>"; };
+		E65F31F726ABF91200946DC2 /* ViewController + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController + Ext.swift"; sourceTree = "<group>"; };
 		E692553D26A172550004E348 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		E6A06B1926A2EB09003999AB /* LabGrotesque-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LabGrotesque-Bold.ttf"; sourceTree = "<group>"; };
 		E6A06B1A26A2EB09003999AB /* LabGrotesque-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LabGrotesque-Medium.ttf"; sourceTree = "<group>"; };
@@ -137,7 +139,7 @@
 				E6023C6D269DE1700035AA7F /* Storyboards */,
 				E6023C6F269DE1C70035AA7F /* Controllers */,
 				E6023C6E269DE1A70035AA7F /* Views */,
-				E6023C71269DE1D70035AA7F /* Constants */,
+				E6023C71269DE1D70035AA7F /* Helpers */,
 				E6023C70269DE1D00035AA7F /* Data */,
 			);
 			path = PresnyaHedonist;
@@ -201,13 +203,14 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
-		E6023C71269DE1D70035AA7F /* Constants */ = {
+		E6023C71269DE1D70035AA7F /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				E6023C82269DE54C0035AA7F /* Constants.swift */,
 				E652E0E826A43A1200DEDF92 /* TableView + Ext.swift */,
+				E65F31F726ABF91200946DC2 /* ViewController + Ext.swift */,
 			);
-			path = Constants;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		E6A06B1626A2EAE7003999AB /* Fonts */ = {
@@ -356,6 +359,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E65F31F826ABF91200946DC2 /* ViewController + Ext.swift in Sources */,
 				E6023C81269DE4EF0035AA7F /* FavoritesVC.swift in Sources */,
 				E6023C45269DB39B0035AA7F /* PresnyaHedonist.xcdatamodeld in Sources */,
 				E6023C77269DE4400035AA7F /* DetailsVC.swift in Sources */,

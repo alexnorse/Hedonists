@@ -53,13 +53,8 @@ class FeedVC: UIViewController {
             places = try context.fetch(Place.fetchRequest())
             
         } catch {
-            let fetchErrorAlert = UIAlertController(title: AlertTitle.error,
-                                                    message: Errors.faillURL,
-                                                    preferredStyle: .alert)
-            fetchErrorAlert.addAction(UIAlertAction(title: "OK",
-                                                    style: .default))
-            
-            DispatchQueue.main.async { self.present(fetchErrorAlert, animated: true) }
+            presentAlert(title: AlertTitle.error,
+                         message: Errors.faillURL)
         }
     }
     

@@ -57,13 +57,8 @@ class NoteListVC: UIViewController {
                 try fetchedNotes?.performFetch()
                 
             } catch {
-                let alert = UIAlertController(title: AlertTitle.error,
-                                              message: Errors.fetchError,
-                                              preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "Ok",
-                                              style: .default))
-                
-                DispatchQueue.main.async { self.present(alert, animated: true) }
+                presentAlert(title: AlertTitle.error,
+                             message: Errors.fetchError)
             }
         }
         

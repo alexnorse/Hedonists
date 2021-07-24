@@ -66,13 +66,8 @@ class InfoVC: UIViewController {
         
         guard let url = URL(string: place?.url ?? "https://www.instagram.com") else {
             
-            let alert = UIAlertController(title: AlertTitle.error,
-                                          message: Errors.faillURL,
-                                          preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Ok",
-                                          style: .default))
-            
-            DispatchQueue.main.async { self.present(alert, animated: true) }
+            presentAlert(title: AlertTitle.error,
+                         message: Errors.faillURL)
             return
         }
         present(SFSafariViewController(url: url), animated: true)
@@ -81,13 +76,7 @@ class InfoVC: UIViewController {
     
     @IBAction func addToFavoritesTapped(_ sender: Any) {
         
-        let alertSuccess = UIAlertController(title: AlertTitle.success,
-                                             message: Alerts.addedToFavorites,
-                                             preferredStyle: .alert)
-        alertSuccess.addAction(UIAlertAction(title: "Ok",
-                                             style: .default))
-        
-        DispatchQueue.main.async { self.present(alertSuccess, animated: true) }
-        return
+        presentAlert(title: AlertTitle.success,
+                     message: Alerts.addedToFavorites)
     }
 }
