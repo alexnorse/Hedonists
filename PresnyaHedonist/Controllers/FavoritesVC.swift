@@ -6,8 +6,13 @@
 //
 
 import UIKit
+import CoreData
 
 class FavoritesVC: UIViewController {
+    
+    var favorites = [Favorite]()
+    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     @IBOutlet weak var favoritesTable: UITableView!
     
@@ -34,20 +39,37 @@ class FavoritesVC: UIViewController {
     func designSettings() {
         favoritesTable.removeExcessCells()
     }
+    
+    
+    func fetchData() {
+        do {
+            favorites = try context.fetch(Favorite.fetchRequest())
+            DispatchQueue.main.async { self.favoritesTable.reloadData() }
+            
+        } catch {
+            presentAlert(title: AlertTitle.error,
+                         message: Errors.faillURL)
+        }
+    }
 }
 
 
 extension FavoritesVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
+        favorites.count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellsID.FAVS_CELL, for: indexPath)
         
-        cell.textLabel?.font = Fonts.bodyAccents
-        cell.detailTextLabel?.font = Fonts.bodyText
+        let favorite = Favorite()
+        
+        cell.textLabel?.text        = favorite.name
+        cell.detailTextLabel?.text  = favorite.category
+        
+        cell.textLabel?.font        = Fonts.bodyAccents
+        cell.detailTextLabel?.font  = Fonts.bodyText
         
         return cell
     }
