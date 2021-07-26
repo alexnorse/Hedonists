@@ -37,6 +37,7 @@ class FeedVC: UIViewController {
         
         configureController()
         configureSearchController()
+        
         fetchData()
     }
     
@@ -54,7 +55,7 @@ class FeedVC: UIViewController {
             
         } catch {
             presentAlert(title: AlertTitle.error,
-                         message: Errors.faillURL)
+                         message: Errors.fetchError)
         }
     }
     

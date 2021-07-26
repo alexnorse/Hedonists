@@ -20,14 +20,12 @@ class FavoritesVC: UIViewController {
         super.viewDidLoad()
         favoritesTable.delegate = self
         favoritesTable.dataSource = self
-    }
-    
-    
-    override func viewWillAppear(_ animated: Bool) {
+        
         configureController()
         designSettings()
+        
+        fetchData()
     }
-    
     
     func configureController() {
         navigationController?.navigationBar.prefersLargeTitles = true
@@ -44,11 +42,18 @@ class FavoritesVC: UIViewController {
     func fetchData() {
         do {
             favorites = try context.fetch(Favorite.fetchRequest())
-            DispatchQueue.main.async { self.favoritesTable.reloadData() }
-            
         } catch {
             presentAlert(title: AlertTitle.error,
                          message: Errors.faillURL)
+        }
+        
+        DispatchQueue.main.async {
+            self.favoritesTable.reloadData()
+            if self.favorites.count == 0 {
+                self.favoritesTable.setEmptyState(EmptyStates.favsEmpty)
+            } else {
+                self.favoritesTable.restore()
+            }
         }
     }
 }
