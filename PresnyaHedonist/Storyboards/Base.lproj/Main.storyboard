@@ -64,7 +64,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ICd-2g-TRM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="312" y="826"/>
+            <point key="canvasLocation" x="1196" y="826"/>
         </scene>
         <!--FeedVC-->
         <scene sceneID="31s-wa-i6A">
@@ -518,6 +518,33 @@
             </objects>
             <point key="canvasLocation" x="2954" y="-678"/>
         </scene>
+        <!--Карта-->
+        <scene sceneID="nR9-ev-Uko">
+            <objects>
+                <viewController storyboardIdentifier="AllPlacesMapVC" id="YHr-RB-wZH" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xCZ-54-vR4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="25U-S2-rWu">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="szT-FG-Cau"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="szT-FG-Cau" firstAttribute="bottom" secondItem="25U-S2-rWu" secondAttribute="bottom" id="0pn-LL-NKl"/>
+                            <constraint firstItem="szT-FG-Cau" firstAttribute="trailing" secondItem="25U-S2-rWu" secondAttribute="trailing" id="Eg3-yY-8a9"/>
+                            <constraint firstItem="25U-S2-rWu" firstAttribute="leading" secondItem="szT-FG-Cau" secondAttribute="leading" id="dFO-PS-Fsu"/>
+                            <constraint firstItem="25U-S2-rWu" firstAttribute="top" secondItem="xCZ-54-vR4" secondAttribute="top" id="mms-Cl-xgm"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Карта" image="map.fill" catalog="system" id="fnU-iW-tO1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qVs-ny-nHW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-575" y="826"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="qOb-rU-ajB">
             <objects>
@@ -531,6 +558,7 @@
                     <connections>
                         <segue destination="UvH-JX-k07" kind="relationship" relationship="viewControllers" id="LVu-mp-zCk"/>
                         <segue destination="GLF-kf-hDy" kind="relationship" relationship="viewControllers" id="C0g-n3-F4f"/>
+                        <segue destination="YHr-RB-wZH" kind="relationship" relationship="viewControllers" id="7Z7-7X-8Ut"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eK2-eR-p5h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -573,13 +601,14 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nB8-Ks-joP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-575" y="826"/>
+            <point key="canvasLocation" x="312" y="826"/>
         </scene>
     </scenes>
     <resources>
         <image name="bolt.fill" catalog="system" width="101" height="128"/>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="info" catalog="system" width="93" height="128"/>
+        <image name="map.fill" catalog="system" width="128" height="110"/>
         <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
         <image name="note.text" catalog="system" width="128" height="106"/>
         <namedColor name="AccentColor">

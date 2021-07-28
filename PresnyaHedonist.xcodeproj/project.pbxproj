@@ -31,6 +31,9 @@
 		E6A06B2026A2EB09003999AB /* LabGrotesque-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6A06B1A26A2EB09003999AB /* LabGrotesque-Medium.ttf */; };
 		E6A06B2126A2EB09003999AB /* LabGrotesque-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6A06B1B26A2EB09003999AB /* LabGrotesque-Black.ttf */; };
 		E6A06B2226A2EB09003999AB /* LabGrotesque-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6A06B1C26A2EB09003999AB /* LabGrotesque-Regular.ttf */; };
+		E6AC9C8826B1900F000D1586 /* ForMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AC9C8726B1900F000D1586 /* ForMap.swift */; };
+		E6AC9C8A26B19118000D1586 /* LocationUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AC9C8926B19118000D1586 /* LocationUnit.swift */; };
+		E6AC9C8C26B1923E000D1586 /* Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AC9C8B26B1923E000D1586 /* Locations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +84,9 @@
 		E6A06B1A26A2EB09003999AB /* LabGrotesque-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LabGrotesque-Medium.ttf"; sourceTree = "<group>"; };
 		E6A06B1B26A2EB09003999AB /* LabGrotesque-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LabGrotesque-Black.ttf"; sourceTree = "<group>"; };
 		E6A06B1C26A2EB09003999AB /* LabGrotesque-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LabGrotesque-Regular.ttf"; sourceTree = "<group>"; };
+		E6AC9C8726B1900F000D1586 /* ForMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForMap.swift; sourceTree = "<group>"; };
+		E6AC9C8926B19118000D1586 /* LocationUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationUnit.swift; sourceTree = "<group>"; };
+		E6AC9C8B26B1923E000D1586 /* Locations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +145,7 @@
 				E6023C6D269DE1700035AA7F /* Storyboards */,
 				E6023C6F269DE1C70035AA7F /* Controllers */,
 				E6023C6E269DE1A70035AA7F /* Views */,
+				E6AC9C8D26B1957F000D1586 /* Map Tab */,
 				E6023C71269DE1D70035AA7F /* Helpers */,
 				E6023C70269DE1D00035AA7F /* Data */,
 			);
@@ -222,6 +229,16 @@
 				E6A06B1C26A2EB09003999AB /* LabGrotesque-Regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		E6AC9C8D26B1957F000D1586 /* Map Tab */ = {
+			isa = PBXGroup;
+			children = (
+				E6AC9C8726B1900F000D1586 /* ForMap.swift */,
+				E6AC9C8926B19118000D1586 /* LocationUnit.swift */,
+				E6AC9C8B26B1923E000D1586 /* Locations.swift */,
+			);
+			path = "Map Tab";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,13 +378,16 @@
 			files = (
 				E65F31F826ABF91200946DC2 /* ViewController + Ext.swift in Sources */,
 				E6023C81269DE4EF0035AA7F /* FavoritesVC.swift in Sources */,
+				E6AC9C8826B1900F000D1586 /* ForMap.swift in Sources */,
 				E6023C45269DB39B0035AA7F /* PresnyaHedonist.xcdatamodeld in Sources */,
 				E6023C77269DE4400035AA7F /* DetailsVC.swift in Sources */,
 				E6023C73269DE3A90035AA7F /* FeedCell.swift in Sources */,
 				E6023C75269DE41C0035AA7F /* FeedVC.swift in Sources */,
 				E652E0E926A43A1200DEDF92 /* TableView + Ext.swift in Sources */,
+				E6AC9C8A26B19118000D1586 /* LocationUnit.swift in Sources */,
 				E6023C79269DE45C0035AA7F /* InfoVC.swift in Sources */,
 				E6023C7D269DE49F0035AA7F /* NoteListVC.swift in Sources */,
+				E6AC9C8C26B1923E000D1586 /* Locations.swift in Sources */,
 				E6023C7B269DE47C0035AA7F /* MapVC.swift in Sources */,
 				E6023C7F269DE4C50035AA7F /* NewNoteVC.swift in Sources */,
 				E6023C3B269DB39B0035AA7F /* AppDelegate.swift in Sources */,

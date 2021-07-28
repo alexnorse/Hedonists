@@ -15,6 +15,7 @@ enum VControllersID {
     static let NOTELIST_VC          = "NoteListVC"
     static let NEWNOTE_VC           = "NewNoteVC"
     static let FAVORITES_VC         = "FavoritesVC"
+    static let ALLPLACESMAP_VC      = "AllPlacesMapVC"
     static let TABBAR_VC            = "TabBarVC"
 }
 

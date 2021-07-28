@@ -34,7 +34,6 @@ extension UITableView {
         messageLabel.textAlignment  = .center
         messageLabel.font           = Fonts.bodyAccents
         messageLabel.sizeToFit()
-        messageLabel.translatesAutoresizingMaskIntoConstraints = false
         
         self.addSubview(messageLabel)
         self.bringSubviewToFront(messageLabel)
