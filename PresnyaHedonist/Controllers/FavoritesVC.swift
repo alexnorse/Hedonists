@@ -6,14 +6,18 @@
 //
 
 import UIKit
+import CoreData
 
 class FavoritesVC: UIViewController {
     
     var favorites = [Favorite]()
     
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var fetchedFavs: NSFetchedResultsController<Favorite>?
     
     @IBOutlet var favoritesTable: UITableView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +29,7 @@ class FavoritesVC: UIViewController {
         
         fetchData()
     }
+    
     
     func configureController() {
         navigationController?.navigationBar.prefersLargeTitles = true
@@ -39,11 +44,13 @@ class FavoritesVC: UIViewController {
     
     
     func fetchData() {
+        let request: NSFetchRequest<Favorite> = Favorite.fetchRequest()
+        
         do {
-            favorites = try context.fetch(Favorite.fetchRequest())
+            favorites = try context.fetch(request)
         } catch {
             presentAlert(title: AlertTitle.error,
-                         message: Errors.faillURL)
+                         message: Errors.fetchError)
         }
         
         DispatchQueue.main.async {
@@ -71,7 +78,7 @@ extension FavoritesVC: UITableViewDelegate, UITableViewDataSource {
         
         cell.textLabel?.text        = favorite.name
         cell.detailTextLabel?.text  = favorite.category
-        
+
         cell.textLabel?.font        = Fonts.bodyAccents
         cell.detailTextLabel?.font  = Fonts.bodyText
         
@@ -87,6 +94,15 @@ extension FavoritesVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let delete = UIContextualAction(style: .destructive,
                                         title: "Delete") { (action, view, nil) in
+            
+            if self.fetchedFavs == nil { return }
+            
+            let favorite = self.fetchedFavs!.object(at: indexPath)
+            self.context.delete(favorite)
+            self.appDelegate.saveContext()
+            self.fetchData()
+            
+            DispatchQueue.main.async { self.favoritesTable.reloadData() }
             
         }
         return UISwipeActionsConfiguration(actions: [delete])

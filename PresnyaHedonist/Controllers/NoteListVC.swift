@@ -121,9 +121,7 @@ extension NoteListVC: UITableViewDelegate, UITableViewDataSource {
         let delete = UIContextualAction(style: .destructive,
                                         title: "Delete") { (action, view, nil) in
             
-            if self.fetchedNotes == nil {
-                return
-            }
+            if self.fetchedNotes == nil { return }
             
             let note = self.fetchedNotes!.object(at: indexPath)
             self.context.delete(note)
