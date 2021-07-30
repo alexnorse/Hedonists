@@ -101,12 +101,9 @@ class AllPlacesMapVC: UIViewController, MKMapViewDelegate {
             annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: id)
             annotationView?.canShowCallout = true
             
-            let button = UIButton(type: .detailDisclosure)
-            annotationView?.rightCalloutAccessoryView = button
         } else {
             annotationView?.annotation = annotation
         }
-        
         return annotationView
     }
     

@@ -78,6 +78,17 @@ class InfoVC: UIViewController {
     
     @IBAction func addToFavoritesTapped(_ sender: Any) {
 
+        let place = Place(context: context)
+        let favorite = Favorite(context: context)
+        favorite.addToFavorites(place)
+        
+        do {
+            try context.save()
+        } catch {
+            presentAlert(title: AlertTitle.error,
+                         message: Errors.favsFail)
+        }
+     
         presentAlert(title: AlertTitle.success,
                      message: Alerts.addedToFavorites)
     }

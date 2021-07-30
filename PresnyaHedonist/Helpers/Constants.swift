@@ -35,7 +35,7 @@ enum FirstLaunchCheck {
 enum UISettings {
     static let cornerRadius: CGFloat            = 15
     static let regionZoomDetails: Double        = 500
-    static let regionZoom: Double               = 10000
+    static let regionZoom: Double               = 1000
 }
 
 

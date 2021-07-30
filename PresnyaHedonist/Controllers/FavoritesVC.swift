@@ -67,7 +67,7 @@ extension FavoritesVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellsID.FAVS_CELL, for: indexPath)
         
-        let favorite = Favorite()
+        let favorite = favorites[indexPath.row]
         
         cell.textLabel?.text        = favorite.name
         cell.detailTextLabel?.text  = favorite.category
