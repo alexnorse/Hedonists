@@ -30,7 +30,9 @@ class MapVC: UIViewController {
         if place != nil {
             let location = CLLocationCoordinate2D(latitude: place!.lat, longitude: place!.long)
             let pin = MKPointAnnotation()
-            let region = MKCoordinateRegion(center: location, latitudinalMeters: UISettings.regionZoom, longitudinalMeters: UISettings.regionZoom)
+            let region = MKCoordinateRegion(center: location,
+                                            latitudinalMeters: UISettings.regionZoomDetails,
+                                            longitudinalMeters: UISettings.regionZoomDetails)
             
             pin.coordinate = location
             

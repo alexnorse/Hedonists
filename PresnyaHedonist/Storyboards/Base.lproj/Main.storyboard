@@ -521,13 +521,16 @@
         <!--Карта-->
         <scene sceneID="nR9-ev-Uko">
             <objects>
-                <viewController storyboardIdentifier="AllPlacesMapVC" id="YHr-RB-wZH" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AllPlacesMapVC" id="YHr-RB-wZH" customClass="AllPlacesMapVC" customModule="PresnyaHedonist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xCZ-54-vR4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="25U-S2-rWu">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <connections>
+                                    <outlet property="delegate" destination="YHr-RB-wZH" id="Gd1-Lq-RVv"/>
+                                </connections>
                             </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="szT-FG-Cau"/>
@@ -540,6 +543,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Карта" image="map.fill" catalog="system" id="fnU-iW-tO1"/>
+                    <connections>
+                        <outlet property="mapView" destination="25U-S2-rWu" id="CYb-qu-0MQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qVs-ny-nHW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
