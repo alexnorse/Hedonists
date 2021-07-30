@@ -9,9 +9,9 @@ import UIKit
 
 class FeedCell: UITableViewCell {
 
-    @IBOutlet weak var placeImage: UIImageView!
-    @IBOutlet weak var placeName: UILabel!
-    @IBOutlet weak var typeLabel: UILabel!
+    @IBOutlet var placeImage: UIImageView!
+    @IBOutlet var placeName: UILabel!
+    @IBOutlet var typeLabel: UILabel!
     
     
     override func awakeFromNib() {

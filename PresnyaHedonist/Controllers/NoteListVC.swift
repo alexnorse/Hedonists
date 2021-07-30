@@ -17,8 +17,8 @@ class NoteListVC: UIViewController {
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var fetchedNotes: NSFetchedResultsController<Note>?
     
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var addnewNote: UIButton!
+    @IBOutlet var tableView: UITableView!
+    @IBOutlet var addnewNote: UIButton!
     
     
     override func viewDidLoad() {

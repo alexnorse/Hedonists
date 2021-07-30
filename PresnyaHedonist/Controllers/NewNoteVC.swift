@@ -20,11 +20,11 @@ class NewNoteVC: UIViewController {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-    @IBOutlet weak var noteView: UIView!
-    @IBOutlet weak var textView: UITextView!
+    @IBOutlet var noteView: UIView!
+    @IBOutlet var textView: UITextView!
     
-    @IBOutlet weak var save: UIButton!
-    @IBOutlet weak var close: UIButton!
+    @IBOutlet var save: UIButton!
+    @IBOutlet var close: UIButton!
     
 
     override func viewDidLoad() {

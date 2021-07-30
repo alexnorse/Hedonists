@@ -14,7 +14,7 @@ class FavoritesVC: UIViewController {
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-    @IBOutlet weak var favoritesTable: UITableView!
+    @IBOutlet var favoritesTable: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

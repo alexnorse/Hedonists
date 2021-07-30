@@ -11,10 +11,10 @@ class DetailsVC: UIViewController {
     
     var place: Place?
     
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var placeName: UILabel!
-    @IBOutlet weak var infoSegments: UISegmentedControl!
-    @IBOutlet weak var containerView: UIView!
+    @IBOutlet var imageView: UIImageView!
+    @IBOutlet var placeName: UILabel!
+    @IBOutlet var infoSegments: UISegmentedControl!
+    @IBOutlet var containerView: UIView!
 
     
     lazy var infoViewController: InfoVC = {

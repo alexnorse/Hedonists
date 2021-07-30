@@ -15,7 +15,7 @@ class FeedVC: UIViewController {
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     let searchController = UISearchController(searchResultsController: nil)
     
-    @IBOutlet weak var tableViewFeed: UITableView!
+    @IBOutlet var tableViewFeed: UITableView!
     
     
     var searchBarIsEmpty: Bool {
@@ -73,7 +73,7 @@ class FeedVC: UIViewController {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if tableViewFeed.indexPathForSelectedRow == nil {
+        guard tableViewFeed.indexPathForSelectedRow != nil else {
             return
         }
         

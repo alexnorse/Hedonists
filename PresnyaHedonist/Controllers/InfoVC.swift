@@ -16,13 +16,13 @@ class InfoVC: UIViewController {
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-    @IBOutlet weak var type: UILabel!
-    @IBOutlet weak var descript: UILabel!
-    @IBOutlet weak var address: UILabel!
-    @IBOutlet weak var workHours: UILabel!
+    @IBOutlet var type: UILabel!
+    @IBOutlet var descript: UILabel!
+    @IBOutlet var address: UILabel!
+    @IBOutlet var workHours: UILabel!
     
-    @IBOutlet weak var instagramLink: UIButton!
-    @IBOutlet weak var addToFavorites: UIButton!
+    @IBOutlet var instagramLink: UIButton!
+    @IBOutlet var addToFavorites: UIButton!
     
     
     override func viewDidLoad() {

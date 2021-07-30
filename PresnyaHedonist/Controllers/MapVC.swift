@@ -12,7 +12,7 @@ class MapVC: UIViewController {
 
     var place: Place?
     
-    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet var mapView: MKMapView!
     
     
     override func viewDidLoad() {
