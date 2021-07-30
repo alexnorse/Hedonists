@@ -185,14 +185,14 @@
 		E6023C6F269DE1C70035AA7F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E6023C80269DE4EF0035AA7F /* FavoritesVC.swift */,
 				E6023C74269DE41C0035AA7F /* FeedVC.swift */,
+				E6023C80269DE4EF0035AA7F /* FavoritesVC.swift */,
+				E6C1DD7E26B3E7C200329E37 /* AllPlacesMapVC.swift */,
 				E6023C76269DE4400035AA7F /* DetailsVC.swift */,
 				E6023C78269DE45C0035AA7F /* InfoVC.swift */,
 				E6023C7A269DE47C0035AA7F /* MapVC.swift */,
 				E6023C7C269DE49F0035AA7F /* NoteListVC.swift */,
 				E6023C7E269DE4C50035AA7F /* NewNoteVC.swift */,
-				E6C1DD7E26B3E7C200329E37 /* AllPlacesMapVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -555,6 +555,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F8RY8W2DY6;
 				INFOPLIST_FILE = PresnyaHedonist/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -574,6 +575,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F8RY8W2DY6;
 				INFOPLIST_FILE = PresnyaHedonist/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

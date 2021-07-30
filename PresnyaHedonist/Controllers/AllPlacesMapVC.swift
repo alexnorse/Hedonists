@@ -7,11 +7,14 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
 class AllPlacesMapVC: UIViewController, MKMapViewDelegate {
     
     var places = [Place]()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    let locationManager = CLLocationManager()
     
     @IBOutlet var mapView: MKMapView!
     
@@ -19,6 +22,7 @@ class AllPlacesMapVC: UIViewController, MKMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchData()
+        checkLocationServices()
         configureMap()
     }
     
@@ -34,6 +38,49 @@ class AllPlacesMapVC: UIViewController, MKMapViewDelegate {
     }
     
     
+    func checkLocationServices() {
+        if CLLocationManager.locationServicesEnabled() {
+            setupLocationManager()
+            checkLocationAuthorization()
+        } else {
+            
+        }
+    }
+    
+    
+    func setupLocationManager() {
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+    }
+    
+    
+    func checkLocationAuthorization() {
+        switch CLLocationManager.authorizationStatus() {
+        case .authorizedWhenInUse:
+            mapView.isUserLocationVisible
+            centerViewToUsersLocation()
+            locationManager.startUpdatingLocation()
+            break
+        case .denied:
+            break
+        case .notDetermined:
+            locationManager.requestWhenInUseAuthorization()
+        case .restricted:
+            break
+        case .authorizedAlways:
+            break
+        }
+    }
+    
+    
+    func centerViewToUsersLocation() {
+        if let location = locationManager.location?.coordinate {
+            let region = MKCoordinateRegion.init(center: location, latitudinalMeters: UISettings.regionZoom, longitudinalMeters: UISettings.regionZoom)
+            mapView.setRegion(region, animated: true)
+        }
+    }
+    
+    
     func configureMap () {
         for location in places {
             let annotation = MKPointAnnotation()
@@ -43,10 +90,6 @@ class AllPlacesMapVC: UIViewController, MKMapViewDelegate {
             
             mapView.addAnnotation(annotation)
         }
-        
-        let centerLocation = CLLocationCoordinate2D(latitude: 55.7575463, longitude: 37.5860032)
-        let region = MKCoordinateRegion(center: centerLocation, latitudinalMeters: UISettings.regionZoom, longitudinalMeters: UISettings.regionZoom)
-        mapView.setRegion(region, animated: false)
     }
     
     
@@ -67,4 +110,22 @@ class AllPlacesMapVC: UIViewController, MKMapViewDelegate {
         return annotationView
     }
     
+}
+
+
+extension AllPlacesMapVC: CLLocationManagerDelegate {
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = locations.last else { return }
+        
+        let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        let region = MKCoordinateRegion.init(center: center, latitudinalMeters: UISettings.regionZoom, longitudinalMeters: UISettings.regionZoom)
+        
+        mapView.setRegion(region, animated: true)
+    }
+    
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        checkLocationAuthorization()
+    }
 }
