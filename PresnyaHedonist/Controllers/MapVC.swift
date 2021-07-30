@@ -8,7 +8,7 @@
 import UIKit
 import MapKit
 
-class MapVC: UIViewController {
+class MapVC: UIViewController, MKMapViewDelegate {
 
     var place: Place?
     
@@ -40,4 +40,5 @@ class MapVC: UIViewController {
             mapView.setRegion(region, animated: false)
         }
     }
+    
 }
