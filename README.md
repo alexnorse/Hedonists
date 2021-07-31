@@ -14,8 +14,8 @@ Presnya is one of the oldest, historical and at the same time, fashionable distr
 
 ## Tech Stack:
 - UIKit, Storyboard
-- CoreData
-- MapKit, MapView 
+- Core Data
+- MapKit, Core Location 
 - CallKit
 - JSON data parsing
 - Safari Services
