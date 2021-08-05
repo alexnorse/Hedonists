@@ -9,6 +9,15 @@ import UIKit
 import MapKit
 import CoreLocation
 
+class MyAnnotation: MKPointAnnotation {
+    let place: Place
+    init(place: Place) {
+        self.place = place
+        super.init()
+    }
+}
+
+
 class AllPlacesMapVC: UIViewController, MKMapViewDelegate {
     
     var places = [Place]()
@@ -21,6 +30,7 @@ class AllPlacesMapVC: UIViewController, MKMapViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        mapView.delegate = self
         fetchData()
         checkLocationServices()
         configureMap()
@@ -57,7 +67,7 @@ class AllPlacesMapVC: UIViewController, MKMapViewDelegate {
     func checkLocationAuthorization() {
         switch CLLocationManager.authorizationStatus() {
         case .authorizedWhenInUse:
-            mapView.isUserLocationVisible
+            mapView.userLocation
             centerViewToUsersLocation()
             locationManager.startUpdatingLocation()
             break
@@ -112,6 +122,14 @@ class AllPlacesMapVC: UIViewController, MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         
+        guard let annotation = view.annotation as? MyAnnotation else { return }
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let detailVC = storyboard.instantiateViewController(identifier: VControllersID.DETAILS_VC) as! DetailsVC
+
+        detailVC.place = annotation.place
+        
+        navigationController?.pushViewController(detailVC, animated: true)
     }
     
 }
