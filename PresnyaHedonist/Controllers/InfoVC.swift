@@ -13,7 +13,6 @@ import CallKit
 class InfoVC: UIViewController {
     
     var place: Place?
-    var favorites = [Favorite]()
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
@@ -78,20 +77,10 @@ class InfoVC: UIViewController {
     
     
     @IBAction func addToFavoritesTapped(_ sender: Any) {
-
-        let favorite = Favorite(context: context)
-        let place = Place(context: context)
-        
-        favorite.addToFavorites(place)
-        favorites.append(favorite)
-        
-        do {
-            try context.save()
-        } catch {
-            presentAlert(title: AlertTitle.error,
-                         message: Errors.favsFail)
-        }
      
+        place?.isFavorite = true
+        
+        
         presentAlert(title: AlertTitle.success,
                      message: Alerts.addedToFavorites)
     }

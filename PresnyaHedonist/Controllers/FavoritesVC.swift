@@ -10,11 +10,20 @@ import CoreData
 
 class FavoritesVC: UIViewController {
     
-    var favorites = [Favorite]()
-    
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    var fetchedFavs: NSFetchedResultsController<Favorite>?
+    let fetchedFavs: NSFetchedResultsController<Place>
+    
+    required init?(coder aDecoder: NSCoder) {
+        let request: NSFetchRequest<Place> = Place.fetchRequest()
+        request.predicate = NSPredicate(format: "isFavorite == YES")
+        
+        fetchedFavs = NSFetchedResultsController(fetchRequest: request,
+                                                 managedObjectContext: context,
+                                                 sectionNameKeyPath: nil,
+                                                 cacheName: nil)
+        super.init(coder: aDecoder)
+    }
+    
     
     @IBOutlet var favoritesTable: UITableView!
     
@@ -23,11 +32,12 @@ class FavoritesVC: UIViewController {
         super.viewDidLoad()
         favoritesTable.delegate = self
         favoritesTable.dataSource = self
-        
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
         configureController()
         designSettings()
-        
-        fetchData()
     }
     
     
@@ -41,43 +51,21 @@ class FavoritesVC: UIViewController {
     func designSettings() {
         favoritesTable.removeExcessCells()
     }
-    
-    
-    func fetchData() {
-        let request: NSFetchRequest<Favorite> = Favorite.fetchRequest()
-        
-        do {
-            favorites = try context.fetch(request)
-        } catch {
-            presentAlert(title: AlertTitle.error,
-                         message: Errors.fetchError)
-        }
-        
-        DispatchQueue.main.async {
-            self.favoritesTable.reloadData()
-            if self.favorites.count == 0 {
-                self.favoritesTable.setEmptyState(EmptyStates.favsEmpty)
-            } else {
-                self.favoritesTable.restore()
-            }
-        }
-    }
+
 }
 
 
 extension FavoritesVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        favorites.count
+        fetchedFavs.fetchedObjects?.count ?? 0
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellsID.FAVS_CELL, for: indexPath)
         
-        let favorite = favorites[indexPath.row]
-        
-        cell.textLabel?.text        = favorite.name
-        cell.detailTextLabel?.text  = favorite.category
+        cell.textLabel?.text        = fetchedFavs.object(at: indexPath).name
+        cell.detailTextLabel?.text  = fetchedFavs.object(at: indexPath).category
 
         cell.textLabel?.font        = Fonts.bodyAccents
         cell.detailTextLabel?.font  = Fonts.bodyText
@@ -94,13 +82,6 @@ extension FavoritesVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let delete = UIContextualAction(style: .destructive,
                                         title: "Delete") { (action, view, nil) in
-            
-            if self.fetchedFavs == nil { return }
-            
-            let favorite = self.fetchedFavs!.object(at: indexPath)
-            self.context.delete(favorite)
-            self.appDelegate.saveContext()
-            self.fetchData()
             
             DispatchQueue.main.async { self.favoritesTable.reloadData() }
             
