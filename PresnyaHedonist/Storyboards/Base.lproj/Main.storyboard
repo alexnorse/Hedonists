@@ -65,7 +65,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ICd-2g-TRM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2105.7971014492755" y="825.66964285714278"/>
+            <point key="canvasLocation" x="1196" y="826"/>
         </scene>
         <!--FeedVC-->
         <scene sceneID="31s-wa-i6A">
@@ -522,7 +522,7 @@
             </objects>
             <point key="canvasLocation" x="2954" y="-678"/>
         </scene>
-        <!--All Places MapVC-->
+        <!--Карта-->
         <scene sceneID="nR9-ev-Uko">
             <objects>
                 <viewController storyboardIdentifier="AllPlacesMapVC" id="YHr-RB-wZH" customClass="AllPlacesMapVC" customModule="PresnyaHedonist" customModuleProvider="target" sceneMemberID="viewController">
@@ -546,6 +546,7 @@
                             <constraint firstItem="25U-S2-rWu" firstAttribute="top" secondItem="xCZ-54-vR4" secondAttribute="top" id="mms-Cl-xgm"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Карта" image="map.fill" catalog="system" id="wIS-g0-wIS"/>
                     <navigationItem key="navigationItem" id="b53-q8-D9X"/>
                     <connections>
                         <outlet property="mapView" destination="25U-S2-rWu" id="CYb-qu-0MQ"/>
@@ -553,7 +554,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qVs-ny-nHW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="334.78260869565219" y="825.66964285714278"/>
+            <point key="canvasLocation" x="-575" y="826"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="qOb-rU-ajB">
@@ -568,7 +569,7 @@
                     <connections>
                         <segue destination="UvH-JX-k07" kind="relationship" relationship="viewControllers" id="LVu-mp-zCk"/>
                         <segue destination="GLF-kf-hDy" kind="relationship" relationship="viewControllers" id="C0g-n3-F4f"/>
-                        <segue destination="qrd-ZG-hBM" kind="relationship" relationship="viewControllers" id="7Z7-7X-8Ut"/>
+                        <segue destination="YHr-RB-wZH" kind="relationship" relationship="viewControllers" id="8nP-32-nZc"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eK2-eR-p5h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -611,26 +612,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nB8-Ks-joP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1221.7391304347827" y="825.66964285714278"/>
-        </scene>
-        <!--Карта-->
-        <scene sceneID="IhE-to-bdJ">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qrd-ZG-hBM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Карта" image="map.fill" catalog="system" id="fnU-iW-tO1"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RNu-RG-zyS">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="YHr-RB-wZH" kind="relationship" relationship="rootViewController" id="uGb-0U-71w"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="E0E-2F-b8k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-575.36231884057975" y="825.66964285714278"/>
+            <point key="canvasLocation" x="312" y="826"/>
         </scene>
     </scenes>
     <resources>

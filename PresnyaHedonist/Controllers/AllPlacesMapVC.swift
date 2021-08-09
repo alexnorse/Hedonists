@@ -48,9 +48,12 @@ class AllPlacesMapVC: UIViewController, MKMapViewDelegate {
     
     
     func checkLocationServices() {
-        CLLocationManager.locationServicesEnabled()
-        setupLocationManager()
-        checkLocationAuthorization()
+        if CLLocationManager.locationServicesEnabled() {
+            setupLocationManager()
+            checkLocationAuthorization()
+        } else {
+            
+        }
     }
     
     
@@ -63,7 +66,7 @@ class AllPlacesMapVC: UIViewController, MKMapViewDelegate {
     func checkLocationAuthorization() {
         switch CLLocationManager.authorizationStatus() {
         case .authorizedWhenInUse:
-            mapView.userLocation
+            mapView.isUserLocationVisible
             centerViewToUsersLocation()
             locationManager.startUpdatingLocation()
             break
@@ -124,7 +127,9 @@ class AllPlacesMapVC: UIViewController, MKMapViewDelegate {
         let detailVC = storyboard.instantiateViewController(identifier: VControllersID.DETAILS_VC) as! DetailsVC
         detailVC.place = annotation.place
         
-        navigationController?.pushViewController(detailVC, animated: true)
+        detailVC.modalPresentationStyle = .automatic
+        
+        present(detailVC, animated: true, completion: nil)
     }
 }
 

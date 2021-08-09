@@ -10,8 +10,8 @@ import CoreData
 
 class FavoritesVC: UIViewController {
     
+    var place: Place?
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let fetchedFavs: NSFetchedResultsController<Place>
     
     @IBOutlet var favoritesTable: UITableView!
@@ -87,6 +87,14 @@ extension FavoritesVC: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let detailVC = storyboard.instantiateViewController(identifier: VControllersID.DETAILS_VC) as! DetailsVC
+        detailVC.place = fetchedFavs.fetchedObjects?[indexPath.row]
+        
+        detailVC.modalPresentationStyle = .automatic
+        present(detailVC, animated: true, completion: nil)
+        
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
@@ -95,9 +103,10 @@ extension FavoritesVC: UITableViewDelegate, UITableViewDataSource {
         let delete = UIContextualAction(style: .destructive,
                                         title: "Delete") { (action, view, nil) in
             
-            let favorite = self.fetchedFavs.object(at: indexPath)
-            self.context.delete(favorite)
-            self.appDelegate.saveContext()
+            self.place = self.fetchedFavs.object(at: indexPath)
+            self.place?.isFavorite = false
+            try? self.context.save()
+            try? self.fetchedFavs.performFetch()
             
             DispatchQueue.main.async { self.favoritesTable.reloadData() }
         }
@@ -125,6 +134,8 @@ extension FavoritesVC: NSFetchedResultsControllerDelegate {
                 favoritesTable.insertRows(at: [indexPath], with: .fade)
             }
             
+        case .delete:
+            favoritesTable.deleteRows(at: [indexPath! as IndexPath], with: .fade)
             break;
             
         default:
