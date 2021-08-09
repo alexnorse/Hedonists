@@ -11,12 +11,10 @@ class FeedVC: UIViewController {
     
     var places = [Place]()
     var filteredPlaces = [Place]()
-    
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     let searchController = UISearchController(searchResultsController: nil)
     
     @IBOutlet var tableViewFeed: UITableView!
-    
     
     var searchBarIsEmpty: Bool {
         guard let text = searchController.searchBar.text else { return false }
@@ -28,9 +26,10 @@ class FeedVC: UIViewController {
         return searchController.isActive && (!searchBarIsEmpty || searchScopeFiltering)
     }
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableViewFeed.delegate = self
         tableViewFeed.dataSource = self
         tableViewFeed.tableSeparator()
@@ -128,12 +127,11 @@ extension FeedVC: UISearchResultsUpdating {
     
     
     func contentFilter(_ searchText: String, scope: String = "Все") {
-        
         filteredPlaces = places.filter({ (place) -> Bool in
-            let categoryMatch = (scope == "Все") || (place.category == scope)
-            if searchBarIsEmpty { return categoryMatch }
-            return categoryMatch && place.name!.lowercased().contains(searchText.lowercased()) })
-    
+                                        let categoryMatch = (scope == "Все") || (place.category == scope)
+                                        if searchBarIsEmpty { return categoryMatch }
+                                        return categoryMatch && place.name!.lowercased().contains(searchText.lowercased()) })
+        
         DispatchQueue.main.async { self.tableViewFeed.reloadData() }
     }
 }

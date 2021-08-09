@@ -9,7 +9,7 @@ import UIKit
 import MapKit
 
 class MapVC: UIViewController, MKMapViewDelegate {
-
+    
     var place: Place?
     
     @IBOutlet var mapView: MKMapView!
@@ -17,7 +17,7 @@ class MapVC: UIViewController, MKMapViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
     
     
@@ -40,5 +40,4 @@ class MapVC: UIViewController, MKMapViewDelegate {
             mapView.setRegion(region, animated: false)
         }
     }
-    
 }

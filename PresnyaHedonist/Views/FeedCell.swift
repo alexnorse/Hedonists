@@ -8,7 +8,7 @@
 import UIKit
 
 class FeedCell: UITableViewCell {
-
+    
     @IBOutlet var placeImage: UIImageView!
     @IBOutlet var placeName: UILabel!
     @IBOutlet var typeLabel: UILabel!
@@ -18,11 +18,11 @@ class FeedCell: UITableViewCell {
         super.awakeFromNib()
         designSettings()
     }
-
+    
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
     }
     
     

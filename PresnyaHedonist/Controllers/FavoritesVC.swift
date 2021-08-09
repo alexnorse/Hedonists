@@ -11,21 +11,28 @@ import CoreData
 class FavoritesVC: UIViewController {
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let fetchedFavs: NSFetchedResultsController<Place>
     
+    @IBOutlet var favoritesTable: UITableView!
+    
+    
     required init?(coder aDecoder: NSCoder) {
+        
         let request: NSFetchRequest<Place> = Place.fetchRequest()
         request.predicate = NSPredicate(format: "isFavorite == YES")
+        request.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
         
         fetchedFavs = NSFetchedResultsController(fetchRequest: request,
                                                  managedObjectContext: context,
                                                  sectionNameKeyPath: nil,
                                                  cacheName: nil)
+        
+        try? fetchedFavs.performFetch()
+        
         super.init(coder: aDecoder)
+        fetchedFavs.delegate = self
     }
-    
-    
-    @IBOutlet var favoritesTable: UITableView!
     
     
     override func viewDidLoad() {
@@ -38,6 +45,12 @@ class FavoritesVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         configureController()
         designSettings()
+        
+        if self.fetchedFavs.fetchedObjects?.count == 0 {
+            self.favoritesTable.setEmptyState(EmptyStates.favsEmpty)
+        } else {
+            self.favoritesTable.restore()
+        }
     }
     
     
@@ -51,13 +64,12 @@ class FavoritesVC: UIViewController {
     func designSettings() {
         favoritesTable.removeExcessCells()
     }
-
 }
 
 
 extension FavoritesVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        fetchedFavs.fetchedObjects?.count ?? 0
+        return fetchedFavs.fetchedObjects?.count ?? 0
     }
     
     
@@ -66,7 +78,7 @@ extension FavoritesVC: UITableViewDelegate, UITableViewDataSource {
         
         cell.textLabel?.text        = fetchedFavs.object(at: indexPath).name
         cell.detailTextLabel?.text  = fetchedFavs.object(at: indexPath).category
-
+        
         cell.textLabel?.font        = Fonts.bodyAccents
         cell.detailTextLabel?.font  = Fonts.bodyText
         
@@ -83,9 +95,40 @@ extension FavoritesVC: UITableViewDelegate, UITableViewDataSource {
         let delete = UIContextualAction(style: .destructive,
                                         title: "Delete") { (action, view, nil) in
             
-            DispatchQueue.main.async { self.favoritesTable.reloadData() }
+            let favorite = self.fetchedFavs.object(at: indexPath)
+            self.context.delete(favorite)
+            self.appDelegate.saveContext()
             
+            DispatchQueue.main.async { self.favoritesTable.reloadData() }
         }
         return UISwipeActionsConfiguration(actions: [delete])
+    }
+}
+
+
+extension FavoritesVC: NSFetchedResultsControllerDelegate {
+    
+    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        favoritesTable.beginUpdates()
+    }
+    
+    
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        favoritesTable.endUpdates()
+    }
+    
+    
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        switch (type) {
+        case .insert:
+            if let indexPath = newIndexPath {
+                favoritesTable.insertRows(at: [indexPath], with: .fade)
+            }
+            
+            break;
+            
+        default:
+            print(" ")
+        }
     }
 }

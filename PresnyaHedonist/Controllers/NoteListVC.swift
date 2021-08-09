@@ -12,7 +12,6 @@ class NoteListVC: UIViewController {
     
     var place: Place?
     var notes: [Note]?
-    
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var fetchedNotes: NSFetchedResultsController<Note>?
@@ -105,13 +104,13 @@ extension NoteListVC: UITableViewDelegate, UITableViewDataSource {
         let note = fetchedNotes?.object(at: indexPath)
         let dateFormatter = DateFormatter()
         
-        dateFormatter.dateFormat = "dd.MM.yy"
+        dateFormatter.dateFormat    = "dd.MM.yy"
         
-        cell.textLabel?.text = note?.text
-        cell.textLabel?.font = Fonts.bodyAccents
+        cell.textLabel?.text        = note?.text
+        cell.detailTextLabel?.text  = dateFormatter.string(from: (note?.date)!)
         
-        cell.detailTextLabel?.text = dateFormatter.string(from: (note?.date)!)
-        cell.detailTextLabel?.font = Fonts.bodyText
+        cell.textLabel?.font        = Fonts.bodyAccents
+        cell.detailTextLabel?.font  = Fonts.bodyText
         
         return cell
     }

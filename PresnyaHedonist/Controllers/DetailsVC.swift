@@ -15,7 +15,7 @@ class DetailsVC: UIViewController {
     @IBOutlet var placeName: UILabel!
     @IBOutlet var infoSegments: UISegmentedControl!
     @IBOutlet var containerView: UIView!
-
+    
     
     lazy var infoViewController: InfoVC = {
         let infoVC = storyboard?.instantiateViewController(identifier: VControllersID.INFO_VC) as! InfoVC
@@ -46,7 +46,7 @@ class DetailsVC: UIViewController {
         designSettings()
         segmentChange(self.infoSegments)
     }
-
+    
     
     func designSettings() {
         placeName.font = Fonts.headlines

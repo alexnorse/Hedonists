@@ -13,14 +13,12 @@ import CallKit
 class InfoVC: UIViewController {
     
     var place: Place?
-    
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     @IBOutlet var type: UILabel!
     @IBOutlet var descript: UILabel!
     @IBOutlet var address: UILabel!
     @IBOutlet var workHours: UILabel!
-    
     @IBOutlet var instagramLink: UIButton!
     @IBOutlet var addToFavorites: UIButton!
     
@@ -54,7 +52,6 @@ class InfoVC: UIViewController {
     
     
     @IBAction func phoneCall(_ sender: Any) {
-        
         let formattedNumber = place?.phone?.components(separatedBy: NSCharacterSet.decimalDigits.inverted).joined(separator: "")
         
         if let url = NSURL(string: ("tel:" + formattedNumber!)) {
@@ -65,7 +62,6 @@ class InfoVC: UIViewController {
     
     
     @IBAction func instagramLink(_ sender: Any) {
-        
         guard let url = URL(string: place?.url ?? "https://www.instagram.com") else {
             
             presentAlert(title: AlertTitle.error,
@@ -77,9 +73,15 @@ class InfoVC: UIViewController {
     
     
     @IBAction func addToFavoritesTapped(_ sender: Any) {
-     
+        
         place?.isFavorite = true
         
+        do {
+            try? context.save()
+        } catch {
+            presentAlert(title: AlertTitle.error,
+                         message: Errors.favsFail)
+        }
         
         presentAlert(title: AlertTitle.success,
                      message: Alerts.addedToFavorites)

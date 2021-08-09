@@ -22,7 +22,6 @@ class AllPlacesMapVC: UIViewController, MKMapViewDelegate {
     
     var places = [Place]()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
     let locationManager = CLLocationManager()
     
     @IBOutlet var mapView: MKMapView!
@@ -49,12 +48,9 @@ class AllPlacesMapVC: UIViewController, MKMapViewDelegate {
     
     
     func checkLocationServices() {
-        if CLLocationManager.locationServicesEnabled() {
-            setupLocationManager()
-            checkLocationAuthorization()
-        } else {
-            
-        }
+        CLLocationManager.locationServicesEnabled()
+        setupLocationManager()
+        checkLocationAuthorization()
     }
     
     
@@ -93,7 +89,7 @@ class AllPlacesMapVC: UIViewController, MKMapViewDelegate {
     
     func configureMap () {
         for location in places {
-            let annotation = MKPointAnnotation()
+            let annotation = MyAnnotation(place: location)
             annotation.title = location.name
             annotation.subtitle = location.category
             annotation.coordinate = CLLocationCoordinate2D(latitude: location.lat, longitude: location.long)
@@ -126,12 +122,10 @@ class AllPlacesMapVC: UIViewController, MKMapViewDelegate {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let detailVC = storyboard.instantiateViewController(identifier: VControllersID.DETAILS_VC) as! DetailsVC
-
         detailVC.place = annotation.place
         
         navigationController?.pushViewController(detailVC, animated: true)
     }
-    
 }
 
 
