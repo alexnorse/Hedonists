@@ -47,26 +47,27 @@ class AllPlacesMapVC: UIViewController, MKMapViewDelegate {
     }
     
     
-    func checkLocationServices() {
-        if CLLocationManager.locationServicesEnabled() {
-            setupLocationManager()
-            checkLocationAuthorization()
-        } else {
-            
-        }
-    }
-    
-    
     func setupLocationManager() {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
     }
     
     
+    func checkLocationServices() {
+        if CLLocationManager.locationServicesEnabled() {
+            setupLocationManager()
+            checkLocationAuthorization()
+        } else {
+            presentAlert(title: AlertTitle.error,
+                         message: Errors.locationNotAllowed)
+        }
+    }
+    
+    
     func checkLocationAuthorization() {
         switch CLLocationManager.authorizationStatus() {
         case .authorizedWhenInUse:
-            mapView.isUserLocationVisible
+            mapView.showsUserLocation = true
             centerViewToUsersLocation()
             locationManager.startUpdatingLocation()
             break
@@ -75,6 +76,7 @@ class AllPlacesMapVC: UIViewController, MKMapViewDelegate {
         case .notDetermined:
             locationManager.requestWhenInUseAuthorization()
         case .restricted:
+            presentAlert(title: AlertTitle.error, message: Errors.locationNotAllowed)
             break
         case .authorizedAlways:
             break

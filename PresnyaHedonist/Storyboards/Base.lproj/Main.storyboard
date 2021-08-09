@@ -530,7 +530,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="25U-S2-rWu">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="25U-S2-rWu">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                                 <connections>
                                     <outlet property="delegate" destination="YHr-RB-wZH" id="Gd1-Lq-RVv"/>

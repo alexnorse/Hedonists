@@ -35,16 +35,17 @@ enum FirstLaunchCheck {
 enum UISettings {
     static let cornerRadius: CGFloat     = 15
     static let regionZoomDetails: Double = 500
-    static let regionZoom: Double        = 1
+    static let regionZoom: Double        = 1000
 }
 
 
 enum Errors {
-    static let databaseError = "В настоящий момент невозможно получить доступ к базе данных.\nПожалуйста, попробуйте позже"
-    static let fetchError    = "Ошибка загрузки.\nПожалуста, попробуйте еще раз"
-    static let faillURL      = "Неверный или устаревший адрес ссылки"
-    static let favsFail      = "Произошла ошибка при добавлении в Избранное"
-    static let imageError    = "Ошибка загрузки изображения ☹️"
+    static let databaseError       = "В настоящий момент невозможно получить доступ к базе данных.\nПожалуйста, попробуйте позже"
+    static let fetchError          = "Ошибка загрузки.\nПожалуста, попробуйте еще раз"
+    static let faillURL            = "Неверный или устаревший адрес ссылки"
+    static let favsFail            = "Произошла ошибка при добавлении в Избранное"
+    static let imageError          = "Ошибка загрузки изображения"
+    static let locationNotAllowed  = "Похоже, что Вы не включили геолокацию.\nНо это можно исправить в Настройках"
 }
 
 
