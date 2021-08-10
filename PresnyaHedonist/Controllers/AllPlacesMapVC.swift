@@ -22,7 +22,6 @@ class AllPlacesMapVC: UIViewController, MKMapViewDelegate {
     
     var places = [Place]()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    let locationManager = CLLocationManager()
     
     @IBOutlet var mapView: MKMapView!
     
@@ -31,8 +30,8 @@ class AllPlacesMapVC: UIViewController, MKMapViewDelegate {
         super.viewDidLoad()
         mapView.delegate = self
         fetchData()
-        checkLocationServices()
         configureMap()
+        configureAnnotations()
     }
     
     
@@ -45,54 +44,19 @@ class AllPlacesMapVC: UIViewController, MKMapViewDelegate {
                          message: Errors.fetchError)
         }
     }
+
     
-    
-    func setupLocationManager() {
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+    func configureMap() {
+        let location = CLLocationCoordinate2D(latitude: 55.7582313, longitude: 37.5949771)
+        let region = MKCoordinateRegion(center: location,
+                                        latitudinalMeters: UISettings.regionZoom,
+                                        longitudinalMeters: UISettings.regionZoom)
+        
+        mapView.setRegion(region, animated: false)
     }
     
     
-    func checkLocationServices() {
-        if CLLocationManager.locationServicesEnabled() {
-            setupLocationManager()
-            checkLocationAuthorization()
-        } else {
-            presentAlert(title: AlertTitle.error,
-                         message: Errors.locationNotAllowed)
-        }
-    }
-    
-    
-    func checkLocationAuthorization() {
-        switch CLLocationManager.authorizationStatus() {
-        case .authorizedWhenInUse:
-            mapView.showsUserLocation = true
-            centerViewToUsersLocation()
-            locationManager.startUpdatingLocation()
-            break
-        case .denied:
-            break
-        case .notDetermined:
-            locationManager.requestWhenInUseAuthorization()
-        case .restricted:
-            presentAlert(title: AlertTitle.error, message: Errors.locationNotAllowed)
-            break
-        case .authorizedAlways:
-            break
-        }
-    }
-    
-    
-    func centerViewToUsersLocation() {
-        if let location = locationManager.location?.coordinate {
-            let region = MKCoordinateRegion.init(center: location, latitudinalMeters: UISettings.regionZoom, longitudinalMeters: UISettings.regionZoom)
-            mapView.setRegion(region, animated: true)
-        }
-    }
-    
-    
-    func configureMap () {
+    func configureAnnotations() {
         for location in places {
             let annotation = MyAnnotation(place: location)
             annotation.title = location.name
@@ -132,23 +96,5 @@ class AllPlacesMapVC: UIViewController, MKMapViewDelegate {
         detailVC.modalPresentationStyle = .automatic
         
         present(detailVC, animated: true, completion: nil)
-    }
-}
-
-
-extension AllPlacesMapVC: CLLocationManagerDelegate {
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.last else { return }
-        
-        let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-        let region = MKCoordinateRegion.init(center: center, latitudinalMeters: UISettings.regionZoom, longitudinalMeters: UISettings.regionZoom)
-        
-        mapView.setRegion(region, animated: true)
-    }
-    
-    
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        checkLocationAuthorization()
     }
 }

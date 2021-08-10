@@ -68,6 +68,7 @@ class FavoritesVC: UIViewController {
 
 
 extension FavoritesVC: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return fetchedFavs.fetchedObjects?.count ?? 0
     }
@@ -122,11 +123,6 @@ extension FavoritesVC: NSFetchedResultsControllerDelegate {
     }
     
     
-    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        favoritesTable.endUpdates()
-    }
-    
-    
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
         switch (type) {
         case .insert:
@@ -142,4 +138,10 @@ extension FavoritesVC: NSFetchedResultsControllerDelegate {
             print(" ")
         }
     }
+    
+    
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        favoritesTable.endUpdates()
+    }
+    
 }

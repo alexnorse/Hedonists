@@ -46,6 +46,7 @@ enum Errors {
     static let favsFail            = "Произошла ошибка при добавлении в Избранное"
     static let imageError          = "Ошибка загрузки изображения"
     static let locationNotAllowed  = "Похоже, что Вы не включили геолокацию.\nНо это можно исправить в Настройках"
+    static let phoneError          = "У этого места нет актуального номера телефона в данный момент"
 }
 
 
