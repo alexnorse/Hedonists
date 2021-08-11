@@ -107,9 +107,6 @@ extension FavoritesVC: UITableViewDelegate, UITableViewDataSource {
             self.place = self.fetchedFavs.object(at: indexPath)
             self.place?.isFavorite = false
             try? self.context.save()
-            try? self.fetchedFavs.performFetch()
-            
-            DispatchQueue.main.async { self.favoritesTable.reloadData() }
         }
         return UISwipeActionsConfiguration(actions: [delete])
     }
