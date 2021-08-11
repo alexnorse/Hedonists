@@ -42,9 +42,9 @@ class FeedVC: UIViewController {
     
     
     func configureController() {
-        navigationController?.navigationBar.prefersLargeTitles  = true
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: Fonts.vcHeads!]
         title = VCTitles.feedTitle
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
     }
     
     
@@ -60,11 +60,12 @@ class FeedVC: UIViewController {
     
     
     func configureSearchController() {
-        searchController.searchResultsUpdater                   = self
-        searchController.searchBar.delegate                     = self
-        searchController.obscuresBackgroundDuringPresentation   = false
-        searchController.searchBar.placeholder                  = "Поиск..."
-        searchController.searchBar.scopeButtonTitles            = ["Все", "Ресторан", "Места", "Завтраки", "Бар"]
+        searchController.searchResultsUpdater                 = self
+        searchController.searchBar.delegate                   = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder                = "Поиск..."
+        searchController.searchBar.scopeButtonTitles          = ["Все", "Ресторан", "Места", "Завтраки", "Бар"]
+        searchController.searchBar.translatesAutoresizingMaskIntoConstraints = true
         
         navigationItem.searchController                         = searchController
         definesPresentationContext                              = true
