@@ -14,7 +14,7 @@ class FavoritesVC: UIViewController {
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     let fetchedFavs: NSFetchedResultsController<Place>
     
-    @IBOutlet var favoritesTable: UITableView!
+    @IBOutlet var favoritesTable: UITableView?
     
     
     required init?(coder aDecoder: NSCoder) {
@@ -37,8 +37,8 @@ class FavoritesVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        favoritesTable.delegate = self
-        favoritesTable.dataSource = self
+        favoritesTable?.delegate = self
+        favoritesTable?.dataSource = self
     }
     
     
@@ -47,9 +47,9 @@ class FavoritesVC: UIViewController {
         designSettings()
         
         if self.fetchedFavs.fetchedObjects?.count == 0 {
-            self.favoritesTable.setEmptyState(EmptyStates.favsEmpty)
+            self.favoritesTable?.setEmptyState(EmptyStates.favsEmpty)
         } else {
-            self.favoritesTable.restore()
+            self.favoritesTable?.restore()
         }
     }
     
@@ -60,7 +60,7 @@ class FavoritesVC: UIViewController {
     
     
     func designSettings() {
-        favoritesTable.removeExcessCells()
+        favoritesTable?.removeExcessCells()
     }
 }
 
@@ -114,7 +114,7 @@ extension FavoritesVC: UITableViewDelegate, UITableViewDataSource {
 extension FavoritesVC: NSFetchedResultsControllerDelegate {
     
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        favoritesTable.beginUpdates()
+        favoritesTable?.beginUpdates()
     }
     
     
@@ -122,11 +122,11 @@ extension FavoritesVC: NSFetchedResultsControllerDelegate {
         switch (type) {
         case .insert:
             if let indexPath = newIndexPath {
-                favoritesTable.insertRows(at: [indexPath], with: .fade)
+                favoritesTable?.insertRows(at: [indexPath], with: .fade)
             }
             
         case .delete:
-            favoritesTable.deleteRows(at: [indexPath! as IndexPath], with: .fade)
+            favoritesTable?.deleteRows(at: [indexPath! as IndexPath], with: .fade)
             break;
             
         default:
@@ -136,7 +136,7 @@ extension FavoritesVC: NSFetchedResultsControllerDelegate {
     
     
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        favoritesTable.endUpdates()
+        favoritesTable?.endUpdates()
     }
     
 }
