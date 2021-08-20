@@ -3,6 +3,8 @@
 
 ![Hedonists App](https://user-images.githubusercontent.com/68333583/127735570-326781e0-3467-4d83-a77d-2ce212ecd0db.png)
 
+## [AppStore link](https://apps.apple.com/ru/app/hedonists/id1580690289?l=en)
+
 ## Description:
 Presnya is one of the oldest, historical and at the same time, fashionable districts in Moscow. Like a true local citizen, I am glad to introduce my guide of its the best places - restaurants, walking areas, bars, concept stores, etc. All selected suggestions are the private collection of 'local stars' - with their own aesthetics and atmosphere. 
 
@@ -23,5 +25,3 @@ Presnya is one of the oldest, historical and at the same time, fashionable distr
 - TabBarView
 - Search bar and Filters
 - Own backend
-
-## [AppStore link](https://apps.apple.com/ru/app/hedonists/id1580690289?l=en)
