@@ -118,12 +118,13 @@ extension NoteListVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let delete = UIContextualAction(style: .destructive,
-                                        title: "Delete") { (action, view, nil) in
+                                        title: "Удалить") { (action, view, nil) in
             
             if self.fetchedNotes == nil { return }
             
             let note = self.fetchedNotes!.object(at: indexPath)
             self.context.delete(note)
+            self.tableView.deleteRows(at: [indexPath], with: .fade)
             self.appDelegate.saveContext()
             self.refresh()
         }

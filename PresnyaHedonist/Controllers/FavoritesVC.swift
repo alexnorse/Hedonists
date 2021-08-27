@@ -45,12 +45,6 @@ class FavoritesVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         configureController()
         designSettings()
-        
-        if self.fetchedFavs.fetchedObjects?.count == 0 {
-            self.favoritesTable?.setEmptyState(EmptyStates.favsEmpty)
-        } else {
-            self.favoritesTable?.restore()
-        }
     }
     
     
@@ -68,6 +62,12 @@ class FavoritesVC: UIViewController {
 extension FavoritesVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if self.fetchedFavs.fetchedObjects?.count == 0 {
+            self.favoritesTable?.setEmptyState(EmptyStates.favsEmpty)
+        } else {
+            self.favoritesTable?.restore()
+        }
+        
         return fetchedFavs.fetchedObjects?.count ?? 0
     }
     
