@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ViewAnimator
 
 class FeedVC: UIViewController {
     
@@ -39,6 +40,14 @@ class FeedVC: UIViewController {
         configureSearchController()
         
         fetchData()
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let animation = AnimationType.from(direction: .left, offset: 200)
+        UIView.animate(views: tableViewFeed.visibleCells,
+                       animations: [animation], duration: 0.75)
     }
     
     

@@ -19,7 +19,7 @@ extension UIViewController {
                                           style: .default))
             
             alert.modalPresentationStyle = .overFullScreen
-            alert.modalTransitionStyle = .crossDissolve
+            alert.modalTransitionStyle   = .crossDissolve
             
             self.present(alert, animated: true)
         }

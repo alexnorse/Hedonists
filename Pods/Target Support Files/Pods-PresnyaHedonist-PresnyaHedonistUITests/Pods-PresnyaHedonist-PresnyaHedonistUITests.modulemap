@@ -1,0 +1,6 @@
+framework module Pods_PresnyaHedonist_PresnyaHedonistUITests {
+  umbrella header "Pods-PresnyaHedonist-PresnyaHedonistUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

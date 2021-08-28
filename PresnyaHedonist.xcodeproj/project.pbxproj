@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A54B56F58F1FC1318F7D122 /* Pods_PresnyaHedonistTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A101A0E2D9B8BB7301A8177 /* Pods_PresnyaHedonistTests.framework */; };
+		7408BF1611355EBFFA1E3029 /* Pods_PresnyaHedonist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E250EE2BF5996AF844DB9C0 /* Pods_PresnyaHedonist.framework */; };
+		82F36A1EEA55785FA15206A4 /* Pods_PresnyaHedonist_PresnyaHedonistUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B4F5C7ED722E40E41356D63 /* Pods_PresnyaHedonist_PresnyaHedonistUITests.framework */; };
 		E6023C3B269DB39B0035AA7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6023C3A269DB39B0035AA7F /* AppDelegate.swift */; };
 		E6023C3D269DB39B0035AA7F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6023C3C269DB39B0035AA7F /* SceneDelegate.swift */; };
 		E6023C42269DB39B0035AA7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6023C40269DB39B0035AA7F /* Main.storyboard */; };
@@ -53,6 +56,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		080DAD067FAA74A22BA62732 /* Pods-PresnyaHedonist-PresnyaHedonistUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PresnyaHedonist-PresnyaHedonistUITests.debug.xcconfig"; path = "Target Support Files/Pods-PresnyaHedonist-PresnyaHedonistUITests/Pods-PresnyaHedonist-PresnyaHedonistUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		0A101A0E2D9B8BB7301A8177 /* Pods_PresnyaHedonistTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PresnyaHedonistTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FCC98EE4722969101B59D39 /* Pods-PresnyaHedonistTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PresnyaHedonistTests.debug.xcconfig"; path = "Target Support Files/Pods-PresnyaHedonistTests/Pods-PresnyaHedonistTests.debug.xcconfig"; sourceTree = "<group>"; };
+		16A4F7CFC9A9D6C2A081E609 /* Pods-PresnyaHedonist-PresnyaHedonistUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PresnyaHedonist-PresnyaHedonistUITests.release.xcconfig"; path = "Target Support Files/Pods-PresnyaHedonist-PresnyaHedonistUITests/Pods-PresnyaHedonist-PresnyaHedonistUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2B4F5C7ED722E40E41356D63 /* Pods_PresnyaHedonist_PresnyaHedonistUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PresnyaHedonist_PresnyaHedonistUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E250EE2BF5996AF844DB9C0 /* Pods_PresnyaHedonist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PresnyaHedonist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B8C0531B7671E7F94BD57B3 /* Pods-PresnyaHedonist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PresnyaHedonist.debug.xcconfig"; path = "Target Support Files/Pods-PresnyaHedonist/Pods-PresnyaHedonist.debug.xcconfig"; sourceTree = "<group>"; };
+		8464E818D0FFBADE37DF35DE /* Pods-PresnyaHedonist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PresnyaHedonist.release.xcconfig"; path = "Target Support Files/Pods-PresnyaHedonist/Pods-PresnyaHedonist.release.xcconfig"; sourceTree = "<group>"; };
+		D28F84562B785134D551398E /* Pods-PresnyaHedonistTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PresnyaHedonistTests.release.xcconfig"; path = "Target Support Files/Pods-PresnyaHedonistTests/Pods-PresnyaHedonistTests.release.xcconfig"; sourceTree = "<group>"; };
 		E6023C37269DB39B0035AA7F /* PresnyaHedonist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PresnyaHedonist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6023C3A269DB39B0035AA7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6023C3C269DB39B0035AA7F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7408BF1611355EBFFA1E3029 /* Pods_PresnyaHedonist.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A54B56F58F1FC1318F7D122 /* Pods_PresnyaHedonistTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,12 +120,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82F36A1EEA55785FA15206A4 /* Pods_PresnyaHedonist_PresnyaHedonistUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5557A2D35BD21E42669E11A4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4E250EE2BF5996AF844DB9C0 /* Pods_PresnyaHedonist.framework */,
+				2B4F5C7ED722E40E41356D63 /* Pods_PresnyaHedonist_PresnyaHedonistUITests.framework */,
+				0A101A0E2D9B8BB7301A8177 /* Pods_PresnyaHedonistTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		676391F65FC3080AA11C6D98 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7B8C0531B7671E7F94BD57B3 /* Pods-PresnyaHedonist.debug.xcconfig */,
+				8464E818D0FFBADE37DF35DE /* Pods-PresnyaHedonist.release.xcconfig */,
+				080DAD067FAA74A22BA62732 /* Pods-PresnyaHedonist-PresnyaHedonistUITests.debug.xcconfig */,
+				16A4F7CFC9A9D6C2A081E609 /* Pods-PresnyaHedonist-PresnyaHedonistUITests.release.xcconfig */,
+				0FCC98EE4722969101B59D39 /* Pods-PresnyaHedonistTests.debug.xcconfig */,
+				D28F84562B785134D551398E /* Pods-PresnyaHedonistTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E6023C2E269DB39B0035AA7F = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +158,8 @@
 				E6023C53269DB39C0035AA7F /* PresnyaHedonistTests */,
 				E6023C5E269DB39C0035AA7F /* PresnyaHedonistUITests */,
 				E6023C38269DB39B0035AA7F /* Products */,
+				676391F65FC3080AA11C6D98 /* Pods */,
+				5557A2D35BD21E42669E11A4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -237,9 +278,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E6023C64269DB39C0035AA7F /* Build configuration list for PBXNativeTarget "PresnyaHedonist" */;
 			buildPhases = (
+				056B98FDFB4CBE6921243BFF /* [CP] Check Pods Manifest.lock */,
 				E6023C33269DB39B0035AA7F /* Sources */,
 				E6023C34269DB39B0035AA7F /* Frameworks */,
 				E6023C35269DB39B0035AA7F /* Resources */,
+				C64588FC267AEA6279B6068A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -254,6 +297,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E6023C67269DB39C0035AA7F /* Build configuration list for PBXNativeTarget "PresnyaHedonistTests" */;
 			buildPhases = (
+				2476EE1FB7A6CC8BB986B710 /* [CP] Check Pods Manifest.lock */,
 				E6023C4C269DB39C0035AA7F /* Sources */,
 				E6023C4D269DB39C0035AA7F /* Frameworks */,
 				E6023C4E269DB39C0035AA7F /* Resources */,
@@ -272,9 +316,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E6023C6A269DB39C0035AA7F /* Build configuration list for PBXNativeTarget "PresnyaHedonistUITests" */;
 			buildPhases = (
+				FA75C52A921F0276C2C7553F /* [CP] Check Pods Manifest.lock */,
 				E6023C57269DB39C0035AA7F /* Sources */,
 				E6023C58269DB39C0035AA7F /* Frameworks */,
 				E6023C59269DB39C0035AA7F /* Resources */,
+				188693C18D74FD819F15A323 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -359,6 +405,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		056B98FDFB4CBE6921243BFF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PresnyaHedonist-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		188693C18D74FD819F15A323 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PresnyaHedonist-PresnyaHedonistUITests/Pods-PresnyaHedonist-PresnyaHedonistUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PresnyaHedonist-PresnyaHedonistUITests/Pods-PresnyaHedonist-PresnyaHedonistUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PresnyaHedonist-PresnyaHedonistUITests/Pods-PresnyaHedonist-PresnyaHedonistUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2476EE1FB7A6CC8BB986B710 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PresnyaHedonistTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C64588FC267AEA6279B6068A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PresnyaHedonist/Pods-PresnyaHedonist-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PresnyaHedonist/Pods-PresnyaHedonist-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PresnyaHedonist/Pods-PresnyaHedonist-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA75C52A921F0276C2C7553F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PresnyaHedonist-PresnyaHedonistUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E6023C33269DB39B0035AA7F /* Sources */ = {
@@ -553,6 +702,7 @@
 		};
 		E6023C65269DB39C0035AA7F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B8C0531B7671E7F94BD57B3 /* Pods-PresnyaHedonist.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -574,6 +724,7 @@
 		};
 		E6023C66269DB39C0035AA7F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8464E818D0FFBADE37DF35DE /* Pods-PresnyaHedonist.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -595,6 +746,7 @@
 		};
 		E6023C68269DB39C0035AA7F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FCC98EE4722969101B59D39 /* Pods-PresnyaHedonistTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -616,6 +768,7 @@
 		};
 		E6023C69269DB39C0035AA7F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D28F84562B785134D551398E /* Pods-PresnyaHedonistTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -637,6 +790,7 @@
 		};
 		E6023C6B269DB39C0035AA7F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 080DAD067FAA74A22BA62732 /* Pods-PresnyaHedonist-PresnyaHedonistUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -656,6 +810,7 @@
 		};
 		E6023C6C269DB39C0035AA7F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16A4F7CFC9A9D6C2A081E609 /* Pods-PresnyaHedonist-PresnyaHedonistUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

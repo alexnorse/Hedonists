@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import ViewAnimator
 
 class FavoritesVC: UIViewController {
     
@@ -45,6 +46,14 @@ class FavoritesVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         configureController()
         designSettings()
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let animation = AnimationType.from(direction: .top, offset: 500)
+        UIView.animate(views: favoritesTable!.visibleCells,
+                       animations: [animation], duration: 0.75)
     }
     
     
