@@ -24,19 +24,21 @@ class FavsCell: UITableViewCell {
     
     
     func designSettings() {
-        placeName.font      = Fonts.headlines
+        placeImage.layer.cornerRadius = UISettings.cornerRadius
+        placeName.font                = Fonts.bodyAccents
         configureGradient()
     }
     
     
     func configureGradient() {
-        let gradientLayer   = CAGradientLayer()
-        let blackColor      = UIColor.black.cgColor
-        let clearColor      = UIColor.clear.cgColor
+        let gradientLayer = CAGradientLayer()
+        let blackColor    = UIColor.black.cgColor
+        let clearColor    = UIColor.clear.cgColor
         
         placeImage.layer.addSublayer(gradientLayer)
         
         gradientLayer.colors = [clearColor, blackColor]
-        gradientLayer.frame = bounds
+        gradientLayer.frame  = bounds
+        gradientLayer.cornerRadius = UISettings.cornerRadius
     }
 }

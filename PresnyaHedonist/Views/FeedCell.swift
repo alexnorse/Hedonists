@@ -27,18 +27,18 @@ class FeedCell: UITableViewCell {
     
     
     func designSettings() {
-        placeImage.layer.cornerRadius       = UISettings.cornerRadius
-        placeName.font                      = Fonts.headlines
-        typeLabel.font                      = Fonts.bodyAccents
+        placeImage.layer.cornerRadius = UISettings.cornerRadius
+        placeName.font                = Fonts.headlines
+        typeLabel.font                = Fonts.bodyAccents
         
         configureGradient()
     }
     
     
     func configureGradient() {
-        let gradientLayer   = CAGradientLayer()
-        let blackColor      = UIColor.black.cgColor
-        let clearColor      = UIColor.clear.cgColor
+        let gradientLayer = CAGradientLayer()
+        let blackColor    = UIColor.black.cgColor
+        let clearColor    = UIColor.clear.cgColor
         
         placeImage.layer.addSublayer(gradientLayer)
         
@@ -49,8 +49,8 @@ class FeedCell: UITableViewCell {
     
     
     func setCell(_ place: Place) {
-        placeImage.image    = UIImage(named: place.image!)
-        placeName.text      = place.name
-        typeLabel.text      = place.category
+        placeImage.image = UIImage(named: place.image!)
+        placeName.text   = place.name
+        typeLabel.text   = place.category
     }
 }
