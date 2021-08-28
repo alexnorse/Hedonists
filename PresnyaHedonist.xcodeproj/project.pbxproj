@@ -24,6 +24,7 @@
 		E6023C7F269DE4C50035AA7F /* NewNoteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6023C7E269DE4C50035AA7F /* NewNoteVC.swift */; };
 		E6023C81269DE4EF0035AA7F /* FavoritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6023C80269DE4EF0035AA7F /* FavoritesVC.swift */; };
 		E6023C83269DE54C0035AA7F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6023C82269DE54C0035AA7F /* Constants.swift */; };
+		E627A64D26DA0AA600F73D82 /* FavsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E627A64C26DA0AA600F73D82 /* FavsCell.swift */; };
 		E652E0E926A43A1200DEDF92 /* TableView + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E652E0E826A43A1200DEDF92 /* TableView + Ext.swift */; };
 		E65F31F826ABF91200946DC2 /* ViewController + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65F31F726ABF91200946DC2 /* ViewController + Ext.swift */; };
 		E692553E26A172550004E348 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = E692553D26A172550004E348 /* data.json */; };
@@ -75,6 +76,7 @@
 		E6023C7E269DE4C50035AA7F /* NewNoteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNoteVC.swift; sourceTree = "<group>"; };
 		E6023C80269DE4EF0035AA7F /* FavoritesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesVC.swift; sourceTree = "<group>"; };
 		E6023C82269DE54C0035AA7F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E627A64C26DA0AA600F73D82 /* FavsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavsCell.swift; sourceTree = "<group>"; };
 		E652E0E826A43A1200DEDF92 /* TableView + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView + Ext.swift"; sourceTree = "<group>"; };
 		E65F31F726ABF91200946DC2 /* ViewController + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController + Ext.swift"; sourceTree = "<group>"; };
 		E692553D26A172550004E348 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				E6023C72269DE3A90035AA7F /* FeedCell.swift */,
+				E627A64C26DA0AA600F73D82 /* FavsCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 				E6023C75269DE41C0035AA7F /* FeedVC.swift in Sources */,
 				E652E0E926A43A1200DEDF92 /* TableView + Ext.swift in Sources */,
 				E6023C79269DE45C0035AA7F /* InfoVC.swift in Sources */,
+				E627A64D26DA0AA600F73D82 /* FavsCell.swift in Sources */,
 				E6023C7D269DE49F0035AA7F /* NoteListVC.swift in Sources */,
 				E6023C7B269DE47C0035AA7F /* MapVC.swift in Sources */,
 				E6023C7F269DE4C50035AA7F /* NewNoteVC.swift in Sources */,

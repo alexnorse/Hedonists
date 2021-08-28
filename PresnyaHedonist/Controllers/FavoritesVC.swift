@@ -73,13 +73,10 @@ extension FavoritesVC: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: CellsID.FAVS_CELL, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: CellsID.FAVS_CELL) as! FavsCell
         
-        cell.textLabel?.text        = fetchedFavs.object(at: indexPath).name
-        cell.detailTextLabel?.text  = fetchedFavs.object(at: indexPath).category
-        
-        cell.textLabel?.font        = Fonts.bodyAccents
-        cell.detailTextLabel?.font  = Fonts.bodyText
+        cell.placeName.text = fetchedFavs.object(at: indexPath).name
+        cell.placeImage.image = UIImage(named: fetchedFavs.object(at: indexPath).image!)
         
         return cell
     }
