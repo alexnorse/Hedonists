@@ -33,7 +33,7 @@ class FeedVC: UIViewController {
         
         tableViewFeed.delegate = self
         tableViewFeed.dataSource = self
-        tableViewFeed.tableSeparator()
+        tableViewFeed.separatorStyle = .none
         tableViewFeed.keyboardDismissMode = .onDrag
         
         configureController()

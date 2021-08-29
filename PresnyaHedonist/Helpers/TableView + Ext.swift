@@ -13,12 +13,6 @@ extension UITableView {
         tableFooterView = UIView(frame: .zero)
     }
     
-    
-    func tableSeparator() {
-        self.separatorStyle = .none
-    }
-    
-    
     func setEmptyState(_ message: String) {
         
         let rectangle = CGRect(origin: CGPoint(x: 0, y: self.center.y),

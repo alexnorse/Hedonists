@@ -27,11 +27,6 @@ class DetailsVC: UIViewController {
         return mapVC
     } ()
     
-    lazy var noteListViewController: NoteListVC = {
-        let noteListVC = storyboard?.instantiateViewController(identifier: VControllersID.NOTELIST_VC) as! NoteListVC
-        return noteListVC
-    } ()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,10 +68,6 @@ class DetailsVC: UIViewController {
         case 1:
             mapViewController.place = self.place
             switchVC(mapViewController)
-            
-        case 2:
-            noteListViewController.place = self.place
-            switchVC(noteListViewController)
             
         default:
             switchVC(infoViewController)

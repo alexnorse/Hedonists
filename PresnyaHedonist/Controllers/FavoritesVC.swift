@@ -40,6 +40,7 @@ class FavoritesVC: UIViewController {
         super.viewDidLoad()
         favoritesTable?.delegate = self
         favoritesTable?.dataSource = self
+        favoritesTable?.separatorStyle = .none
     }
     
     
@@ -106,7 +107,7 @@ extension FavoritesVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let delete = UIContextualAction(style: .destructive,
-                                        title: "Delete") { (action, view, nil) in
+                                        title: "Удалить") { (action, view, nil) in
             
             self.place = self.fetchedFavs.object(at: indexPath)
             self.place?.isFavorite = false

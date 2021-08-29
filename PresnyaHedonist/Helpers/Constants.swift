@@ -9,13 +9,11 @@ import UIKit
 
 enum VControllersID {
     static let FEED_VC         = "FeedVC"
+    static let FAVORITES_VC    = "FavoritesVC"
+    static let ALLPLACESMAP_VC = "AllPlacesMapVC"
     static let DETAILS_VC      = "DetailsVC"
     static let MAP_VC          = "MapVC"
     static let INFO_VC         = "InfoVC"
-    static let NOTELIST_VC     = "NoteListVC"
-    static let NEWNOTE_VC      = "NewNoteVC"
-    static let FAVORITES_VC    = "FavoritesVC"
-    static let ALLPLACESMAP_VC = "AllPlacesMapVC"
     static let TABBAR_VC       = "TabBarVC"
 }
 
@@ -23,7 +21,6 @@ enum VControllersID {
 enum CellsID {
     static let FEED_CELL  = "feedCell"
     static let FAVS_CELL  = "favsCell"
-    static let NOTES_CELL = "notesCell"
 }
 
 
@@ -45,7 +42,6 @@ enum Errors {
     static let faillURL            = "Неверный или устаревший адрес ссылки"
     static let favsFail            = "Произошла ошибка при добавлении в Избранное"
     static let imageError          = "Ошибка загрузки изображения"
-    static let locationNotAllowed  = "Похоже, что Вы не включили геолокацию.\nНо это можно исправить в Настройках"
     static let phoneError          = "У этого места нет актуального номера телефона в данный момент"
 }
 
@@ -62,7 +58,6 @@ enum AlertTitle {
 
 
 enum EmptyStates {
-    static let notesEmpty = "У Вас пока нет заметок об этом месте. \nДобавьте свои впечатления 🖋"
     static let favsEmpty  = "У Вас пока еще нет мест в Избранном \nПосмотрите, что есть в нашей ленте 🧐"
 }
 

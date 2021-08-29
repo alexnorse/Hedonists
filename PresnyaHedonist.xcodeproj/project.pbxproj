@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -23,8 +23,6 @@
 		E6023C77269DE4400035AA7F /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6023C76269DE4400035AA7F /* DetailsVC.swift */; };
 		E6023C79269DE45C0035AA7F /* InfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6023C78269DE45C0035AA7F /* InfoVC.swift */; };
 		E6023C7B269DE47C0035AA7F /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6023C7A269DE47C0035AA7F /* MapVC.swift */; };
-		E6023C7D269DE49F0035AA7F /* NoteListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6023C7C269DE49F0035AA7F /* NoteListVC.swift */; };
-		E6023C7F269DE4C50035AA7F /* NewNoteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6023C7E269DE4C50035AA7F /* NewNoteVC.swift */; };
 		E6023C81269DE4EF0035AA7F /* FavoritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6023C80269DE4EF0035AA7F /* FavoritesVC.swift */; };
 		E6023C83269DE54C0035AA7F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6023C82269DE54C0035AA7F /* Constants.swift */; };
 		E627A64D26DA0AA600F73D82 /* FavsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E627A64C26DA0AA600F73D82 /* FavsCell.swift */; };
@@ -84,8 +82,6 @@
 		E6023C76269DE4400035AA7F /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
 		E6023C78269DE45C0035AA7F /* InfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoVC.swift; sourceTree = "<group>"; };
 		E6023C7A269DE47C0035AA7F /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
-		E6023C7C269DE49F0035AA7F /* NoteListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListVC.swift; sourceTree = "<group>"; };
-		E6023C7E269DE4C50035AA7F /* NewNoteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNoteVC.swift; sourceTree = "<group>"; };
 		E6023C80269DE4EF0035AA7F /* FavoritesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesVC.swift; sourceTree = "<group>"; };
 		E6023C82269DE54C0035AA7F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E627A64C26DA0AA600F73D82 /* FavsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavsCell.swift; sourceTree = "<group>"; };
@@ -147,7 +143,6 @@
 				0FCC98EE4722969101B59D39 /* Pods-PresnyaHedonistTests.debug.xcconfig */,
 				D28F84562B785134D551398E /* Pods-PresnyaHedonistTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -235,8 +230,6 @@
 				E6023C76269DE4400035AA7F /* DetailsVC.swift */,
 				E6023C78269DE45C0035AA7F /* InfoVC.swift */,
 				E6023C7A269DE47C0035AA7F /* MapVC.swift */,
-				E6023C7C269DE49F0035AA7F /* NoteListVC.swift */,
-				E6023C7E269DE4C50035AA7F /* NewNoteVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -524,9 +517,7 @@
 				E652E0E926A43A1200DEDF92 /* TableView + Ext.swift in Sources */,
 				E6023C79269DE45C0035AA7F /* InfoVC.swift in Sources */,
 				E627A64D26DA0AA600F73D82 /* FavsCell.swift in Sources */,
-				E6023C7D269DE49F0035AA7F /* NoteListVC.swift in Sources */,
 				E6023C7B269DE47C0035AA7F /* MapVC.swift in Sources */,
-				E6023C7F269DE4C50035AA7F /* NewNoteVC.swift in Sources */,
 				E6023C3B269DB39B0035AA7F /* AppDelegate.swift in Sources */,
 				E6023C3D269DB39B0035AA7F /* SceneDelegate.swift in Sources */,
 				E6023C83269DE54C0035AA7F /* Constants.swift in Sources */,
@@ -714,7 +705,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = alexnorse.PresnyaHedonist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -736,7 +727,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = alexnorse.PresnyaHedonist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
