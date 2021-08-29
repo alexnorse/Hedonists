@@ -40,7 +40,7 @@ class FavoritesVC: UIViewController {
         super.viewDidLoad()
         favoritesTable?.delegate = self
         favoritesTable?.dataSource = self
-        favoritesTable?.separatorStyle = .none
+        self.favoritesTable?.separatorStyle = .none
     }
     
     
@@ -126,11 +126,10 @@ extension FavoritesVC: NSFetchedResultsControllerDelegate {
     
     
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        
         switch (type) {
         case .insert:
-            if let indexPath = newIndexPath {
-                favoritesTable?.insertRows(at: [indexPath], with: .fade)
-            }
+            if let indexPath = newIndexPath { favoritesTable?.insertRows(at: [indexPath], with: .fade) }
             
         case .delete:
             favoritesTable?.deleteRows(at: [indexPath! as IndexPath], with: .fade)
@@ -145,5 +144,4 @@ extension FavoritesVC: NSFetchedResultsControllerDelegate {
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         favoritesTable?.endUpdates()
     }
-    
 }

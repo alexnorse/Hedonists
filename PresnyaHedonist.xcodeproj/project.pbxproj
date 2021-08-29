@@ -22,7 +22,7 @@
 		E6023C75269DE41C0035AA7F /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6023C74269DE41C0035AA7F /* FeedVC.swift */; };
 		E6023C77269DE4400035AA7F /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6023C76269DE4400035AA7F /* DetailsVC.swift */; };
 		E6023C79269DE45C0035AA7F /* InfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6023C78269DE45C0035AA7F /* InfoVC.swift */; };
-		E6023C7B269DE47C0035AA7F /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6023C7A269DE47C0035AA7F /* MapVC.swift */; };
+		E6023C7B269DE47C0035AA7F /* PlaceMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6023C7A269DE47C0035AA7F /* PlaceMapVC.swift */; };
 		E6023C81269DE4EF0035AA7F /* FavoritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6023C80269DE4EF0035AA7F /* FavoritesVC.swift */; };
 		E6023C83269DE54C0035AA7F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6023C82269DE54C0035AA7F /* Constants.swift */; };
 		E627A64D26DA0AA600F73D82 /* FavsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E627A64C26DA0AA600F73D82 /* FavsCell.swift */; };
@@ -33,7 +33,7 @@
 		E6A06B2026A2EB09003999AB /* LabGrotesque-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6A06B1A26A2EB09003999AB /* LabGrotesque-Medium.ttf */; };
 		E6A06B2126A2EB09003999AB /* LabGrotesque-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6A06B1B26A2EB09003999AB /* LabGrotesque-Black.ttf */; };
 		E6A06B2226A2EB09003999AB /* LabGrotesque-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6A06B1C26A2EB09003999AB /* LabGrotesque-Regular.ttf */; };
-		E6C1DD7F26B3E7C200329E37 /* AllPlacesMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C1DD7E26B3E7C200329E37 /* AllPlacesMapVC.swift */; };
+		E6C1DD7F26B3E7C200329E37 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C1DD7E26B3E7C200329E37 /* MapVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,7 +81,7 @@
 		E6023C74269DE41C0035AA7F /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		E6023C76269DE4400035AA7F /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
 		E6023C78269DE45C0035AA7F /* InfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoVC.swift; sourceTree = "<group>"; };
-		E6023C7A269DE47C0035AA7F /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		E6023C7A269DE47C0035AA7F /* PlaceMapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMapVC.swift; sourceTree = "<group>"; };
 		E6023C80269DE4EF0035AA7F /* FavoritesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesVC.swift; sourceTree = "<group>"; };
 		E6023C82269DE54C0035AA7F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E627A64C26DA0AA600F73D82 /* FavsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavsCell.swift; sourceTree = "<group>"; };
@@ -92,7 +92,7 @@
 		E6A06B1A26A2EB09003999AB /* LabGrotesque-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LabGrotesque-Medium.ttf"; sourceTree = "<group>"; };
 		E6A06B1B26A2EB09003999AB /* LabGrotesque-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LabGrotesque-Black.ttf"; sourceTree = "<group>"; };
 		E6A06B1C26A2EB09003999AB /* LabGrotesque-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LabGrotesque-Regular.ttf"; sourceTree = "<group>"; };
-		E6C1DD7E26B3E7C200329E37 /* AllPlacesMapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPlacesMapVC.swift; sourceTree = "<group>"; };
+		E6C1DD7E26B3E7C200329E37 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,10 +226,10 @@
 			children = (
 				E6023C74269DE41C0035AA7F /* FeedVC.swift */,
 				E6023C80269DE4EF0035AA7F /* FavoritesVC.swift */,
-				E6C1DD7E26B3E7C200329E37 /* AllPlacesMapVC.swift */,
+				E6C1DD7E26B3E7C200329E37 /* MapVC.swift */,
 				E6023C76269DE4400035AA7F /* DetailsVC.swift */,
 				E6023C78269DE45C0035AA7F /* InfoVC.swift */,
-				E6023C7A269DE47C0035AA7F /* MapVC.swift */,
+				E6023C7A269DE47C0035AA7F /* PlaceMapVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -508,7 +508,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E65F31F826ABF91200946DC2 /* ViewController + Ext.swift in Sources */,
-				E6C1DD7F26B3E7C200329E37 /* AllPlacesMapVC.swift in Sources */,
+				E6C1DD7F26B3E7C200329E37 /* MapVC.swift in Sources */,
 				E6023C81269DE4EF0035AA7F /* FavoritesVC.swift in Sources */,
 				E6023C45269DB39B0035AA7F /* PresnyaHedonist.xcdatamodeld in Sources */,
 				E6023C77269DE4400035AA7F /* DetailsVC.swift in Sources */,
@@ -517,7 +517,7 @@
 				E652E0E926A43A1200DEDF92 /* TableView + Ext.swift in Sources */,
 				E6023C79269DE45C0035AA7F /* InfoVC.swift in Sources */,
 				E627A64D26DA0AA600F73D82 /* FavsCell.swift in Sources */,
-				E6023C7B269DE47C0035AA7F /* MapVC.swift in Sources */,
+				E6023C7B269DE47C0035AA7F /* PlaceMapVC.swift in Sources */,
 				E6023C3B269DB39B0035AA7F /* AppDelegate.swift in Sources */,
 				E6023C3D269DB39B0035AA7F /* SceneDelegate.swift in Sources */,
 				E6023C83269DE54C0035AA7F /* Constants.swift in Sources */,

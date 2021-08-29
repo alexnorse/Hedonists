@@ -8,13 +8,13 @@
 import UIKit
 
 enum VControllersID {
-    static let FEED_VC         = "FeedVC"
-    static let FAVORITES_VC    = "FavoritesVC"
-    static let ALLPLACESMAP_VC = "AllPlacesMapVC"
-    static let DETAILS_VC      = "DetailsVC"
-    static let MAP_VC          = "MapVC"
-    static let INFO_VC         = "InfoVC"
-    static let TABBAR_VC       = "TabBarVC"
+    static let FEED_VC      = "FeedVC"
+    static let FAVORITES_VC = "FavoritesVC"
+    static let MAP_VC       = "MapVC"
+    static let DETAILS_VC   = "DetailsVC"
+    static let PLACEMAP_VC  = "PlaceMapVC"
+    static let INFO_VC      = "InfoVC"
+    static let TABBAR_VC    = "TabBarVC"
 }
 
 
@@ -37,12 +37,12 @@ enum UISettings {
 
 
 enum Errors {
-    static let databaseError       = "В настоящий момент невозможно получить доступ к базе данных.\nПожалуйста, попробуйте позже"
-    static let fetchError          = "Ошибка загрузки.\nПожалуста, попробуйте еще раз"
-    static let faillURL            = "Неверный или устаревший адрес ссылки"
-    static let favsFail            = "Произошла ошибка при добавлении в Избранное"
-    static let imageError          = "Ошибка загрузки изображения"
-    static let phoneError          = "У этого места нет актуального номера телефона в данный момент"
+    static let databaseError = "В настоящий момент невозможно получить доступ к базе данных.\nПожалуйста, попробуйте позже"
+    static let fetchError    = "Ошибка загрузки.\nПожалуста, попробуйте еще раз"
+    static let faillURL      = "Неверный или устаревший адрес ссылки"
+    static let favsFail      = "Произошла ошибка при добавлении в Избранное"
+    static let imageError    = "Ошибка загрузки изображения"
+    static let phoneError    = "У этого места нет актуального номера телефона в данный момент"
 }
 
 
@@ -58,7 +58,7 @@ enum AlertTitle {
 
 
 enum EmptyStates {
-    static let favsEmpty  = "У Вас пока еще нет мест в Избранном \nПосмотрите, что есть в нашей ленте 🧐"
+    static let favsEmpty = "У Вас пока еще нет мест в Избранном \nПосмотрите, что есть в нашей ленте 🧐"
 }
 
 

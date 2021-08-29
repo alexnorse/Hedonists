@@ -22,8 +22,8 @@ class DetailsVC: UIViewController {
         return infoVC
     } ()
     
-    lazy var mapViewController: MapVC = {
-        let mapVC = storyboard?.instantiateViewController(identifier: VControllersID.MAP_VC) as! MapVC
+    lazy var mapViewController: PlaceMapVC = {
+        let mapVC = storyboard?.instantiateViewController(identifier: VControllersID.PLACEMAP_VC) as! PlaceMapVC
         return mapVC
     } ()
     
