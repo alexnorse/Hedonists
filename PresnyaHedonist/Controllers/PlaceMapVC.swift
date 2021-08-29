@@ -17,7 +17,6 @@ class PlaceMapVC: UIViewController, MKMapViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     

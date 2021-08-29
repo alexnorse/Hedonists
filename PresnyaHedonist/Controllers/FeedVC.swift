@@ -30,15 +30,12 @@ class FeedVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableViewFeed.delegate = self
         tableViewFeed.dataSource = self
-        tableViewFeed.separatorStyle = .none
         tableViewFeed.keyboardDismissMode = .onDrag
         
         configureController()
         configureSearchController()
-        
         fetchData()
     }
     
@@ -46,8 +43,7 @@ class FeedVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         let animation = AnimationType.from(direction: .left, offset: 200)
-        UIView.animate(views: tableViewFeed.visibleCells,
-                       animations: [animation], duration: 0.75)
+        UIView.animate(views: tableViewFeed.visibleCells, animations: [animation], duration: 0.75)
     }
     
     
@@ -61,7 +57,6 @@ class FeedVC: UIViewController {
     func fetchData() {
         do {
             places = try context.fetch(Place.fetchRequest())
-            
         } catch {
             presentAlert(title: AlertTitle.error,
                          message: Errors.fetchError)
@@ -83,12 +78,9 @@ class FeedVC: UIViewController {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard tableViewFeed.indexPathForSelectedRow != nil else {
-            return
-        }
+        guard tableViewFeed.indexPathForSelectedRow != nil else { return }
         
         if let indexPath = tableViewFeed.indexPathForSelectedRow {
-            
             var place: Place
             
             if isFiltering { place = filteredPlaces[indexPath.row] }
@@ -111,7 +103,6 @@ extension FeedVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellsID.FEED_CELL) as! FeedCell
-        
         var place: Place
         
         if isFiltering { place = filteredPlaces[indexPath.row] }

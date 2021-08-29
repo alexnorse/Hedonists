@@ -30,7 +30,6 @@ class DetailsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     
@@ -59,8 +58,8 @@ class DetailsVC: UIViewController {
     
     
     @IBAction func segmentChange(_ sender: UISegmentedControl) {
-        switch sender.selectedSegmentIndex {
         
+        switch sender.selectedSegmentIndex {
         case 0:
             infoViewController.place = self.place
             switchVC(infoViewController)

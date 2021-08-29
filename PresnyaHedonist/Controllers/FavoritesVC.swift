@@ -19,7 +19,6 @@ class FavoritesVC: UIViewController {
     
     
     required init?(coder aDecoder: NSCoder) {
-        
         let request: NSFetchRequest<Place> = Place.fetchRequest()
         request.predicate = NSPredicate(format: "isFavorite == YES")
         request.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
@@ -40,7 +39,6 @@ class FavoritesVC: UIViewController {
         super.viewDidLoad()
         favoritesTable?.delegate = self
         favoritesTable?.dataSource = self
-        self.favoritesTable?.separatorStyle = .none
     }
     
     
@@ -93,7 +91,6 @@ extension FavoritesVC: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let detailVC = storyboard.instantiateViewController(identifier: VControllersID.DETAILS_VC) as! DetailsVC
         detailVC.place = fetchedFavs.fetchedObjects?[indexPath.row]
@@ -126,7 +123,6 @@ extension FavoritesVC: NSFetchedResultsControllerDelegate {
     
     
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
-        
         switch (type) {
         case .insert:
             if let indexPath = newIndexPath { favoritesTable?.insertRows(at: [indexPath], with: .fade) }

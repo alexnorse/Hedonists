@@ -25,7 +25,6 @@ class InfoVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     
@@ -76,7 +75,6 @@ class InfoVC: UIViewController {
     
     
     @IBAction func addToFavoritesTapped(_ sender: Any) {
-        
         place?.isFavorite = true
         try? context.save()
         

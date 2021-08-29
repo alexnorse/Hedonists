@@ -38,7 +38,6 @@ class MapVC: UIViewController, MKMapViewDelegate {
     func fetchData() {
         do {
             places = try context.fetch(Place.fetchRequest())
-            
         } catch {
             presentAlert(title: AlertTitle.error,
                          message: Errors.fetchError)
@@ -86,15 +85,13 @@ class MapVC: UIViewController, MKMapViewDelegate {
     
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        
+    
         guard let annotation = view.annotation as? MyAnnotation else { return }
-        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let detailVC = storyboard.instantiateViewController(identifier: VControllersID.DETAILS_VC) as! DetailsVC
         detailVC.place = annotation.place
         
         detailVC.modalPresentationStyle = .automatic
-        
         present(detailVC, animated: true, completion: nil)
     }
 }
