@@ -34,11 +34,13 @@ class FeedVC: UIViewController {
         tableViewFeed.dataSource = self
         tableViewFeed.keyboardDismissMode = .onDrag
         
-        configureController()
         configureSearchController()
         fetchData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        configureController()
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)

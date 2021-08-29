@@ -11,7 +11,6 @@ import MapKit
 class PlaceMapVC: UIViewController, MKMapViewDelegate {
     
     var place: Place?
-    
     @IBOutlet var mapView: MKMapView!
     
     
