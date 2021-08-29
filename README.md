@@ -1,7 +1,7 @@
 ## Hedonists App
 > *"We are not a Michelin guide, of course. But we have tried" :)*
 
-![Hedonists App](https://user-images.githubusercontent.com/68333583/127735570-326781e0-3467-4d83-a77d-2ce212ecd0db.png)
+![Hedonists App](https://user-images.githubusercontent.com/68333583/131242823-86058a87-842e-4117-ad26-e21a3d79f96d.png)
 
 ### [AppStore link](https://apps.apple.com/ru/app/hedonists/id1580690289?l=en)
 
