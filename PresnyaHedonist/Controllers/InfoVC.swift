@@ -15,7 +15,7 @@ class InfoVC: UIViewController {
     var place: Place?
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-    @IBOutlet var type: UILabel!
+    
     @IBOutlet var descript: UILabel!
     @IBOutlet var address: UILabel!
     @IBOutlet var workHours: UILabel!
@@ -35,7 +35,6 @@ class InfoVC: UIViewController {
     
     
     func configureContent() {
-        type.text       = place?.category
         descript.text   = place?.descript
         address.text    = place?.address
         workHours.text  = place?.workhours
@@ -43,7 +42,6 @@ class InfoVC: UIViewController {
     
     
     func designSettings() {
-        type.font       = Fonts.bodyAccents
         descript.font   = Fonts.bodyText
         address.font    = Fonts.bodyAccents
         workHours.font  = Fonts.bodyAccents

@@ -13,6 +13,7 @@ class DetailsVC: UIViewController {
     
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var placeName: UILabel!
+    @IBOutlet var placeType: UILabel!
     @IBOutlet var infoSegments: UISegmentedControl!
     @IBOutlet var containerView: UIView!
     
@@ -34,16 +35,22 @@ class DetailsVC: UIViewController {
     
     
     override func viewWillAppear(_ animated: Bool) {
-        imageView.image = UIImage(named: place?.image ?? Errors.imageError)
-        placeName.text = place?.name
-        
+        configureContent()
         designSettings()
         segmentChange(self.infoSegments)
     }
     
     
+    func configureContent() {
+        imageView.image = UIImage(named: place?.image ?? Errors.imageError)
+        placeName.text = place?.name
+        placeType.text = place?.category
+    }
+    
+    
     func designSettings() {
         placeName.font = Fonts.headlines
+        placeType.font = Fonts.bodyAccents
     }
     
     
