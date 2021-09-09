@@ -9,15 +9,6 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MyAnnotation: MKPointAnnotation {
-    let place: Place
-    init(place: Place) {
-        self.place = place
-        super.init()
-    }
-}
-
-
 class MapVC: UIViewController, MKMapViewDelegate {
     
     var places = [Place]()

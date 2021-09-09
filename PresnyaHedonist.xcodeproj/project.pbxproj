@@ -33,6 +33,7 @@
 		E6A06B2026A2EB09003999AB /* LabGrotesque-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6A06B1A26A2EB09003999AB /* LabGrotesque-Medium.ttf */; };
 		E6A06B2126A2EB09003999AB /* LabGrotesque-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6A06B1B26A2EB09003999AB /* LabGrotesque-Black.ttf */; };
 		E6A06B2226A2EB09003999AB /* LabGrotesque-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6A06B1C26A2EB09003999AB /* LabGrotesque-Regular.ttf */; };
+		E6A1777F26EA42D50099CC5A /* MyAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A1777E26EA42D50099CC5A /* MyAnnotation.swift */; };
 		E6C1DD7F26B3E7C200329E37 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C1DD7E26B3E7C200329E37 /* MapVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +93,7 @@
 		E6A06B1A26A2EB09003999AB /* LabGrotesque-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LabGrotesque-Medium.ttf"; sourceTree = "<group>"; };
 		E6A06B1B26A2EB09003999AB /* LabGrotesque-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LabGrotesque-Black.ttf"; sourceTree = "<group>"; };
 		E6A06B1C26A2EB09003999AB /* LabGrotesque-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LabGrotesque-Regular.ttf"; sourceTree = "<group>"; };
+		E6A1777E26EA42D50099CC5A /* MyAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAnnotation.swift; sourceTree = "<group>"; };
 		E6C1DD7E26B3E7C200329E37 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -249,6 +251,7 @@
 				E6023C82269DE54C0035AA7F /* Constants.swift */,
 				E652E0E826A43A1200DEDF92 /* TableView + Ext.swift */,
 				E65F31F726ABF91200946DC2 /* ViewController + Ext.swift */,
+				E6A1777E26EA42D50099CC5A /* MyAnnotation.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -509,6 +512,7 @@
 			files = (
 				E65F31F826ABF91200946DC2 /* ViewController + Ext.swift in Sources */,
 				E6C1DD7F26B3E7C200329E37 /* MapVC.swift in Sources */,
+				E6A1777F26EA42D50099CC5A /* MyAnnotation.swift in Sources */,
 				E6023C81269DE4EF0035AA7F /* FavoritesVC.swift in Sources */,
 				E6023C45269DB39B0035AA7F /* PresnyaHedonist.xcdatamodeld in Sources */,
 				E6023C77269DE4400035AA7F /* DetailsVC.swift in Sources */,
