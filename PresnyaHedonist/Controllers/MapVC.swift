@@ -7,7 +7,6 @@
 
 import UIKit
 import MapKit
-import CoreLocation
 
 class MapVC: UIViewController, MKMapViewDelegate {
     
