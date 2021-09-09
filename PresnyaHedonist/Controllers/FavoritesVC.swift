@@ -51,8 +51,7 @@ class FavoritesVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         let animation = AnimationType.from(direction: .top, offset: 500)
-        UIView.animate(views: favoritesTable!.visibleCells,
-                       animations: [animation], duration: 0.75)
+        UIView.animate(views: favoritesTable!.visibleCells, animations: [animation], duration: 0.75)
     }
     
     

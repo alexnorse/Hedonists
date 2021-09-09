@@ -44,7 +44,7 @@ class FeedVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        let animation = AnimationType.from(direction: .left, offset: 200)
+        let animation = AnimationType.from(direction: .left, offset: 500)
         UIView.animate(views: tableViewFeed.visibleCells, animations: [animation], duration: 0.75)
     }
     
