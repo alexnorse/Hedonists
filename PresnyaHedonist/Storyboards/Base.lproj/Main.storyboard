@@ -373,6 +373,9 @@
                         <outlet property="address" destination="5hd-54-ZMe" id="oX7-2b-Zth"/>
                         <outlet property="descript" destination="umN-fv-YQU" id="zTZ-ym-K0v"/>
                         <outlet property="workHours" destination="mro-KO-Die" id="L0A-jP-Ck2"/>
+                        <outletCollection property="buttons" destination="UMm-VC-I2z" collectionClass="NSMutableArray" id="UgJ-xI-khN"/>
+                        <outletCollection property="buttons" destination="qJw-9v-MR5" collectionClass="NSMutableArray" id="ZBR-qP-1Ej"/>
+                        <outletCollection property="buttons" destination="ULs-gC-WAQ" collectionClass="NSMutableArray" id="MOB-zr-slv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jNH-N1-F6k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

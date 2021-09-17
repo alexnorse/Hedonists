@@ -19,6 +19,7 @@ class InfoVC: UIViewController {
     @IBOutlet var descript: UILabel!
     @IBOutlet var address: UILabel!
     @IBOutlet var workHours: UILabel!
+    @IBOutlet var buttons: [UIButton]!
     
     
     override func viewDidLoad() {
@@ -43,6 +44,10 @@ class InfoVC: UIViewController {
         descript.font   = Fonts.bodyText
         address.font    = Fonts.bodyAccents
         workHours.font  = Fonts.bodyAccents
+        
+        for button in buttons {
+            button.layer.cornerRadius = 30
+        }
     }
     
     
