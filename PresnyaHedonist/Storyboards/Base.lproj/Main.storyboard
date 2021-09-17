@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -166,8 +167,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Rbq-Ce-YGh">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Rbq-Ce-YGh">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="0tI-32-bnI">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
@@ -176,30 +177,35 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6zY-GM-gBG">
-                                        <rect key="frame" x="20" y="310" width="374" height="33.5"/>
+                                        <rect key="frame" x="20" y="307" width="374" height="79.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mnG-MD-sGq">
-                                        <rect key="frame" x="20" y="353.5" width="374" height="19.5"/>
+                                        <rect key="frame" x="20" y="393.5" width="374" height="19.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" systemColor="secondaryLabelColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="p23-59-jCi">
-                                        <rect key="frame" x="20" y="383" width="374" height="32"/>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="p23-59-jCi">
+                                        <rect key="frame" x="20" y="420" width="374" height="32"/>
+                                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                                         <segments>
-                                            <segment title="" image="info.circle" catalog="system"/>
-                                            <segment title="" image="mappin.and.ellipse" catalog="system"/>
+                                            <segment title="">
+                                                <imageReference key="image" image="info.circle" catalog="system" symbolScale="large"/>
+                                            </segment>
+                                            <segment title="">
+                                                <imageReference key="image" image="mappin.and.ellipse" catalog="system" symbolScale="large"/>
+                                            </segment>
                                         </segments>
-                                        <color key="selectedSegmentTintColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                        <color key="selectedSegmentTintColor" systemColor="systemGray3Color"/>
                                         <connections>
                                             <action selector="segmentChange:" destination="keh-8C-f5D" eventType="valueChanged" id="PXU-bx-2GP"/>
                                         </connections>
                                     </segmentedControl>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WnO-zk-yYC">
-                                        <rect key="frame" x="0.0" y="424" width="414" height="384"/>
+                                        <rect key="frame" x="0.0" y="458" width="414" height="384"/>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -216,8 +222,8 @@
                         <constraints>
                             <constraint firstItem="Rbq-Ce-YGh" firstAttribute="top" secondItem="nQN-gL-4gX" secondAttribute="top" id="GsG-wv-Vij"/>
                             <constraint firstItem="Rbq-Ce-YGh" firstAttribute="trailing" secondItem="nQN-gL-4gX" secondAttribute="trailing" id="IbW-Hg-Sa7"/>
+                            <constraint firstAttribute="bottom" secondItem="Rbq-Ce-YGh" secondAttribute="bottom" id="SAa-de-I5H"/>
                             <constraint firstItem="Rbq-Ce-YGh" firstAttribute="leading" secondItem="nQN-gL-4gX" secondAttribute="leading" id="TWC-c1-xzQ"/>
-                            <constraint firstItem="nQN-gL-4gX" firstAttribute="bottom" secondItem="Rbq-Ce-YGh" secondAttribute="bottom" id="y3D-BZ-SHW"/>
                         </constraints>
                     </view>
                     <connections>
@@ -481,14 +487,14 @@
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="secondarySystemGroupedBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
