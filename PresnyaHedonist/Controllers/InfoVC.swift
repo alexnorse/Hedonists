@@ -19,8 +19,6 @@ class InfoVC: UIViewController {
     @IBOutlet var descript: UILabel!
     @IBOutlet var address: UILabel!
     @IBOutlet var workHours: UILabel!
-    @IBOutlet var instagramLink: UIButton!
-    @IBOutlet var addToFavorites: UIButton!
     
     
     override func viewDidLoad() {
