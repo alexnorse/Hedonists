@@ -46,7 +46,7 @@ class InfoVC: UIViewController {
         workHours.font  = Fonts.bodyAccents
         
         for button in buttons {
-            button.layer.cornerRadius = 30
+            button.layer.cornerRadius = 25
         }
     }
     
