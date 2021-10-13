@@ -16,12 +16,12 @@ Presnya is one of the oldest, historical and at the same time, fashionable distr
 - Enjoy life, be a true Hedonist and support the local business
 
 ### Tech Stack:
-- UIKit, Storyboard
+- UIKit
+- Storyboard UI
 - Core Data
-- MapKit, Core Location 
+- MapKit
 - CallKit
 - JSON data parsing
 - Safari Services
-- TabBarView
-- Search bar and Filters
+- SearchBar with filters
 - Own backend
