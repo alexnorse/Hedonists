@@ -66,9 +66,7 @@ class InfoVC: UIViewController {
     
     @IBAction func instagramLink(_ sender: Any) {
         guard let url = URL(string: place?.url ?? "https://www.instagram.com") else {
-            
-            presentAlert(title: AlertTitle.error,
-                         message: Errors.faillURL)
+            presentAlert(title: AlertTitle.error, message: Errors.faillURL)
             return
         }
         present(SFSafariViewController(url: url), animated: true)
@@ -79,7 +77,6 @@ class InfoVC: UIViewController {
         place?.isFavorite = true
         try? context.save()
         
-        presentAlert(title: AlertTitle.success,
-                     message: Alerts.addedToFavorites)
+        presentAlert(title: AlertTitle.success, message: Alerts.addedToFavorites)
     }
 }

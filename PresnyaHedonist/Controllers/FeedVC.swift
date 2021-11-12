@@ -60,8 +60,7 @@ class FeedVC: UIViewController {
         do {
             places = try context.fetch(Place.fetchRequest())
         } catch {
-            presentAlert(title: AlertTitle.error,
-                         message: Errors.fetchError)
+            presentAlert(title: AlertTitle.error, message: Errors.fetchError)
         }
     }
     
