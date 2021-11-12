@@ -49,7 +49,7 @@ class MapVC: UIViewController, MKMapViewDelegate {
             annotation.title = location.name
             annotation.subtitle = location.category
             annotation.coordinate = CLLocationCoordinate2D(latitude: location.lat, longitude: location.long)
-    
+
             mapView.addAnnotation(annotation)
         }
     }
