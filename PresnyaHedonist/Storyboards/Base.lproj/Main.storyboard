@@ -272,10 +272,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PFY-1N-hJa">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="748"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="H1o-4i-etU">
-                                        <rect key="frame" x="20" y="5" width="374" height="153.5"/>
+                                        <rect key="frame" x="20" y="5" width="374" height="88.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Описание" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="umN-fv-YQU">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="19.5"/>
@@ -295,59 +295,11 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="xpp-v1-nQr">
-                                                <rect key="frame" x="0.0" y="103.5" width="374" height="50"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UMm-VC-I2z">
-                                                        <rect key="frame" x="0.0" y="0.0" width="114.5" height="50"/>
-                                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="50" id="fLY-J5-n9a"/>
-                                                        </constraints>
-                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal">
-                                                            <imageReference key="image" image="phone.fill" catalog="system" symbolScale="large"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="phoneCall:" destination="q2e-RO-IXc" eventType="touchUpInside" id="RW9-oI-Lem"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJw-9v-MR5">
-                                                        <rect key="frame" x="129.5" y="0.0" width="115" height="50"/>
-                                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="50" id="YiT-yv-5Mo"/>
-                                                        </constraints>
-                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal">
-                                                            <imageReference key="image" image="photo.on.rectangle.fill" catalog="system" symbolScale="large"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="instagramLink:" destination="q2e-RO-IXc" eventType="touchUpInside" id="6Pr-fB-LyP"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ULs-gC-WAQ">
-                                                        <rect key="frame" x="259.5" y="0.0" width="114.5" height="50"/>
-                                                        <color key="backgroundColor" systemColor="systemRedColor"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="50" id="HKq-Vg-0zG"/>
-                                                        </constraints>
-                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal">
-                                                            <imageReference key="image" image="heart.fill" catalog="system" symbolScale="large"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="addToFavoritesTapped:" destination="q2e-RO-IXc" eventType="touchUpInside" id="yOV-pY-ieV"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                            </stackView>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="5hd-54-ZMe" firstAttribute="width" secondItem="H1o-4i-etU" secondAttribute="width" id="1Rn-5d-dce"/>
                                             <constraint firstItem="umN-fv-YQU" firstAttribute="width" secondItem="H1o-4i-etU" secondAttribute="width" id="9Vo-mM-DzL"/>
                                             <constraint firstItem="mro-KO-Die" firstAttribute="width" secondItem="H1o-4i-etU" secondAttribute="width" id="VK6-6y-yKR"/>
-                                            <constraint firstItem="xpp-v1-nQr" firstAttribute="width" secondItem="H1o-4i-etU" secondAttribute="width" id="ck4-dG-BoM"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
@@ -359,14 +311,65 @@
                                     <constraint firstItem="H1o-4i-etU" firstAttribute="centerX" secondItem="PFY-1N-hJa" secondAttribute="centerX" id="uFN-fj-lwT"/>
                                 </constraints>
                             </scrollView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="xpp-v1-nQr">
+                                <rect key="frame" x="20" y="802" width="374" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UMm-VC-I2z">
+                                        <rect key="frame" x="0.0" y="0.0" width="114.5" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="fLY-J5-n9a"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="phone.fill" catalog="system" symbolScale="large"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="phoneCall:" destination="q2e-RO-IXc" eventType="touchUpInside" id="RW9-oI-Lem"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJw-9v-MR5">
+                                        <rect key="frame" x="129.5" y="0.0" width="115" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="YiT-yv-5Mo"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="photo.on.rectangle.fill" catalog="system" symbolScale="large"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="instagramLink:" destination="q2e-RO-IXc" eventType="touchUpInside" id="6Pr-fB-LyP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ULs-gC-WAQ">
+                                        <rect key="frame" x="259.5" y="0.0" width="114.5" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="HKq-Vg-0zG"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="heart.fill" catalog="system" symbolScale="large"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addToFavoritesTapped:" destination="q2e-RO-IXc" eventType="touchUpInside" id="yOV-pY-ieV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ba9-Od-eCZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="PFY-1N-hJa" firstAttribute="leading" secondItem="gBA-rD-l7i" secondAttribute="leading" id="2Gc-oC-9QD"/>
+                            <constraint firstItem="ba9-Od-eCZ" firstAttribute="bottom" secondItem="xpp-v1-nQr" secondAttribute="bottom" constant="10" id="8D1-Py-WKv"/>
+                            <constraint firstItem="ba9-Od-eCZ" firstAttribute="trailing" secondItem="xpp-v1-nQr" secondAttribute="trailing" constant="20" id="IiR-NE-cGq"/>
                             <constraint firstAttribute="trailing" secondItem="PFY-1N-hJa" secondAttribute="trailing" id="MkE-0S-14G"/>
-                            <constraint firstAttribute="bottom" secondItem="PFY-1N-hJa" secondAttribute="bottom" id="NDE-mH-zFf"/>
+                            <constraint firstItem="xpp-v1-nQr" firstAttribute="centerX" secondItem="gBA-rD-l7i" secondAttribute="centerX" id="Pvl-RB-Bof"/>
+                            <constraint firstItem="xpp-v1-nQr" firstAttribute="leading" secondItem="ba9-Od-eCZ" secondAttribute="leading" constant="20" id="fUc-au-rJv"/>
                             <constraint firstItem="PFY-1N-hJa" firstAttribute="top" secondItem="ba9-Od-eCZ" secondAttribute="top" id="n3R-V3-7aZ"/>
+                            <constraint firstItem="xpp-v1-nQr" firstAttribute="top" secondItem="PFY-1N-hJa" secondAttribute="bottom" constant="10" id="zti-qF-Dgw"/>
                         </constraints>
                     </view>
                     <connections>
@@ -374,8 +377,8 @@
                         <outlet property="descript" destination="umN-fv-YQU" id="zTZ-ym-K0v"/>
                         <outlet property="workHours" destination="mro-KO-Die" id="L0A-jP-Ck2"/>
                         <outletCollection property="buttons" destination="UMm-VC-I2z" collectionClass="NSMutableArray" id="UgJ-xI-khN"/>
-                        <outletCollection property="buttons" destination="qJw-9v-MR5" collectionClass="NSMutableArray" id="ZBR-qP-1Ej"/>
                         <outletCollection property="buttons" destination="ULs-gC-WAQ" collectionClass="NSMutableArray" id="MOB-zr-slv"/>
+                        <outletCollection property="buttons" destination="qJw-9v-MR5" collectionClass="NSMutableArray" id="ZBR-qP-1Ej"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jNH-N1-F6k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
