@@ -63,7 +63,7 @@
 		226AFB96F5FFDED70A4A550A5D1FDC7B /* ViewAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewAnimator.swift; path = Sources/ViewAnimator.swift; sourceTree = "<group>"; };
 		31C42B8EDDE8A99EE9E2039C83ACEFDD /* Pods-PresnyaHedonist-PresnyaHedonistUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PresnyaHedonist-PresnyaHedonistUITests.modulemap"; sourceTree = "<group>"; };
 		3C78EEA7D813E5143DCAA88CAC31D733 /* ViewAnimator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ViewAnimator.debug.xcconfig; sourceTree = "<group>"; };
-		40D95358EFB3FEE2AA29F98856891971 /* Pods_PresnyaHedonist_PresnyaHedonistUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PresnyaHedonist_PresnyaHedonistUITests.framework; path = "Pods-PresnyaHedonist-PresnyaHedonistUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		40D95358EFB3FEE2AA29F98856891971 /* Pods_PresnyaHedonist_PresnyaHedonistUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PresnyaHedonist_PresnyaHedonistUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4583B5ED773EB2BC6AD4BF3DDF17AEE1 /* Pods-PresnyaHedonist-PresnyaHedonistUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PresnyaHedonist-PresnyaHedonistUITests-umbrella.h"; sourceTree = "<group>"; };
 		4D77B88F635DA75CBF159199B95A1D4E /* Pods-PresnyaHedonistTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PresnyaHedonistTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		4FFE0FAFBF2AE81BEBEB76544F5D76E3 /* Pods-PresnyaHedonistTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PresnyaHedonistTests.modulemap"; sourceTree = "<group>"; };
@@ -71,19 +71,19 @@
 		580B3C9E0E68BFF532CAC31211A32301 /* Pods-PresnyaHedonistTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PresnyaHedonistTests-Info.plist"; sourceTree = "<group>"; };
 		6577760A4D6BE29D1CBFD70104DB5627 /* UICollectionView + ViewAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UICollectionView + ViewAnimator.swift"; path = "Sources/Extensions/UICollectionView + ViewAnimator.swift"; sourceTree = "<group>"; };
 		6585C4A90935FA1B87C4DA5CE7C20B75 /* Pods-PresnyaHedonist-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PresnyaHedonist-Info.plist"; sourceTree = "<group>"; };
-		65ED1D872738B5FC1415A73B71E02B25 /* Pods_PresnyaHedonist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PresnyaHedonist.framework; path = "Pods-PresnyaHedonist.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		67722E08DF864B3BD2948E835DBAD94D /* Pods_PresnyaHedonistTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PresnyaHedonistTests.framework; path = "Pods-PresnyaHedonistTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		65ED1D872738B5FC1415A73B71E02B25 /* Pods_PresnyaHedonist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PresnyaHedonist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		67722E08DF864B3BD2948E835DBAD94D /* Pods_PresnyaHedonistTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PresnyaHedonistTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6891C7CBB03CD841E8A859785452F8DF /* ViewAnimator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ViewAnimator.release.xcconfig; sourceTree = "<group>"; };
 		710F64E7EE1FEEC5CE5AC6FA949CE92E /* UITableView + ViewAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITableView + ViewAnimator.swift"; path = "Sources/Extensions/UITableView + ViewAnimator.swift"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		7C5AC6EAC340CB3B827783B1EE3273FF /* Pods-PresnyaHedonist-PresnyaHedonistUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PresnyaHedonist-PresnyaHedonistUITests-frameworks.sh"; sourceTree = "<group>"; };
 		8C284B1F2ADF8C55AD8D63C560EF2933 /* AnimationType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationType.swift; path = Sources/Models/AnimationType.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9F4DDF6F2DDFFD6A2A764B6886C614EE /* ViewAnimator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ViewAnimator.modulemap; sourceTree = "<group>"; };
 		9F67E77B95E20DAD56BB2D15ABEEEF00 /* Pods-PresnyaHedonistTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PresnyaHedonistTests.release.xcconfig"; sourceTree = "<group>"; };
 		A162773F7F996110894B24E915BD2EC1 /* Pods-PresnyaHedonistTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PresnyaHedonistTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		A41BB1D58227630D04E3810EF73A5824 /* Pods-PresnyaHedonist-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PresnyaHedonist-acknowledgements.markdown"; sourceTree = "<group>"; };
-		A76921F7329D552AD6FA723972B6337A /* ViewAnimator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ViewAnimator.framework; path = ViewAnimator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A76921F7329D552AD6FA723972B6337A /* ViewAnimator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ViewAnimator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B09A61AFD3F8AD195B8E0561581FB0FA /* Pods-PresnyaHedonist-PresnyaHedonistUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PresnyaHedonist-PresnyaHedonistUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B1B47B9E9B3768FF966C9A23F4369454 /* Animation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Animation.swift; path = Sources/Protocols/Animation.swift; sourceTree = "<group>"; };
 		B25A3FCD84B74CC6190CAE8ABCFAC9E5 /* ViewAnimator-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ViewAnimator-dummy.m"; sourceTree = "<group>"; };
@@ -176,7 +176,6 @@
 				FE756C9EB3A100E317C282BA4144C1A5 /* ViewAnimatorConfig.swift */,
 				4BDF8136E88B3D2E1CE4AE7F1D28A69C /* Support Files */,
 			);
-			name = ViewAnimator;
 			path = ViewAnimator;
 			sourceTree = "<group>";
 		};
@@ -394,7 +393,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1310;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 9.3";
@@ -640,7 +639,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/ViewAnimator/ViewAnimator-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/ViewAnimator/ViewAnimator-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -674,7 +673,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/ViewAnimator/ViewAnimator-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/ViewAnimator/ViewAnimator-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
