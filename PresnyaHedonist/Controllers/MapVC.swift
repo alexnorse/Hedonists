@@ -94,7 +94,7 @@ class MapVC: UIViewController, MKMapViewDelegate {
             setupLocationManager()
             checkLocationAuthorization()
         } else {
-            // Show alert
+            presentAlert(title: AlertTitle.error, message: Alerts.locationServices)
         }
     }
     
@@ -104,10 +104,10 @@ class MapVC: UIViewController, MKMapViewDelegate {
         case .notDetermined:
             locationManager.requestWhenInUseAuthorization()
         case .restricted:
-            // Show alert to turn on
+            presentAlert(title: AlertTitle.error, message: Alerts.locationServices)
             break
         case .denied:
-            // Show alert to turn on
+            presentAlert(title: AlertTitle.error, message: Alerts.locationServices)
             break
         case .authorizedAlways:
             break
@@ -115,6 +115,8 @@ class MapVC: UIViewController, MKMapViewDelegate {
             mapView.showsUserLocation = true
             configureMapPosition()
             locationManager.startUpdatingLocation()
+            break
+        @unknown default:
             break
         }
     }

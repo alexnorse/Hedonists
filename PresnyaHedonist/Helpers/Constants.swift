@@ -48,6 +48,7 @@ enum Errors {
 
 enum Alerts {
     static let addedToFavorites = "Место добавлено в Избранное"
+    static let locationServices = "Похоже, у Вас не включена геолокация или отсутствует разрешение на ее использование. Вы можете изменить это в настройках Вашего iPhone"
 }
 
 
