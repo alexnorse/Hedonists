@@ -56,6 +56,8 @@ class MapVC: UIViewController, MKMapViewDelegate {
     
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard !(annotation is MKUserLocation)  else { return nil }
+        
         let id = "Place"
         var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: id)
         
