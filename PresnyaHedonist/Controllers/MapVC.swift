@@ -138,38 +138,4 @@ extension MapVC: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         checkLocationAuthorization()
     }
-    
-    
-    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        guard let annotiation = view.annotation else { return }
-        
-        let directionRequest = MKDirections.Request()
-        directionRequest.source = MKMapItem.forCurrentLocation()
-        directionRequest.destination = MKMapItem(placemark: MKPlacemark(coordinate: annotiation.coordinate))
-        directionRequest.transportType = .walking
-        let directions = MKDirections(request: directionRequest)
-        
-        directions.calculate { (response, error) -> Void in
-            guard let response = response else {
-                if let error = error { print("Error: \(error)") }
-                return
-            }
-            
-            if !response.routes.isEmpty {
-                let route = response.routes[0]
-                DispatchQueue.main.async { [weak self] in self?.mapView.addOverlay(route.polyline) }
-            }
-        }
-    }
-    
-    
-    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-        guard overlay is MKPolyline else { return MKPolylineRenderer() }
-        
-        let polylineRenderer = MKPolylineRenderer(overlay: overlay)
-        polylineRenderer.strokeColor = UIColor.systemBlue
-        polylineRenderer.lineWidth = 5
-        
-        return polylineRenderer
-    }
 }
