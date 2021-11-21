@@ -132,6 +132,7 @@ extension MapVC: CLLocationManagerDelegate {
         let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
         let region = MKCoordinateRegion.init(center: center, latitudinalMeters: UISettings.regionZoom, longitudinalMeters: UISettings.regionZoom)
         mapView.setRegion(region, animated: true)
+        locationManager.stopUpdatingLocation()
     }
     
     
