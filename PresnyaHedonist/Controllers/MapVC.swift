@@ -143,11 +143,11 @@ extension MapVC: CLLocationManagerDelegate {
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         guard let annotiation = view.annotation else { return }
         
-        let request = MKDirections.Request()
-        request.source = MKMapItem.forCurrentLocation()
-        request.destination = MKMapItem(placemark: MKPlacemark(coordinate: annotiation.coordinate))
-        request.transportType = .walking
-        let directions = MKDirections(request: request)
+        let directionRequest = MKDirections.Request()
+        directionRequest.source = MKMapItem.forCurrentLocation()
+        directionRequest.destination = MKMapItem(placemark: MKPlacemark(coordinate: annotiation.coordinate))
+        directionRequest.transportType = .walking
+        let directions = MKDirections(request: directionRequest)
         
         directions.calculate { (response, error) -> Void in
             guard let response = response else {
@@ -157,11 +157,7 @@ extension MapVC: CLLocationManagerDelegate {
             
             if !response.routes.isEmpty {
                 let route = response.routes[0]
-                
-                DispatchQueue.main.async {
-                    self.mapView.addOverlay(route.polyline)
-                    self.mapView.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
-                }
+                DispatchQueue.main.async { [weak self] in self?.mapView.addOverlay(route.polyline) }
             }
         }
     }
