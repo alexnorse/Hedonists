@@ -65,8 +65,8 @@ class MapVC: UIViewController, MKMapViewDelegate {
             annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: id)
             annotationView?.canShowCallout = true
             
-            let button = UIButton(type: .detailDisclosure)
-            annotationView?.rightCalloutAccessoryView = button
+            let infoButton = UIButton(type: .detailDisclosure)
+            annotationView?.rightCalloutAccessoryView = infoButton
         } else {
             annotationView?.annotation = annotation
         }
