@@ -37,18 +37,6 @@
     },
     {
         "category": "Бар",
-        "name": "The BIX",
-        "address": "Большой Козихинский пер., д.9",
-        "lat": 55.7630142,
-        "long": 37.5966012,
-        "descript": "Бар с ежедневными джазовыми концертами на Патриарших прудах. Акцент меню сделан на американской кухне. В барной карте от Максима Ситницкого (Tiki Bar, Прожектор, Saxon & Parole) - коктейльная классика, крафтовое бутылочное пиво, большой выбор крепкого алкоголя и вино.",
-        "phone": "+74952521091",
-        "workhours": "18.00 - 03.00",
-        "image": "thebix.msk",
-        "url": "https://www.instagram.com/thebix.msk/"
-    },
-    {
-        "category": "Бар",
         "name": "Simach в Недальнем",
         "address": "Тверской б-р, 15, стр.2",
         "lat": 55.7606315,
@@ -180,18 +168,6 @@
         "url": "https://www.instagram.com/grapemoscow/"
     },
     {
-        "category": "Бар",
-        "name": "Виноv'n",
-        "address": "Большой Козихинский пер., 15 ",
-        "lat": 55.7637608,
-        "long": 37.5957033,
-        "descript": "Небольшой эстетичный винный бар в районе Патриков с летней террасой и видом на сад.",
-        "phone": "+79856168080",
-        "workhours": "12.00 - 23.00",
-        "image": "vinov.nbar",
-        "url": "https://www.instagram.com/vinov.nbar/"
-    },
-    {
         "category": "Места",
         "name": "Магазин Аптечных продуктов",
         "address": "Малая Бронная ул., 22/15",
@@ -320,18 +296,6 @@
         "workhours": "10.00 - 22.00",
         "image": "mates.msk1",
         "url": "https://www.instagram.com/mates.msk/"
-    },
-    {
-        "category": "Завтраки",
-        "name": "Tiger Bunny",
-        "address": "2-я Черногрязская ул., 6к2",
-        "lat": 55.761469,
-        "long": 37.547965,
-        "descript": "Стильная кофейня с завтраками и замороженными йогуртами, расположенная на тихой улице в центре, недалеко от Красногвардейских прудов",
-        "phone": "+79645823060",
-        "workhours": "09.00 - 22.00",
-        "image": "tigerbunny_frozenyogurt",
-        "url": "https://www.instagram.com/tigerbunny_frozenyogurt/"
     },
     {
         "category": "Завтраки",
@@ -933,18 +897,6 @@
         "workhours": "09.00 - 23.00",
         "image": "margarita__bistro",
         "url": "https://www.instagram.com/margarita__bistro/"
-    },
-    {
-        "category": "Места",
-        "name": "Тишинка Gastro Hall",
-        "address": "Тишинская пл., 1 строение 1",
-        "lat": 55.769169,
-        "long": 37.583397,
-        "descript": "Объединяет под своей крышей уникальные фуд-концепции и отменную гастрономию ресторанного уровня. Корнеры не представлены нигде более, а разнообразие кухонь удовлетворит даже самого требовательного гурмана.  Tishinka Gastro Hall уже удостоена престижной наградой Ресторанного рейтинга журнала GQ в номинации «Лучший фуд-корт года»!",
-        "phone": "+79997142163",
-        "workhours": "11.00 - 23.00",
-        "image": "tishinka_gastro_hall",
-        "url": "https://www.instagram.com/tishinka_gastro_hall/"
     },
     {
         "category": "Места",
