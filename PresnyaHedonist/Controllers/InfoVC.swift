@@ -55,7 +55,7 @@ class InfoVC: UIViewController {
         if place?.phone != nil {
             let formattedNumber = place?.phone?.components(separatedBy: NSCharacterSet.decimalDigits.inverted).joined(separator: "")
             
-            if let url = NSURL(string: ("tel:" + formattedNumber!)) {
+            if let url = NSURL(string: ("tel:" + "+" + formattedNumber!)) {
                 if #available(iOS 10, *) { UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
                 } else { UIApplication.shared.openURL(url as URL) }
             }
