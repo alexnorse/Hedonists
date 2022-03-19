@@ -182,7 +182,7 @@
 				E6023C6F269DE1C70035AA7F /* Controllers */,
 				E6023C6E269DE1A70035AA7F /* Views */,
 				E6023C71269DE1D70035AA7F /* Helpers */,
-				E6023C70269DE1D00035AA7F /* Data */,
+				E6023C70269DE1D00035AA7F /* Model */,
 			);
 			path = PresnyaHedonist;
 			sourceTree = "<group>";
@@ -236,13 +236,13 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		E6023C70269DE1D00035AA7F /* Data */ = {
+		E6023C70269DE1D00035AA7F /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				E6023C43269DB39B0035AA7F /* PresnyaHedonist.xcdatamodeld */,
 				E692553D26A172550004E348 /* data.json */,
 			);
-			path = Data;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		E6023C71269DE1D70035AA7F /* Helpers */ = {

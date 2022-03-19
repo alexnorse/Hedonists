@@ -9,9 +9,10 @@ import UIKit
 import MapKit
 
 class MyAnnotation: MKPointAnnotation {
-    let place: Place
-    init(place: Place) {
-        self.place = place
-        super.init()
-    }
+     let place: Place
+     
+     init(place: Place) {
+          self.place = place
+          super.init()
+     }
 }
